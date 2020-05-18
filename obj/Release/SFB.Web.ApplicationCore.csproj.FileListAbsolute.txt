@@ -1,0 +1,9 @@
+C:\DfE\Workspace\SFB_NEW_NEW\Web\SFB.Web.ApplicationCore\bin\Release\SFB.Web.ApplicationCore.dll.config
+C:\DfE\Workspace\SFB_NEW_NEW\Web\SFB.Web.ApplicationCore\bin\Release\SFB.Web.ApplicationCore.dll
+C:\DfE\Workspace\SFB_NEW_NEW\Web\SFB.Web.ApplicationCore\bin\Release\SFB.Web.ApplicationCore.pdb
+C:\DfE\Workspace\SFB_NEW_NEW\Web\SFB.Web.ApplicationCore\bin\Release\Newtonsoft.Json.dll
+C:\DfE\Workspace\SFB_NEW_NEW\Web\SFB.Web.ApplicationCore\bin\Release\Newtonsoft.Json.xml
+C:\DfE\Workspace\SFB_NEW_NEW\Web\SFB.Web.ApplicationCore\obj\Release\SFB.Web.ApplicationCore.csprojAssemblyReference.cache
+C:\DfE\Workspace\SFB_NEW_NEW\Web\SFB.Web.ApplicationCore\obj\Release\SFB.Web.ApplicationCore.csproj.CopyComplete
+C:\DfE\Workspace\SFB_NEW_NEW\Web\SFB.Web.ApplicationCore\obj\Release\SFB.Web.ApplicationCore.dll
+C:\DfE\Workspace\SFB_NEW_NEW\Web\SFB.Web.ApplicationCore\obj\Release\SFB.Web.ApplicationCore.pdb
