@@ -1,5 +1,5 @@
-﻿using Microsoft.Spatial;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Spatial;
 
 namespace SFB.Web.ApplicationCore.Models
 {

@@ -5,9 +5,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("SFB.Web.ApplicationCore")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Core logic class library for Schools Financial Benchmarking service")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Department for Education")]
 [assembly: AssemblyProduct("SFB.Web.ApplicationCore")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]

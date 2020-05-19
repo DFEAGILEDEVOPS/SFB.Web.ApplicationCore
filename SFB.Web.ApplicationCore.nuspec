@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>SFB.Web.ApplicationCore</title>
+    <authors>DfE</authors>
+    <owners>DfE</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/DFEAGILEDEVOPS/SFB.Web.ApplicationCore</projectUrl>
+    <description>Core business logic class library for Schools Financial Benchmarking service</description>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <copyright>Copyright 2020</copyright>
+    <tags>SFB DFE</tags>
+  </metadata>
+</package>
