@@ -109,16 +109,6 @@ AutoTest.Net/
 # Installshield output folder
 [Ee]xpress/
 
-# DocProject is a documentation generator add-in
-DocProject/buildhelp/
-DocProject/Help/*.HxT
-DocProject/Help/*.HxC
-DocProject/Help/*.hhc
-DocProject/Help/*.hhk
-DocProject/Help/*.hhp
-DocProject/Help/Html2
-DocProject/Help/html
-
 # Click-Once directory
 publish/
 
@@ -131,7 +121,7 @@ publish/
 #*.pubxml
 
 # NuGet Packages Directory
-web/packages/*
+packages/*
 ## TODO: If the tool you use requires repositories.config
 ## uncomment the next line
 #!packages/repositories.config
@@ -190,30 +180,3 @@ FakesAssemblies/
 GeneratedArtifacts/
 _Pvt_Extensions/
 ModelManifest.xml
-
-# Web.UI folders
-Web/SFB.Web.UI/public/assets/stylesheets/*
-Web/SFB.Web.UI/public/assets/styleguide/*
-Web/SFB.Web.UI/public/assets/scripts/application.*
-Web/SFB.Web.UI/test/results*
-Web/SFB.Web.UI/public/assets/scripts/index.html
-
-#Ignore files used in Test Automation
-.idea/
-Web/Web.UI.Automation/screenshots/*
-
-.DS_Store
-
-/Web/SFB.Web.UI/public/c3
-/Web/SFB.Web.UI/public/d3
-/Web/SFB.Web.UI/public/dfeagiledevops-typeahead
-/Web/SFB.Web.UI/public/govuk-styleguide-theme
-/Web/SFB.Web.UI/public/jquery
-/Web/SFB.Web.UI/public/jquery-simulate
-/Web/SFB.Web.DAL.Tests/App.config
-/Web/SFB.Web.UI/Assets/Scripts/Views/
-/Web/SFB.Web.UI/Assets/Scripts/Elements/SchoolMap/
-/Web/SFB.Web.Api/appsettings.json
-/Web/SFB.Web.Api/appsettings.Development.json
-/Web/SFB.Web.Api2/appsettings.json
-/Web/SFB.Web.Api2/appsettings.Development.json
