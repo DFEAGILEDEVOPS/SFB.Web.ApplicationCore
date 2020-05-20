@@ -14,3 +14,14 @@ C:\DfE\Workspace\SFB.Web.ApplicationCore\obj\Release\SFB.Web.ApplicationCore.csp
 C:\DfE\Workspace\SFB.Web.ApplicationCore\obj\Release\SFB.Web.ApplicationCore.csproj.CopyComplete
 C:\DfE\Workspace\SFB.Web.ApplicationCore\obj\Release\SFB.Web.ApplicationCore.dll
 C:\DfE\Workspace\SFB.Web.ApplicationCore\obj\Release\SFB.Web.ApplicationCore.pdb
+C:\DfE\Workspace\SFB.Web.ApplicationCore\bin\Release\System.Spatial.dll
+C:\DfE\Workspace\SFB.Web.ApplicationCore\bin\Release\System.Spatial.xml
+C:\DfE\Workspace\SFB.Web.ApplicationCore\bin\Release\de\System.Spatial.resources.dll
+C:\DfE\Workspace\SFB.Web.ApplicationCore\bin\Release\es\System.Spatial.resources.dll
+C:\DfE\Workspace\SFB.Web.ApplicationCore\bin\Release\fr\System.Spatial.resources.dll
+C:\DfE\Workspace\SFB.Web.ApplicationCore\bin\Release\it\System.Spatial.resources.dll
+C:\DfE\Workspace\SFB.Web.ApplicationCore\bin\Release\ja\System.Spatial.resources.dll
+C:\DfE\Workspace\SFB.Web.ApplicationCore\bin\Release\ko\System.Spatial.resources.dll
+C:\DfE\Workspace\SFB.Web.ApplicationCore\bin\Release\ru\System.Spatial.resources.dll
+C:\DfE\Workspace\SFB.Web.ApplicationCore\bin\Release\zh-Hans\System.Spatial.resources.dll
+C:\DfE\Workspace\SFB.Web.ApplicationCore\bin\Release\zh-Hant\System.Spatial.resources.dll
