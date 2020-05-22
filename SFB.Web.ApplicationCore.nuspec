@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>$id$</id>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
     <title>SFB.Web.ApplicationCore</title>
     <authors>Department for Education</authors>
     <owners>Department for Education</owners>
@@ -12,7 +12,7 @@
     <description>Core business logic class library for Schools Financial Benchmarking service</description>
     <releaseNotes>Upgraded version and package configuration</releaseNotes>
     <copyright>Copyright 2020</copyright>
-	<dependencies>
+	  <dependencies>
       <group targetFramework=".NETFramework4.7.2" />
     </dependencies>
   </metadata>
