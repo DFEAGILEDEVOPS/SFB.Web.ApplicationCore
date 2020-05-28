@@ -5,13 +5,16 @@ namespace SFB.Web.ApplicationCore.Models
 {
     public class SelfAssesmentModel
     {
+        private string OverallPhase { get; set; }
+
         public int Urn { get; private set; }
 
         public string Name { get; private set; }
 
-        private string OverallPhase { get; set; }
-        
+        public string LatestTerm { get; set; }
+
         private bool HasSixthForm { get; set; }
+
         public string OverallPhaseWSixthForm
         {
             get
@@ -30,16 +33,15 @@ namespace SFB.Web.ApplicationCore.Models
 
         public SADSizeLookupDataObject SadSizeLookup { get; set; }
         public SADFSMLookupDataObject SadFSMLookup { get; set; }
-        public SADSchoolRatingsDataObject RatingForTeachingStaff { get; set; }
-
         public List<SadAssesmentAreaModel> SadAssesmentAreas { get; set; }
 
-        public SelfAssesmentModel(int urn, string name, string overallPhase, bool hasSixthForm)
+        public SelfAssesmentModel(int urn, string name, string overallPhase, bool hasSixthForm, string latestTerm)
         {
             Urn = urn;
             Name = name;
             OverallPhase = overallPhase;
             HasSixthForm = hasSixthForm;
+            LatestTerm = latestTerm;
         }
     }
 }
