@@ -51,7 +51,11 @@
     <Compile Include="CachingInterfaces\IActiveCollectionsService.cs" />
     <Compile Include="CachingInterfaces\IBicComparisonResultCachingService.cs" />
     <Compile Include="DataAccessInterfaces\IEfficiencyMetricRepository.cs" />
+    <Compile Include="DataAccessInterfaces\ISelfAssesmentDashboardRepository.cs" />
     <Compile Include="Entities\EfficiencyMetricDataObject.cs" />
+    <Compile Include="Entities\SADFSMLookupDataObject.cs" />
+    <Compile Include="Entities\SADSizeLookupDataObject.cs" />
+    <Compile Include="Entities\SADSchoolRatingsDataObject.cs" />
     <Compile Include="Models\ApiResponse.cs" />
     <Compile Include="DataAccessInterfaces\IDataCollectionManager.cs" />
     <Compile Include="DataAccessInterfaces\IEdubaseRepository.cs" />
@@ -81,6 +85,8 @@
     <Compile Include="Models\QueryResultsModel.cs" />
     <Compile Include="Models\ResultModel.cs" />
     <Compile Include="Models\FinancialDataModel.cs" />
+    <Compile Include="Models\SadAssesmentAreaModel.cs" />
+    <Compile Include="Models\SelfAssesmentModel.cs" />
     <Compile Include="Models\SchoolModel.cs" />
     <Compile Include="Models\SearchResultsModel.cs" />
     <Compile Include="Models\SimpleCriteria.cs" />
@@ -102,6 +108,8 @@
     <Compile Include="SearchInterfaces\ISchoolSearchService.cs" />
     <Compile Include="SearchInterfaces\ITrustSearchService.cs" />
     <Compile Include="ApiInterfaces\ISptReportService.cs" />
+    <Compile Include="Services\DataAccess\ISelfAssesmentDashboardDataService.cs" />
+    <Compile Include="Services\DataAccess\SelfAssesmentDashboardDataService.cs" />
     <Compile Include="Services\LocalAuthorities\ILaSearchService.cs" />
     <Compile Include="Services\LocalAuthorities\LaSearchService.cs" />
     <Compile Include="Services\Validation\ValidationService.cs" />

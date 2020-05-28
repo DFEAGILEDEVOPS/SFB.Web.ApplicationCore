@@ -209,7 +209,7 @@
         public const string TEACHERS_LEADERSHIP_PAY = "AllTeachersOnTheLeadershipPayRangePercent";
         public const string UID = "UID";
 
-    }
+    }      
 
     public class TrustCharacteristicsQuestions
     {
