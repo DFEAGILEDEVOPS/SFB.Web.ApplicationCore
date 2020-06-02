@@ -5,7 +5,8 @@ namespace SFB.Web.ApplicationCore.Models
 {
     public class SadAssesmentAreaModel
     {
-        public string AssesmentAreaName { get; set; }
+        public string AssessmentAreaType { get; set; }
+        public string AssessmentAreaName { get; set; }
 
         public decimal SchoolData { get; set; }
 
@@ -13,9 +14,10 @@ namespace SFB.Web.ApplicationCore.Models
 
         public List<SADSchoolRatingsDataObject> AllTresholds { get; set; }
 
-        public SadAssesmentAreaModel(string assesmentAreaName, decimal schoolData, decimal percentageSchoolData, List<SADSchoolRatingsDataObject> allTresholds)
+        public SadAssesmentAreaModel(string assessmentAreaType,string assessmentAreaName, decimal schoolData, decimal percentageSchoolData, List<SADSchoolRatingsDataObject> allTresholds)
         {
-            AssesmentAreaName = assesmentAreaName;
+            AssessmentAreaType = assessmentAreaType;
+            AssessmentAreaName = assessmentAreaName;
             SchoolData = schoolData;
             PercentageSchoolData = percentageSchoolData;
             AllTresholds = allTresholds;
