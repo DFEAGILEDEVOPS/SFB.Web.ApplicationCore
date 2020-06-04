@@ -20,7 +20,7 @@ namespace SFB.Web.ApplicationCore.Models
 
         public string OfstedRating { get; private set; }
 
-        public DateTime OfstedInspectionDate { get; private set; }
+        public string OfstedInspectionDate { get; private set; }
 
         public decimal ProgressScore { get; private set; }
 
@@ -75,7 +75,7 @@ namespace SFB.Web.ApplicationCore.Models
             NumberOfPupils = numberOfPupils;
             FSM = fsm;
             OfstedRating = ofstedRating;
-            OfstedInspectionDate = DateTime.Parse(ofstedInspectionDate, CultureInfo.CurrentCulture, DateTimeStyles.None);
+            OfstedInspectionDate = ofstedInspectionDate;
             ProgressScore = progressScore;
             ProgressScoreType = progressScoreType;
             Progress8Banding = progress8Banding;
