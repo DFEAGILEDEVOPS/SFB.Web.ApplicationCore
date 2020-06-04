@@ -8,9 +8,9 @@ namespace SFB.Web.ApplicationCore.Models
         public string AssessmentAreaType { get; set; }
         public string AssessmentAreaName { get; set; }
 
-        public decimal SchoolData { get; set; }
+        public decimal SchoolDataLatestTerm { get; set; }
 
-        public decimal PercentageSchoolData { get; set; }
+        public decimal PercentageSchoolDataLatestTerm { get; set; }
 
         public List<SADSchoolRatingsDataObject> AllTresholds { get; set; }
 
@@ -18,8 +18,8 @@ namespace SFB.Web.ApplicationCore.Models
         {
             AssessmentAreaType = assessmentAreaType;
             AssessmentAreaName = assessmentAreaName;
-            SchoolData = schoolData;
-            PercentageSchoolData = percentageSchoolData;
+            SchoolDataLatestTerm = schoolData;
+            PercentageSchoolDataLatestTerm = percentageSchoolData;
             AllTresholds = allTresholds;
         }
     }

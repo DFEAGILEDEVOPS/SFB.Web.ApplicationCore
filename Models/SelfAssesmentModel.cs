@@ -1,22 +1,19 @@
 ﻿using SFB.Web.ApplicationCore.Entities;
-using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Globalization;
 
 namespace SFB.Web.ApplicationCore.Models
 {
     public class SelfAssesmentModel
     {
-        private string OverallPhase { get; set; }
+        private string OverallPhaseLatestTerm { get; set; }
 
         public int Urn { get; private set; }
 
         public string Name { get; private set; }
         
-        public string LondonWeighting { get; private set; }
+        public string LondonWeightingLatestTerm { get; private set; }
 
-        public decimal NumberOfPupils { get; private set; }
+        public decimal NumberOfPupilsLatestTerm { get; private set; }
 
         public string OfstedRating { get; private set; }
 
@@ -28,27 +25,30 @@ namespace SFB.Web.ApplicationCore.Models
 
         public decimal Progress8Banding { get; private set; }
         
-        public decimal FSM { get; private set; }
+        public decimal FSMLatestTerm { get; private set; }
 
         public string LatestTerm { get; set; }
 
         private bool HasSixthForm { get; set; }
 
-        public string OverallPhaseWSixthForm
+        public string OverallPhaseWSixthFormLatestTerm
         {
             get
             {
                 if (HasSixthForm)
                 {
-                    return $"{OverallPhase} with sixth form" ;
+                    return $"{OverallPhaseLatestTerm} with sixth form" ;
                 }
                 else
                 {
-                    return OverallPhase;
+                    return OverallPhaseLatestTerm;
                 }
                 
             }
         }
+
+        public decimal TotalExpenditureLatestTerm { get; set; }
+        public decimal TotalIncomeLatestTerm { get; set; }
 
         public SADSizeLookupDataObject SadSizeLookup { get; set; }
         public SADFSMLookupDataObject SadFSMLookup { get; set; }
@@ -65,21 +65,25 @@ namespace SFB.Web.ApplicationCore.Models
             decimal progressScore,
             string progressScoreType,
             decimal progress8Banding,
-            bool hasSixthForm, 
+            bool hasSixthForm,
+            decimal totalExpenditure,
+            decimal totalIncome,
             string latestTerm)
         {
             Urn = urn;
             Name = name;
-            OverallPhase = overallPhase;
-            LondonWeighting = londonWeighting;
-            NumberOfPupils = numberOfPupils;
-            FSM = fsm;
+            OverallPhaseLatestTerm = overallPhase;
+            LondonWeightingLatestTerm = londonWeighting;
+            NumberOfPupilsLatestTerm = numberOfPupils;
+            FSMLatestTerm = fsm;
             OfstedRating = ofstedRating;
             OfstedInspectionDate = ofstedInspectionDate;
             ProgressScore = progressScore;
             ProgressScoreType = progressScoreType;
             Progress8Banding = progress8Banding;
             HasSixthForm = hasSixthForm;
+            TotalExpenditureLatestTerm = totalExpenditure;
+            TotalIncomeLatestTerm = totalIncome;
             LatestTerm = latestTerm;
         }
     }
