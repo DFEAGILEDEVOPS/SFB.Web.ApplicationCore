@@ -6,8 +6,6 @@ namespace SFB.Web.ApplicationCore.Models
 {
     public class SelfAssesmentModel
     {
-        private string OverallPhaseLatestTerm { get; set; }
-
         public int Urn { get; private set; }
 
         public string Name { get; private set; }
@@ -30,23 +28,24 @@ namespace SFB.Web.ApplicationCore.Models
 
         public string LatestTerm { get; set; }
 
-        private bool HasSixthForm { get; set; }
+        public bool HasSixthFormLatestTerm { get; set; }
 
-        public string OverallPhaseWSixthFormLatestTerm
-        {
-            get
-            {
-                if (HasSixthForm)
-                {
-                    return $"{OverallPhaseLatestTerm} with sixth form" ;
-                }
-                else
-                {
-                    return OverallPhaseLatestTerm;
-                }
+        public string OverallPhaseLatestTerm { get; set; }
+        //public string OverallPhaseWSixthFormLatestTerm
+        //{
+        //    get
+        //    {
+        //        if (HasSixthForm)
+        //        {
+        //            return $"{OverallPhaseLatestTerm} with sixth form" ;
+        //        }
+        //        else
+        //        {
+        //            return OverallPhaseLatestTerm;
+        //        }
                 
-            }
-        }
+        //    }
+        //}
 
         public decimal TotalExpenditureLatestTerm { get; set; }
         public decimal TotalIncomeLatestTerm { get; set; }
@@ -82,7 +81,7 @@ namespace SFB.Web.ApplicationCore.Models
             ProgressScore = progressScore;
             ProgressScoreType = progressScoreType;
             Progress8Banding = progress8Banding;
-            HasSixthForm = hasSixthForm;
+            HasSixthFormLatestTerm = hasSixthForm;
             TotalExpenditureLatestTerm = totalExpenditure;
             TotalIncomeLatestTerm = totalIncome;
             LatestTerm = latestTerm;
