@@ -10,7 +10,7 @@ namespace SFB.Web.ApplicationCore.Services.DataAccess
     {
         Task<SADSizeLookupDataObject> GetSADSizeLookupDataObject(string overallPhase, bool hasSixthForm, decimal noPupils, string term);
         Task<SADFSMLookupDataObject> GetSADFSMLookupDataObject(string overallPhase, bool hasSixthForm, decimal fsm, string term);
-        Task<List<SADSchoolRatingsDataObject>> GetSADSchoolRatingsDataObjectAsync(string assesmentArea, string overallPhase, bool hasSixthForm, string londonWeighting, string size, string FSM, decimal score, string term);
+        Task<List<SADSchoolRatingsDataObject>> GetSADSchoolRatingsDataObjectAsync(string assesmentArea, string overallPhase, bool hasSixthForm, string londonWeighting, string size, string FSM, string term);
 
     }
 }
