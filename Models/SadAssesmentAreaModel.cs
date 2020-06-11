@@ -8,13 +8,13 @@ namespace SFB.Web.ApplicationCore.Models
         public string AssessmentAreaType { get; set; }
         public string AssessmentAreaName { get; set; }
 
-        public decimal SchoolDataLatestTerm { get; set; }
+        public decimal? SchoolDataLatestTerm { get; set; }
 
-        public decimal TotalForAreaTypeLatestTerm { get; set; }
+        public decimal? TotalForAreaTypeLatestTerm { get; set; }
 
         public List<SADSchoolRatingsDataObject> AllTresholds { get; set; }
 
-        public SadAssesmentAreaModel(string assessmentAreaType,string assessmentAreaName, decimal schoolData, decimal totalForAreaType, List<SADSchoolRatingsDataObject> allTresholds)
+        public SadAssesmentAreaModel(string assessmentAreaType,string assessmentAreaName, decimal? schoolData, decimal? totalForAreaType, List<SADSchoolRatingsDataObject> allTresholds)
         {
             AssessmentAreaType = assessmentAreaType;
             AssessmentAreaName = assessmentAreaName;
