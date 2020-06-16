@@ -27,6 +27,18 @@ namespace SFB.Web.ApplicationCore.Services.DataAccess
             return result;
         }
 
+        public async Task<List<SADSizeLookupDataObject>> GetSADSizeLookups()
+        {
+            var result = await _repository.GetSADSizeLookupListDataObject();
+            return result;
+        }
+
+        public async Task<List<SADFSMLookupDataObject>> GetSADFSMLookups()
+        {
+            var result = await _repository.GetSADFSMLookupListDataObject();
+            return result;
+        }
+
         public async Task<List<SADSchoolRatingsDataObject>> GetSADSchoolRatingsDataObjectAsync(string assesmentArea, string overallPhase, bool hasSixthForm, string londonWeighting, string size, string FSM, string term)
         {
             var result = await _repository.GetSADSchoolRatingsDataObjectsAsync(assesmentArea, overallPhase, hasSixthForm, londonWeighting, size, FSM, term);
