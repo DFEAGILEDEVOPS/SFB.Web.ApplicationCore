@@ -10,6 +10,8 @@ namespace SFB.Web.ApplicationCore.Models
 
         public string Name { get; private set; }
         
+        public string FinanceType { get; private set; }
+
         public string LondonWeightingLatestTerm { get; private set; }
 
         public decimal NumberOfPupilsLatestTerm { get; private set; }
