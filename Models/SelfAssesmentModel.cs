@@ -59,6 +59,7 @@ namespace SFB.Web.ApplicationCore.Models
         public SelfAssesmentModel(int urn, 
             string name, 
             string overallPhase, 
+            string financeType,
             string londonWeighting, 
             decimal numberOfPupils, 
             decimal fsm,
@@ -75,6 +76,7 @@ namespace SFB.Web.ApplicationCore.Models
             Urn = urn;
             Name = name;
             OverallPhaseLatestTerm = overallPhase;
+            FinanceType = financeType;
             LondonWeightingLatestTerm = londonWeighting;
             NumberOfPupilsLatestTerm = numberOfPupils;
             FSMLatestTerm = fsm;
