@@ -10,8 +10,8 @@
         //public string LondonWeighting { get; set; }
         //public string Size { get; set; }
         //public string FSM { get; set; }
-        public decimal ScoreLow { get; set; }
-        public decimal ScoreHigh { get; set; }
+        public decimal? ScoreLow { get; set; }
+        public decimal? ScoreHigh { get; set; }
         public string RatingText { get; set; }
         public string RatingColour { get; set; }
 
