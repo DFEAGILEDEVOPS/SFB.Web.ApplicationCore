@@ -12,7 +12,7 @@ namespace SFB.Web.ApplicationCore.Models
         
         public string FinanceType { get; private set; }
 
-        public string LondonWeightingLatestTerm { get; private set; }
+        public string LondonWeighting { get; private set; }
 
         public decimal NumberOfPupilsLatestTerm { get; private set; }
 
@@ -30,27 +30,19 @@ namespace SFB.Web.ApplicationCore.Models
 
         public string LatestTerm { get; set; }
 
-        public bool HasSixthFormLatestTerm { get; set; }
+        public bool HasSixthForm { get; set; }
 
-        public string OverallPhaseLatestTerm { get; set; }
-        //public string OverallPhaseWSixthFormLatestTerm
-        //{
-        //    get
-        //    {
-        //        if (HasSixthForm)
-        //        {
-        //            return $"{OverallPhaseLatestTerm} with sixth form" ;
-        //        }
-        //        else
-        //        {
-        //            return OverallPhaseLatestTerm;
-        //        }
-                
-        //    }
-        //}
+        public string OverallPhase { get; set; }
 
         public decimal TotalExpenditureLatestTerm { get; set; }
+
         public decimal TotalIncomeLatestTerm { get; set; }
+
+        public decimal TeachersTotalLastTerm { get; set; }
+
+        public decimal TeachersLeaderLastTerm { get; set; }
+
+        public decimal WorkforceTotalLastTerm { get; set; }
 
         public SADSizeLookupDataObject SadSizeLookup { get; set; }
         public SADFSMLookupDataObject SadFSMLookup { get; set; }
@@ -71,13 +63,16 @@ namespace SFB.Web.ApplicationCore.Models
             bool hasSixthForm,
             decimal totalExpenditure,
             decimal totalIncome,
-            string latestTerm)
+            string latestTerm,
+            decimal teachersTotal,
+            decimal teachersLeader,
+            decimal workforceTotal)
         {
             Urn = urn;
             Name = name;
-            OverallPhaseLatestTerm = overallPhase;
+            OverallPhase = overallPhase;
             FinanceType = financeType;
-            LondonWeightingLatestTerm = londonWeighting;
+            LondonWeighting = londonWeighting;
             NumberOfPupilsLatestTerm = numberOfPupils;
             FSMLatestTerm = fsm;
             OfstedRating = ofstedRating;
@@ -85,10 +80,13 @@ namespace SFB.Web.ApplicationCore.Models
             ProgressScore = progressScore;
             ProgressScoreType = progressScoreType;
             Progress8Banding = progress8Banding;
-            HasSixthFormLatestTerm = hasSixthForm;
+            HasSixthForm = hasSixthForm;
             TotalExpenditureLatestTerm = totalExpenditure;
             TotalIncomeLatestTerm = totalIncome;
             LatestTerm = latestTerm;
+            TeachersTotalLastTerm = teachersTotal;
+            TeachersLeaderLastTerm = teachersLeader;
+            WorkforceTotalLastTerm = workforceTotal;
         }
     }
 }
