@@ -20,7 +20,7 @@ namespace SFB.Web.ApplicationCore.Models
 
         public DateTime? OfstedInspectionDate { get; private set; }
 
-        public decimal ProgressScore { get; private set; }
+        public decimal? ProgressScore { get; private set; }
 
         public string ProgressScoreType { get; private set; }
 
@@ -57,7 +57,7 @@ namespace SFB.Web.ApplicationCore.Models
             decimal fsm,
             string ofstedRating,
             DateTime? ofstedInspectionDate,
-            decimal progressScore,
+            decimal? progressScore,
             string progressScoreType,
             decimal progress8Banding,
             bool hasSixthForm,
