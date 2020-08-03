@@ -32,6 +32,8 @@ namespace SFB.Web.ApplicationCore.Models
 
         public bool HasSixthForm { get; set; }
 
+        public bool IsReturnsComplete { get; set; }
+
         public string OverallPhase { get; set; }
 
         public decimal TotalExpenditureLatestTerm { get; set; }
@@ -66,7 +68,8 @@ namespace SFB.Web.ApplicationCore.Models
             string latestTerm,
             decimal teachersTotal,
             decimal teachersLeader,
-            decimal workforceTotal)
+            decimal workforceTotal,
+            bool isReturnsComplete)
         {
             Urn = urn;
             Name = name;
@@ -87,6 +90,7 @@ namespace SFB.Web.ApplicationCore.Models
             TeachersTotalLastTerm = teachersTotal;
             TeachersLeaderLastTerm = teachersLeader;
             WorkforceTotalLastTerm = workforceTotal;
+            IsReturnsComplete = isReturnsComplete;
         }
     }
 }
