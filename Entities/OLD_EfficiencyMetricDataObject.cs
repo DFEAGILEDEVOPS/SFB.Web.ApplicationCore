@@ -3,7 +3,7 @@
 namespace SFB.Web.ApplicationCore.Entities
 {
     //TODO: refactor after DB schema optimization
-    public class EfficiencyMetricDataObject
+    public class OLD_EfficiencyMetricDataObject
     {
         #region private
 
@@ -236,75 +236,63 @@ namespace SFB.Web.ApplicationCore.Entities
         public decimal? Readprog_supp { get => READPROG_supp; set => READPROG_supp = value; }
         public decimal? Matprog_supp { get => MATPROG_supp; set => MATPROG_supp = value; }
 
-        public List<EfficiencyMetricNeighbourListItemObject> NeighbourRecords
+        public List<OLD_EfficiencyMetricNeighbourListItemObject> NeighbourRecords
         {
             get
             {
-                return new List<EfficiencyMetricNeighbourListItemObject>
+                return new List<OLD_EfficiencyMetricNeighbourListItemObject>
                 {
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour1, Efficiencydecileneighbour1),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour2, Efficiencydecileneighbour2),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour3, Efficiencydecileneighbour3),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour4, Efficiencydecileneighbour4),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour5, Efficiencydecileneighbour5),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour6, Efficiencydecileneighbour6),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour7, Efficiencydecileneighbour7),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour8, Efficiencydecileneighbour8),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour9, Efficiencydecileneighbour9),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour10, Efficiencydecileneighbour10),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour11, Efficiencydecileneighbour11),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour12, Efficiencydecileneighbour12),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour13, Efficiencydecileneighbour13),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour14, Efficiencydecileneighbour14),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour15, Efficiencydecileneighbour15),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour16, Efficiencydecileneighbour16),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour17, Efficiencydecileneighbour17),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour18, Efficiencydecileneighbour18),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour19, Efficiencydecileneighbour19),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour20, Efficiencydecileneighbour20),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour21, Efficiencydecileneighbour21),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour22, Efficiencydecileneighbour22),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour23, Efficiencydecileneighbour23),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour24, Efficiencydecileneighbour24),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour25, Efficiencydecileneighbour25),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour26, Efficiencydecileneighbour26),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour27, Efficiencydecileneighbour27),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour28, Efficiencydecileneighbour28),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour29, Efficiencydecileneighbour29),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour30, Efficiencydecileneighbour30),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour31, Efficiencydecileneighbour31),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour32, Efficiencydecileneighbour32),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour33, Efficiencydecileneighbour33),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour34, Efficiencydecileneighbour34),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour35, Efficiencydecileneighbour35),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour36, Efficiencydecileneighbour36),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour37, Efficiencydecileneighbour37),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour38, Efficiencydecileneighbour38),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour39, Efficiencydecileneighbour39),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour40, Efficiencydecileneighbour40),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour41, Efficiencydecileneighbour41),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour42, Efficiencydecileneighbour42),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour43, Efficiencydecileneighbour43),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour44, Efficiencydecileneighbour44),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour45, Efficiencydecileneighbour45),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour46, Efficiencydecileneighbour46),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour47, Efficiencydecileneighbour47),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour48, Efficiencydecileneighbour48),
-                    new EfficiencyMetricNeighbourListItemObject(Neighbour49, Efficiencydecileneighbour49),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour1, Efficiencydecileneighbour1),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour2, Efficiencydecileneighbour2),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour3, Efficiencydecileneighbour3),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour4, Efficiencydecileneighbour4),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour5, Efficiencydecileneighbour5),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour6, Efficiencydecileneighbour6),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour7, Efficiencydecileneighbour7),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour8, Efficiencydecileneighbour8),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour9, Efficiencydecileneighbour9),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour10, Efficiencydecileneighbour10),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour11, Efficiencydecileneighbour11),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour12, Efficiencydecileneighbour12),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour13, Efficiencydecileneighbour13),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour14, Efficiencydecileneighbour14),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour15, Efficiencydecileneighbour15),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour16, Efficiencydecileneighbour16),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour17, Efficiencydecileneighbour17),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour18, Efficiencydecileneighbour18),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour19, Efficiencydecileneighbour19),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour20, Efficiencydecileneighbour20),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour21, Efficiencydecileneighbour21),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour22, Efficiencydecileneighbour22),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour23, Efficiencydecileneighbour23),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour24, Efficiencydecileneighbour24),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour25, Efficiencydecileneighbour25),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour26, Efficiencydecileneighbour26),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour27, Efficiencydecileneighbour27),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour28, Efficiencydecileneighbour28),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour29, Efficiencydecileneighbour29),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour30, Efficiencydecileneighbour30),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour31, Efficiencydecileneighbour31),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour32, Efficiencydecileneighbour32),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour33, Efficiencydecileneighbour33),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour34, Efficiencydecileneighbour34),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour35, Efficiencydecileneighbour35),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour36, Efficiencydecileneighbour36),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour37, Efficiencydecileneighbour37),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour38, Efficiencydecileneighbour38),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour39, Efficiencydecileneighbour39),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour40, Efficiencydecileneighbour40),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour41, Efficiencydecileneighbour41),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour42, Efficiencydecileneighbour42),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour43, Efficiencydecileneighbour43),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour44, Efficiencydecileneighbour44),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour45, Efficiencydecileneighbour45),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour46, Efficiencydecileneighbour46),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour47, Efficiencydecileneighbour47),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour48, Efficiencydecileneighbour48),
+                    new OLD_EfficiencyMetricNeighbourListItemObject(Neighbour49, Efficiencydecileneighbour49),
                 };
             }
         }
-    }
-
-    public class EfficiencyMetricNeighbourListItemObject
-    {
-        public EfficiencyMetricNeighbourListItemObject(int urn, int rank)
-        {
-            URN = urn;
-            Rank = rank;
-        }
-        public int URN { get; set; }
-
-        public int Rank { get; set; }
     }
 }

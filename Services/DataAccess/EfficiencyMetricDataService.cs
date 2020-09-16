@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using SFB.Web.ApplicationCore.DataAccess;
 using SFB.Web.ApplicationCore.Entities;
@@ -15,14 +14,11 @@ namespace SFB.Web.ApplicationCore.Services.DataAccess
             _efficiencyMetricRepository = efficiencyMetricRepository;
         }
 
-        public Task<EfficiencyMetricDataObject> GetSchoolDataObjectByUrnAsync(int urn)
+        public async Task<EfficiencyMetricParentDataObject> GetSchoolDataObjectByUrnAsync(int urn)
         {
-            return _efficiencyMetricRepository.GetEfficiencyMetricDataObjectByUrnAsync(urn);
-        }
-
-        public Task<List<EfficiencyMetricDataObject>> GetMultipleSchoolDataObjectsByUrnsAsync(List<int> urns)
-        {
-            return _efficiencyMetricRepository.GetMultipleSchoolDataObjectsByUrnsAsync(urns);
+            var emData =  await _efficiencyMetricRepository.GetEfficiencyMetricDataObjectByUrnAsync(urn);
+            emData.Neighbours = emData.Neighbours.OrderByDescending(n => n.EfficiencyScore).ToList();
+            return emData;
         }
     }
 }
