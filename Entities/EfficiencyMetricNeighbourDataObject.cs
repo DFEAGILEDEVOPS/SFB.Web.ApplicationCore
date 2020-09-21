@@ -13,25 +13,21 @@ namespace SFB.Web.ApplicationCore.Entities
         public decimal Ever6Pub { get; set;}
         public decimal SenPub { get; set; }
         public decimal Expenditurepp { get; set; }
-        public string Address { get; set; }
-        public string Telephone { get; set; }
         public string HeadTeacher { get; set; }
-        public string SchoolType { get; set; }
         public string OfstedRating { get; set; }
         public string ReligiousCharacter { get; set; }
         public string OverallPhase { get; set; }
         public decimal Progress8 { get; set; }
         public decimal EfficiencyScore { get; set; }
-        public object Street { get; }
-        public object Town { get; }
-        public object Postcode { get; }
-        public string TelephoneNum { get; internal set; }
-        public string TypeOfEstablishment { get; internal set; }
-        public object HeadFirstName { get; internal set; }
-        public object HeadLastName { get; internal set; }
-
+        public string Street { get; set; }
+        public string Town { get; set; }
+        public string Postcode { get; set; }
+        public string Telephone { get; set; }
+        public string TypeOfEstablishment { get; set; }
+        public string HeadFirstName { get; set; }
+        public string HeadLastName { get; set; }
+        
         public LocationDataObject Location { get; set; }
 
-        public List<EfficiencyMetricNeighbourDataObject> Neighbours { get; set; }
     }
 }

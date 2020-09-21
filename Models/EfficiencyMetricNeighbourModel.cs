@@ -33,7 +33,7 @@ namespace SFB.Web.ApplicationCore.Models
 
         public string Address => $"{_data.Street}, {_data.Town}, {_data.Postcode}";
 
-        public string Telephone => _data.TelephoneNum;
+        public string Telephone => _data.Telephone;
 
         public string HeadTeacher => $"{_data.HeadFirstName} {_data.HeadLastName}";
 
