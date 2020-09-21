@@ -54,8 +54,6 @@
     <Compile Include="DataAccessInterfaces\ISelfAssesmentDashboardRepository.cs" />
     <Compile Include="Entities\EfficiencyMetricNeighbourDataObject.cs" />
     <Compile Include="Entities\EfficiencyMetricParentDataObject.cs" />
-    <Compile Include="Entities\OLD_EfficiencyMetricDataObject.cs" />
-    <Compile Include="Entities\OLD_EfficiencyMetricNeighbourListItemObject.cs" />
     <Compile Include="Entities\SADFSMLookupDataObject.cs" />
     <Compile Include="Entities\SADSizeLookupDataObject.cs" />
     <Compile Include="Entities\SADSchoolRatingsDataObject.cs" />
@@ -82,8 +80,6 @@
     <Compile Include="Helpers\GeoCodeCalc.cs" />
     <Compile Include="Models\EfficiencyMetricNeighbourModel.cs" />
     <Compile Include="Models\EfficiencyMetricParentModel.cs" />
-    <Compile Include="Models\OLD_EfficiencyMetricParentModel.cs" />
-    <Compile Include="Models\OLD_EfficiencyMetricNeighbourModel.cs" />
     <Compile Include="Models\FacetResultModel.cs" />
     <Compile Include="Models\HistoricalChartData.cs" />
     <Compile Include="Models\LaModel.cs" />

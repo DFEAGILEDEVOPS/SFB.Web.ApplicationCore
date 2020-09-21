@@ -9,12 +9,10 @@ namespace SFB.Web.ApplicationCore.Models
         private EfficiencyMetricParentDataObject _data;
         public int URN => _data.Urn;
         public int Rank => _data.EfficiencyDecileinGroup;
-
         public string Name => _data.Name;
-
         public string Phase => _data.Phase;
-
         public string LocalAuthority => _data.Laname;
+        public string SchoolType => _data.SchoolType;
 
         public List<EfficiencyMetricNeighbourModel> NeighbourDataModels { 
             get {

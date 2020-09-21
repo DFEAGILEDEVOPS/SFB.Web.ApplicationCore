@@ -1,5 +1,4 @@
 ﻿using SFB.Web.ApplicationCore.Entities;
-using System.Security.Permissions;
 
 namespace SFB.Web.ApplicationCore.Models
 {
