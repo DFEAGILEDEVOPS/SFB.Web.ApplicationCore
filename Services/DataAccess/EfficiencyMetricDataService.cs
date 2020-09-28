@@ -20,5 +20,11 @@ namespace SFB.Web.ApplicationCore.Services.DataAccess
             emData.Neighbours = emData.Neighbours.OrderByDescending(n => n.EfficiencyScore).ToList();
             return emData;
         }
+
+        public async Task<bool> GetStatusByUrnAsync(int urn)
+        {
+            var status = await _efficiencyMetricRepository.GetStatusByUrnAsync(urn);
+            return status;
+        }
     }
 }
