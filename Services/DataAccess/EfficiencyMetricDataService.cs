@@ -21,9 +21,9 @@ namespace SFB.Web.ApplicationCore.Services.DataAccess
             return emData;
         }
 
-        public bool GetStatusByUrn(int urn)
+        public Task<bool> GetStatusByUrn(int urn)
         {
-            return _efficiencyMetricRepository.GetStatusByUrn(urn);            
+            return _efficiencyMetricRepository.GetStatusByUrnAsync(urn);            
         }
     }
 }
