@@ -7,6 +7,6 @@ namespace SFB.Web.ApplicationCore.DataAccess
     {
         Task<EfficiencyMetricParentDataObject> GetEfficiencyMetricDataObjectByUrnAsync(int urn);
 
-        bool GetStatusByUrnAsync(int urn);
+        bool GetStatusByUrn(int urn);
     }
 }

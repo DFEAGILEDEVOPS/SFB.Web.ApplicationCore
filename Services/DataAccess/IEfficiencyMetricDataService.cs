@@ -6,6 +6,6 @@ namespace SFB.Web.ApplicationCore.Services.DataAccess
     public interface IEfficiencyMetricDataService
     {
         Task<EfficiencyMetricParentDataObject> GetSchoolDataObjectByUrnAsync(int urn);
-        bool GetStatusByUrnAsync(int urn);
+        bool GetStatusByUrn(int urn);
     }
 }
