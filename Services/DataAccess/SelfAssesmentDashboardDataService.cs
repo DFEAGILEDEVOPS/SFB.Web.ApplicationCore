@@ -2,6 +2,7 @@
 using SFB.Web.ApplicationCore.Entities;
 using SFB.Web.ApplicationCore.Helpers.Enums;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace SFB.Web.ApplicationCore.Services.DataAccess
@@ -41,8 +42,10 @@ namespace SFB.Web.ApplicationCore.Services.DataAccess
 
         public async Task<List<SADSchoolRatingsDataObject>> GetSADSchoolRatingsDataObjectAsync(string assesmentArea, string overallPhase, bool hasSixthForm, string londonWeighting, string size, string FSM, string term)
         {
-            var result = await _repository.GetSADSchoolRatingsDataObjectsAsync(assesmentArea, overallPhase, hasSixthForm, londonWeighting, size, FSM, term);
-            return result;
+            var results = await _repository.GetSADSchoolRatingsDataObjectsAsync(assesmentArea, overallPhase, hasSixthForm, londonWeighting, size, FSM, term);
+            var groups = results.GroupBy(r => r.Term);
+            var latestRatings = results.GroupBy(r => r.Term).Last();
+            return latestRatings.ToList();
         }
     }
 }

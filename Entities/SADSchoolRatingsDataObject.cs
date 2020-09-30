@@ -2,7 +2,7 @@
 {
     public class SADSchoolRatingsDataObject
     {
-        //public string Term { get; set; }
+        public string Term { get; set; }
         //public string OverallPhase { get; set; }
         //public string FinancialType { get; set; }
         //public string AssessmentArea { get; set; }
