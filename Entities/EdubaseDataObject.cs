@@ -57,10 +57,10 @@ namespace SFB.Web.ApplicationCore.Entities
         public float? NumberOfPupils { get; set; }
 
         [JsonProperty(PropertyName = EdubaseDataFieldNames.STAT_LOW)]
-        public int StatutoryLowAge { get; set; }
+        public int? StatutoryLowAge { get; set; }
 
         [JsonProperty(PropertyName = EdubaseDataFieldNames.STAT_HIGH)]
-        public int StatutoryHighAge { get; set; }
+        public int? StatutoryHighAge { get; set; }
 
         [JsonProperty(PropertyName = EdubaseDataFieldNames.HEAD_FIRST_NAME)]
         public string HeadFirstName { get; set; }
