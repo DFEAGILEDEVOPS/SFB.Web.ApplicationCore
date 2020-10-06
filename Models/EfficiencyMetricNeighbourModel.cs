@@ -28,7 +28,9 @@ namespace SFB.Web.ApplicationCore.Models
 
         public decimal ExpenditurePP => _data.Expenditurepp;
 
-        public decimal? Progress8 => _data.Progress8;
+        public decimal? Progress8 => _data.P8Score;
+
+        public decimal? Ks2 => _data.KS2Progress;
 
         public string Address => $"{_data.Street}, {_data.Town}, {_data.Postcode}";
 

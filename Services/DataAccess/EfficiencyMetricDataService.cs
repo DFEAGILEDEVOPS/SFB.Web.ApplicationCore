@@ -16,7 +16,14 @@ namespace SFB.Web.ApplicationCore.Services.DataAccess
 
         public async Task<EfficiencyMetricParentDataObject> GetSchoolDataObjectByUrnAsync(int urn)
         {
-            var emData =  await _efficiencyMetricRepository.GetEfficiencyMetricDataObjectByUrnAsync(urn);
+            EfficiencyMetricParentDataObject emData = null;
+            var emDatas =  await _efficiencyMetricRepository.GetEfficiencyMetricDataObjectByUrnAsync(urn);
+            if (emDatas.Count == 2) {
+                emData = emDatas.Where(em => em.PrimarySecondary == "Secondary").FirstOrDefault();
+            }
+            else {
+                emData = emDatas.First();
+            }
             emData.Neighbours = emData.Neighbours.OrderByDescending(n => n.EfficiencyScore).ToList();
             return emData;
         }
