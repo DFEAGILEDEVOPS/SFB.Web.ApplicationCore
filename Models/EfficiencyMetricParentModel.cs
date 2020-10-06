@@ -10,9 +10,12 @@ namespace SFB.Web.ApplicationCore.Models
         public int URN => _data.Urn;
         public int Rank => _data.EfficiencyDecileinGroup;
         public string Name => _data.Name;
-        public string Phase => _data.Phase;      
+        public string Phase => _data.Phase;
+        public string PrimarySecondary => _data.PrimarySecondary;
         public string LocalAuthority => _data.Laname;
         public string SchoolType => _data.SchoolType;
+        public decimal? Progress8 => _data.P8Score;
+        public decimal? Ks2 => _data.KS2Progress;
 
         public List<EfficiencyMetricNeighbourModel> NeighbourDataModels { 
             get {

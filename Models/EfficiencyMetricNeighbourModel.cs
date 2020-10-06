@@ -32,6 +32,8 @@ namespace SFB.Web.ApplicationCore.Models
 
         public decimal? Ks2 => _data.KS2Progress;
 
+        public string PrimarySecondary => _data.PrimarySecondary;
+
         public string Address => $"{_data.Street}, {_data.Town}, {_data.Postcode}";
 
         public string Telephone => _data.Telephone;
