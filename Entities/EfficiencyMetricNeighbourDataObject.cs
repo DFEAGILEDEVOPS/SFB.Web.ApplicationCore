@@ -17,6 +17,7 @@ namespace SFB.Web.ApplicationCore.Entities
         public string OfstedRating { get; set; }
         public string ReligiousCharacter { get; set; }
         public string OverallPhase { get; set; }
+        public string Phase { get; set; }
         public string PrimarySecondary { get; set; }
         public decimal? KS2Progress { get; set; }
         public decimal? P8Score { get; set; }

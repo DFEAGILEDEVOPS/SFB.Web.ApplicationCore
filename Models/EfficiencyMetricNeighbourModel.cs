@@ -47,6 +47,8 @@ namespace SFB.Web.ApplicationCore.Models
         public string ReligiousCharacter => _data.ReligiousCharacter;
 
         public string OverallPhase => _data.OverallPhase;
+        
+        public string Phase => _data.Phase;
 
         public decimal EfficiencyScore => _data.EfficiencyScore;
 
