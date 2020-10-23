@@ -369,6 +369,7 @@
         public const int DEFAULT = 15;
         public const int ONE_CLICK = 15;
         public const int BIC = 15;
+        public const int SPECIALS = 15;
     }
 
     public class CriteriaSearchConfig
@@ -387,6 +388,8 @@
         public const decimal BIC_DEFAULT_FLEX_FSM = 0.1M;
         public const decimal RR_PER_INCOME_TRESHOLD = -5M;
         public const int BIC_TARGET_POOL_COUNT = 50;
+        public const int SPECIALS_AGE_EXP_RANGE = 2;
+        public const int SPECIALS_EXP_PERCENTAGE = 5;
         public static readonly string[] BIC_ALLOWED_PHASES = new[] { "All-through", "Infant and junior", "Secondary", "Junior", "Middle deemed secondary", "Middle deemed primary" };
     }
 }

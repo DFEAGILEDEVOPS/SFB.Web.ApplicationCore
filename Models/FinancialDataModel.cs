@@ -109,7 +109,7 @@ namespace SFB.Web.ApplicationCore.Models
             {
                 try
                 {
-                    if (FinancialDataObjectModel != null)
+                    if (FinancialDataObjectModel != null && FinancialDataObjectModel.MATSATCentralServices != null)
                     {
                         return FinancialDataObjectModel.MATSATCentralServices.Equals("MAT");
                     }
@@ -128,7 +128,7 @@ namespace SFB.Web.ApplicationCore.Models
             {
                 try
                 {
-                    if (FinancialDataObjectModel != null)
+                    if (FinancialDataObjectModel != null && FinancialDataObjectModel.MATSATCentralServices != null)
                     {
                         return FinancialDataObjectModel.MATSATCentralServices.Equals("SAT");
                     }

@@ -133,6 +133,26 @@ namespace SFB.Web.ApplicationCore.Services.Comparison
             return criteria;
         }
 
+        public BenchmarkCriteria BuildFromSpecialComparisonCriteria(FinancialDataModel benchmarkSchoolData, SpecialCriteria specialCriteria, int percentageMargin = 0)
+        {
+            var criteria = new BenchmarkCriteria();
+
+            criteria.SchoolOverallPhase = new[] { "Special"};
+ 
+            //var minMarginFactor = 1 - ((percentageMargin + CriteriaSearchConfig.SPECIALS_EXT_PERCENTAGE) / 100m);
+            //var maxMarginFactor = 1 + ((percentageMargin + CriteriaSearchConfig.SPECIALS_EXT_PERCENTAGE) / 100m);
+
+            if (specialCriteria.SimilarPupils.GetValueOrDefault())
+            {
+                criteria.MinLowestAgePupils = benchmarkSchoolData.LowestAgePupils - CriteriaSearchConfig.SPECIALS_AGE_EXP_RANGE;
+                criteria.MaxLowestAgePupils = benchmarkSchoolData.LowestAgePupils + CriteriaSearchConfig.SPECIALS_AGE_EXP_RANGE;
+                criteria.MinHighestAgePupils = benchmarkSchoolData.HighestAgePupils - CriteriaSearchConfig.SPECIALS_AGE_EXP_RANGE;
+                criteria.MaxHighestAgePupils = benchmarkSchoolData.HighestAgePupils + CriteriaSearchConfig.SPECIALS_AGE_EXP_RANGE;                
+            }
+
+            return criteria;
+        }
+
         private decimal? WithinPercentLimits(decimal? percent)
         {
             if(percent > 100)

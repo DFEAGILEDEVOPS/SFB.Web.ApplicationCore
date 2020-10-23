@@ -72,42 +72,52 @@ namespace SFB.Web.ApplicationCore.Services.Comparison
                 }
             }
 
-            //STEP 3: Query return is still less than required. Flex the Urban/Rural criteria gradually.
-            //tryCount = 1;
-            //while (benchmarkSchools.Count < CriteriaSearchConfig.BIC_TARGET_POOL_COUNT)
-            //{
-            //    var urbanRuralDefault = defaultSchoolFinancialDataModel.UrbanRural;
-            //    var urbanRuralKey = Dictionaries.UrbanRuralDictionary.First(d => d.Value == urbanRuralDefault).Key;
-
-            //    var urbanRuralQuery = Dictionaries.UrbanRuralDictionary.Where(d =>
-            //        d.Key >= urbanRuralKey - tryCount && d.Key <= urbanRuralKey + tryCount).Select(d => d.Value).ToArray();
-
-            //    benchmarkCriteria.UrbanRural = urbanRuralQuery;
-
-            //    benchmarkSchools = await _financialDataService.SearchSchoolsByCriteriaAsync(benchmarkCriteria, estType);
-
-            //    if (benchmarkSchools.Count > CriteriaSearchConfig.BIC_TARGET_POOL_COUNT) //Number jumping to more than ideal. Clip from top by per people expenditure proximity.
-            //    {
-            //        benchmarkSchools = benchmarkSchools.OrderBy(b => Math.Abs(b.PerPupilTotalExpenditure.GetValueOrDefault() - defaultSchoolFinancialDataModel.PerPupilTotalExpenditure.GetValueOrDefault()))
-            //            .Take(CriteriaSearchConfig.BIC_TARGET_POOL_COUNT).ToList();
-            //        break;
-            //    }
-
-            //    if (urbanRuralQuery.Length == Dictionaries.UrbanRuralDictionary.Count)
-            //    {
-            //        break;
-            //    }
-
-            //    tryCount++;
-            //}
-
-            //STEP 4: Further reduce pool of 50 (or less) to target 15 by highest progress measure
+            //STEP 3: Further reduce pool of 50 (or less) to target 15 by highest progress measure
             if (benchmarkSchools.Count > ComparisonListLimit.BIC)
             {
                 benchmarkSchools = benchmarkSchools
                     .OrderByDescending(b => b.OverallPhase == "Secondary" || b.OverallPhase == "All-through" ? b.Progress8Measure : b.Ks2Progress)
                     .Take(ComparisonListLimit.BIC)
                     .ToList();
+            }
+
+            return new ComparisonResult()
+            {
+                BenchmarkSchools = benchmarkSchools,
+                BenchmarkCriteria = benchmarkCriteria
+            };
+        }
+
+        public async Task<ComparisonResult> GenerateBenchmarkListWithSpecialComparisonAsync(BenchmarkCriteria benchmarkCriteria, SpecialCriteria specialCriteria, FinancialDataModel defaultSchoolFinancialDataModel)
+        {
+            //STEP 1: Straight search with prefilled criteria
+            var benchmarkSchools = await _financialDataService.SearchSchoolsByCriteriaAsync(benchmarkCriteria, EstablishmentType.All);
+
+            if (benchmarkSchools.Count > ComparisonListLimit.SPECIALS) //Original query returns more than required. Clip from top by per people expenditure proximity.
+            {
+                benchmarkSchools = benchmarkSchools.OrderBy(b => Math.Abs(b.NoPupils.GetValueOrDefault() - defaultSchoolFinancialDataModel.PupilCount.GetValueOrDefault())).Take(ComparisonListLimit.SPECIALS).ToList();
+            }
+
+            //STEP 2: Original query returns less than required. Expand criteria values gradually and try this max 10 times
+            var tryCount = 0;
+            while (benchmarkSchools.Count < ComparisonListLimit.SPECIALS)
+            {
+                if (++tryCount > CriteriaSearchConfig.MAX_TRY_LIMIT) //Max query try reached. Return whatever is found.
+                {
+                    break;
+                }
+
+                benchmarkCriteria = _benchmarkCriteriaBuilderService.BuildFromSpecialComparisonCriteria(defaultSchoolFinancialDataModel, specialCriteria, tryCount);
+
+                benchmarkSchools = await _financialDataService.SearchSchoolsByCriteriaAsync(benchmarkCriteria, EstablishmentType.All);
+
+                if (benchmarkSchools.Count > ComparisonListLimit.SPECIALS) //Number jumping to more than ideal. Cut from top by proximity.
+                {
+                    benchmarkSchools = benchmarkSchools.OrderBy(b => Math.Abs(b.NoPupils.GetValueOrDefault() - defaultSchoolFinancialDataModel.PupilCount.GetValueOrDefault())).Take(ComparisonListLimit.SPECIALS).ToList();
+                    benchmarkCriteria.MinNoPupil = benchmarkSchools.Min(s => s.NoPupils);
+                    benchmarkCriteria.MaxNoPupil = benchmarkSchools.Max(s => s.NoPupils); //Update the criteria to reflect the max and min pupil count of the found schools
+                    break;
+                }
             }
 
             return new ComparisonResult()
@@ -262,5 +272,6 @@ namespace SFB.Web.ApplicationCore.Services.Comparison
                 BenchmarkCriteria = benchmarkCriteria
             };
         }
+
     }
 }
