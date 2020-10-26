@@ -1,5 +1,8 @@
-﻿using SFB.Web.ApplicationCore.Helpers.Constants;
+﻿using SFB.Web.ApplicationCore.Attributes;
+using SFB.Web.ApplicationCore.Helpers.Constants;
 using SFB.Web.ApplicationCore.Models;
+using System.Linq;
+using System.Reflection;
 
 namespace SFB.Web.ApplicationCore.Services.Comparison
 {
@@ -133,15 +136,12 @@ namespace SFB.Web.ApplicationCore.Services.Comparison
             return criteria;
         }
 
-        public BenchmarkCriteria BuildFromSpecialComparisonCriteria(FinancialDataModel benchmarkSchoolData, SpecialCriteria specialCriteria, int percentageMargin = 0)
+        public BenchmarkCriteria BuildFromSpecialComparisonCriteria(FinancialDataModel benchmarkSchoolData, SpecialCriteria specialCriteria, int tryCount = 0)
         {
             var criteria = new BenchmarkCriteria();
 
             criteria.SchoolOverallPhase = new[] { "Special"};
  
-            //var minMarginFactor = 1 - ((percentageMargin + CriteriaSearchConfig.SPECIALS_EXT_PERCENTAGE) / 100m);
-            //var maxMarginFactor = 1 + ((percentageMargin + CriteriaSearchConfig.SPECIALS_EXT_PERCENTAGE) / 100m);
-
             if (specialCriteria.SimilarPupils.GetValueOrDefault())
             {
                 criteria.MinLowestAgePupils = benchmarkSchoolData.LowestAgePupils - CriteriaSearchConfig.SPECIALS_AGE_EXP_RANGE;
@@ -150,7 +150,35 @@ namespace SFB.Web.ApplicationCore.Services.Comparison
                 criteria.MaxHighestAgePupils = benchmarkSchoolData.HighestAgePupils + CriteriaSearchConfig.SPECIALS_AGE_EXP_RANGE;                
             }
 
+
+            foreach (var sen in specialCriteria.TopSenCriteria)
+            {
+                FindAndSetMaxMinSenInCriteria(criteria, sen, tryCount);
+            }
+
             return criteria;
+        }
+
+        private void FindAndSetMaxMinSenInCriteria(BenchmarkCriteria criteria, SenCriterion sen, int tryCount)
+        {
+            foreach (var property in typeof(BenchmarkCriteria).GetProperties())
+            {
+                var uiNameAttribute = property.GetCustomAttributes(typeof(PrettyNameAttribute)).FirstOrDefault();
+
+                if ((uiNameAttribute as PrettyNameAttribute)?.Name == sen.Name)
+                {
+                    if (property.Name.StartsWith("Min"))
+                    {
+                        var expandedValue = sen.Min - (sen.Original * CriteriaSearchConfig.SPECIALS_EXP_PERCENTAGE * tryCount / 100);
+                        property.SetValue(criteria, expandedValue);
+                    }
+                    else if (property.Name.StartsWith("Max"))
+                    {
+                        var expandedValue = sen.Max + (sen.Original * CriteriaSearchConfig.SPECIALS_EXP_PERCENTAGE * tryCount / 100);
+                        property.SetValue(criteria, expandedValue);
+                    }
+                }
+            }
         }
 
         private decimal? WithinPercentLimits(decimal? percent)

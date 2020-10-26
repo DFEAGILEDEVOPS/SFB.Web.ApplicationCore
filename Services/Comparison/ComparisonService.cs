@@ -106,11 +106,17 @@ namespace SFB.Web.ApplicationCore.Services.Comparison
                 {
                     break;
                 }
+#if DEBUG
+                System.Diagnostics.Debug.WriteLine(tryCount, "Try count");
+#endif
 
                 benchmarkCriteria = _benchmarkCriteriaBuilderService.BuildFromSpecialComparisonCriteria(defaultSchoolFinancialDataModel, specialCriteria, tryCount);
 
                 benchmarkSchools = await _financialDataService.SearchSchoolsByCriteriaAsync(benchmarkCriteria, EstablishmentType.All);
 
+#if DEBUG
+                System.Diagnostics.Debug.WriteLine(benchmarkSchools.Count, "Result count");
+#endif
                 if (benchmarkSchools.Count > ComparisonListLimit.SPECIALS) //Number jumping to more than ideal. Cut from top by proximity.
                 {
                     benchmarkSchools = benchmarkSchools.OrderBy(b => Math.Abs(b.NoPupils.GetValueOrDefault() - defaultSchoolFinancialDataModel.PupilCount.GetValueOrDefault())).Take(ComparisonListLimit.SPECIALS).ToList();

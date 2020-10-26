@@ -390,6 +390,7 @@
         public const int BIC_TARGET_POOL_COUNT = 50;
         public const int SPECIALS_AGE_EXP_RANGE = 2;
         public const int SPECIALS_EXP_PERCENTAGE = 5;
+        public static readonly int[] SPECIALS_CONSTANT_SEN_TOPUP = new[] { 15, 10, 5 };
         public static readonly string[] BIC_ALLOWED_PHASES = new[] { "All-through", "Infant and junior", "Secondary", "Junior", "Middle deemed secondary", "Middle deemed primary" };
     }
 }

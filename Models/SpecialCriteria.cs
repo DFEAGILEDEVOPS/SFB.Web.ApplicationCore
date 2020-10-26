@@ -1,13 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace SFB.Web.ApplicationCore.Models
 {
-    public class SpecialCriteria : IEquatable<SpecialCriteria>
+    public class SpecialCriteria
     {
         public bool? SimilarPupils { get; set; }
-        public bool Equals(SpecialCriteria other)
-        {
-            return this.SimilarPupils == other.SimilarPupils;
-        }
+
+        public List<SenCriterion> TopSenCriteria { get; set; }
     }
 }
