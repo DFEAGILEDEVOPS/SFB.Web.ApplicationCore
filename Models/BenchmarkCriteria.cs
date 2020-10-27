@@ -2,6 +2,8 @@
 using System.ComponentModel.DataAnnotations;
 using SFB.Web.ApplicationCore.Helpers.Constants;
 using SFB.Web.ApplicationCore.Attributes;
+using System.Reflection;
+using System.Linq;
 
 namespace SFB.Web.ApplicationCore.Models
 {
@@ -478,5 +480,60 @@ namespace SFB.Web.ApplicationCore.Models
         [Range(0, Int32.MaxValue)]
         [DBField(docName: SchoolTrustFinanceDataFieldNames.SCHOOL_OVERALL_PHASE_BREAKDOWN, name: SchoolTrustFinanceDataFieldNames.SCHOOL_OVERALL_PHASE_CROSS_AT, type: CriteriaFieldComparisonTypes.MAX)]
         public int? MaxCrossPhaseAT { get; set; }
+
+        internal void FindAndSetMaxMinSenInCriteria(SenCriterion sen, int tryCount)
+        {
+            foreach (var property in typeof(BenchmarkCriteria).GetProperties())
+            {
+                var uiNameAttribute = property.GetCustomAttributes(typeof(PrettyNameAttribute)).FirstOrDefault();
+
+                if ((uiNameAttribute as PrettyNameAttribute)?.Name == sen.CriteriaName)
+                {
+                    if (property.Name.StartsWith("Min"))
+                    {
+                        var expandedValue = WithinSpecialPercentLimits(sen.Min - (sen.Original * CriteriaSearchConfig.SPECIALS_EXP_PERCENTAGE * tryCount / 100));
+                        property.SetValue(this, expandedValue);
+                    }
+                    else if (property.Name.StartsWith("Max"))
+                    {
+                        var expandedValue = WithinSpecialPercentLimits(sen.Max + (sen.Original * CriteriaSearchConfig.SPECIALS_EXP_PERCENTAGE * tryCount / 100));
+                        property.SetValue(this, expandedValue);
+                    }
+                }
+            }
+        }
+
+        internal void FindAndSetMaxMinSenInCriteria(string senDBName, decimal? minValue, decimal? maxValue)
+        {
+            foreach (var property in typeof(BenchmarkCriteria).GetProperties())
+            {
+                var uiNameAttribute = property.GetCustomAttributes(typeof(DBFieldAttribute)).FirstOrDefault();
+
+                if ((uiNameAttribute as DBFieldAttribute)?.Name == senDBName)
+                {
+                    if (property.Name.StartsWith("Min"))
+                    {
+                        property.SetValue(this, minValue);
+                    }
+                    else if (property.Name.StartsWith("Max"))
+                    {
+                        property.SetValue(this, maxValue);
+                    }
+                }
+            }
+        }
+
+        private decimal? WithinSpecialPercentLimits(decimal? percent)
+        {
+            if (percent > 100)
+            {
+                return 100;
+            }
+            if (percent < CriteriaSearchConfig.SPECIALS_SEN_PERCENTAGE_MIN_LIMIT)
+            {
+                return CriteriaSearchConfig.SPECIALS_SEN_PERCENTAGE_MIN_LIMIT;
+            }
+            else return percent;
+        }
     }
 }

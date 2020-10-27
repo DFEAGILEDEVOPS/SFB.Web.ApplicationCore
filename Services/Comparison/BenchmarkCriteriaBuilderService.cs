@@ -153,32 +153,10 @@ namespace SFB.Web.ApplicationCore.Services.Comparison
 
             foreach (var sen in specialCriteria.TopSenCriteria)
             {
-                FindAndSetMaxMinSenInCriteria(criteria, sen, tryCount);
+                criteria.FindAndSetMaxMinSenInCriteria(sen, tryCount);
             }
 
             return criteria;
-        }
-
-        private void FindAndSetMaxMinSenInCriteria(BenchmarkCriteria criteria, SenCriterion sen, int tryCount)
-        {
-            foreach (var property in typeof(BenchmarkCriteria).GetProperties())
-            {
-                var uiNameAttribute = property.GetCustomAttributes(typeof(PrettyNameAttribute)).FirstOrDefault();
-
-                if ((uiNameAttribute as PrettyNameAttribute)?.Name == sen.Name)
-                {
-                    if (property.Name.StartsWith("Min"))
-                    {
-                        var expandedValue = sen.Min - (sen.Original * CriteriaSearchConfig.SPECIALS_EXP_PERCENTAGE * tryCount / 100);
-                        property.SetValue(criteria, expandedValue);
-                    }
-                    else if (property.Name.StartsWith("Max"))
-                    {
-                        var expandedValue = sen.Max + (sen.Original * CriteriaSearchConfig.SPECIALS_EXP_PERCENTAGE * tryCount / 100);
-                        property.SetValue(criteria, expandedValue);
-                    }
-                }
-            }
         }
 
         private decimal? WithinPercentLimits(decimal? percent)

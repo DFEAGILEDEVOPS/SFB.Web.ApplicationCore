@@ -308,11 +308,8 @@
         public const string MATTotals = "MAT-Totals";//Total of Academy only figures of the MAT
         public const string MATOverview = "MAT-Overview";//MAT + all of its Academies' figures
 
-        public const string EfficiencyMetrics = "EfficiencyMetrics";
-
         public const string Unidentified = "Unidentified";
 
-        //public const string MATDistributed = "MAT-Distributed";//retired
     }
 
     public class SearchErrorMessages
@@ -390,6 +387,9 @@
         public const int BIC_TARGET_POOL_COUNT = 50;
         public const int SPECIALS_AGE_EXP_RANGE = 2;
         public const int SPECIALS_EXP_PERCENTAGE = 5;
+        public const int SPECIALS_SEN_PERCENTAGE_MIN_LIMIT = 5;
+        public const int SPECIALS_TOP_SEN_RATIO_THRESHOLD = 10;
+        public const int SPECIALS_TOP_SEN_NUMBER = 3;
         public static readonly int[] SPECIALS_CONSTANT_SEN_TOPUP = new[] { 15, 10, 5 };
         public static readonly string[] BIC_ALLOWED_PHASES = new[] { "All-through", "Infant and junior", "Secondary", "Junior", "Middle deemed secondary", "Middle deemed primary" };
     }

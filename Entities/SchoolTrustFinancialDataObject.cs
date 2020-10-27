@@ -1,6 +1,10 @@
 ﻿using Newtonsoft.Json;
+using SFB.Web.ApplicationCore.Attributes;
 using SFB.Web.ApplicationCore.Helpers.Constants;
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
 
 namespace SFB.Web.ApplicationCore.Entities
 {
@@ -478,5 +482,20 @@ namespace SFB.Web.ApplicationCore.Entities
 
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.TEACHERS_LEADERSHIP_PAY)]
         public decimal? PerTeachersOnLeadershipPay { get; set; }
+
+        internal decimal? getValueByCriteriaName(string criteriaName)
+        {
+            foreach (var property in typeof(SchoolTrustFinancialDataObject).GetProperties())
+            {
+                var uiNameAttribute = property.GetCustomAttributes(typeof(JsonPropertyAttribute)).FirstOrDefault();
+
+                if ((uiNameAttribute as JsonPropertyAttribute)?.PropertyName == criteriaName)
+                {
+                    return (decimal?)property.GetValue(this);
+                }
+            }
+
+            return null;
+        }
     }
 }

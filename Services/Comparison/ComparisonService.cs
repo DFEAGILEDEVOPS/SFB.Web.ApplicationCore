@@ -93,9 +93,23 @@ namespace SFB.Web.ApplicationCore.Services.Comparison
             //STEP 1: Straight search with prefilled criteria
             var benchmarkSchools = await _financialDataService.SearchSchoolsByCriteriaAsync(benchmarkCriteria, EstablishmentType.All);
 
-            if (benchmarkSchools.Count > ComparisonListLimit.SPECIALS) //Original query returns more than required. Clip from top by per people expenditure proximity.
+#if DEBUG
+            System.Diagnostics.Debug.WriteLine(benchmarkSchools.Count, "Result count");
+#endif
+
+            if (benchmarkSchools.Count > ComparisonListLimit.SPECIALS) //Original query returns more than required. Clip to closest schools to the top SEN criteria.
             {
-                benchmarkSchools = benchmarkSchools.OrderBy(b => Math.Abs(b.NoPupils.GetValueOrDefault() - defaultSchoolFinancialDataModel.PupilCount.GetValueOrDefault())).Take(ComparisonListLimit.SPECIALS).ToList();
+                var highestSENName = specialCriteria.TopSenCriteria[0].DataName;
+                var highestSENValue = specialCriteria.TopSenCriteria[0].Original.GetValueOrDefault();
+
+#if DEBUG
+                System.Diagnostics.Debug.WriteLine(highestSENName, "Clipping by approximation");
+#endif
+                benchmarkSchools = benchmarkSchools.OrderBy(b => Math.Abs(b.getValueByCriteriaName(highestSENName).GetValueOrDefault() - highestSENValue)).Take(ComparisonListLimit.SPECIALS).ToList();
+                //Updating the criteria to reflect the final min and max used values used on top SEN
+                var minValue = benchmarkSchools.Min(s => s.getValueByCriteriaName(highestSENName));
+                var maxValue = benchmarkSchools.Max(s => s.getValueByCriteriaName(highestSENName));
+                benchmarkCriteria.FindAndSetMaxMinSenInCriteria(highestSENName, minValue, maxValue);
             }
 
             //STEP 2: Original query returns less than required. Expand criteria values gradually and try this max 10 times
@@ -107,22 +121,29 @@ namespace SFB.Web.ApplicationCore.Services.Comparison
                     break;
                 }
 #if DEBUG
-                System.Diagnostics.Debug.WriteLine(tryCount, "Try count");
+                System.Diagnostics.Debug.WriteLine(tryCount, "Expansion try count");
 #endif
 
                 benchmarkCriteria = _benchmarkCriteriaBuilderService.BuildFromSpecialComparisonCriteria(defaultSchoolFinancialDataModel, specialCriteria, tryCount);
 
                 benchmarkSchools = await _financialDataService.SearchSchoolsByCriteriaAsync(benchmarkCriteria, EstablishmentType.All);
-
 #if DEBUG
                 System.Diagnostics.Debug.WriteLine(benchmarkSchools.Count, "Result count");
 #endif
-                if (benchmarkSchools.Count > ComparisonListLimit.SPECIALS) //Number jumping to more than ideal. Cut from top by proximity.
+
+                if (benchmarkSchools.Count > ComparisonListLimit.SPECIALS) //Number jumping to more than ideal. Clip to closest schools to the top SEN criteria.
                 {
-                    benchmarkSchools = benchmarkSchools.OrderBy(b => Math.Abs(b.NoPupils.GetValueOrDefault() - defaultSchoolFinancialDataModel.PupilCount.GetValueOrDefault())).Take(ComparisonListLimit.SPECIALS).ToList();
-                    benchmarkCriteria.MinNoPupil = benchmarkSchools.Min(s => s.NoPupils);
-                    benchmarkCriteria.MaxNoPupil = benchmarkSchools.Max(s => s.NoPupils); //Update the criteria to reflect the max and min pupil count of the found schools
-                    break;
+                    var highestSENName = specialCriteria.TopSenCriteria[0].DataName;
+                    var highestSENValue = specialCriteria.TopSenCriteria[0].Original.GetValueOrDefault();
+
+#if DEBUG
+                    System.Diagnostics.Debug.WriteLine(highestSENName, "Clipping by approximation");
+#endif
+                    benchmarkSchools = benchmarkSchools.OrderBy(b => Math.Abs(b.getValueByCriteriaName(highestSENName).GetValueOrDefault() - highestSENValue)).Take(ComparisonListLimit.SPECIALS).ToList();
+                    //Updating the criteria to reflect the final min and max used values used on top SEN
+                    var minValue = benchmarkSchools.Min(s => s.getValueByCriteriaName(highestSENName));
+                    var maxValue = benchmarkSchools.Max(s => s.getValueByCriteriaName(highestSENName));
+                    benchmarkCriteria.FindAndSetMaxMinSenInCriteria(highestSENName, minValue, maxValue); break;
                 }
             }
 

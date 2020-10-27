@@ -90,6 +90,7 @@
     <Compile Include="Models\SelfAssesmentModel.cs" />
     <Compile Include="Models\SchoolModel.cs" />
     <Compile Include="Models\SearchResultsModel.cs" />
+    <Compile Include="Models\SENCriteriaModel.cs" />
     <Compile Include="Models\SenCriterion.cs" />
     <Compile Include="Models\SimpleCriteria.cs" />
     <Compile Include="Models\SpecialCriteria.cs" />
