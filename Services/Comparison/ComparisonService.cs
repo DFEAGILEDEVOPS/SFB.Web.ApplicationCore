@@ -91,7 +91,7 @@ namespace SFB.Web.ApplicationCore.Services.Comparison
         public async Task<ComparisonResult> GenerateBenchmarkListWithSpecialComparisonAsync(BenchmarkCriteria benchmarkCriteria, SpecialCriteria specialCriteria, FinancialDataModel defaultSchoolFinancialDataModel)
         {
             //STEP 1: Straight search with prefilled criteria
-            var benchmarkSchools = await _financialDataService.SearchSchoolsByCriteriaAsync(benchmarkCriteria, EstablishmentType.All);
+            var benchmarkSchools = await _financialDataService.SearchSchoolsByCriteriaAsync(benchmarkCriteria, EstablishmentType.All, true);
 
 #if DEBUG
             System.Diagnostics.Debug.WriteLine(benchmarkSchools.Count, "Result count");
@@ -126,7 +126,7 @@ namespace SFB.Web.ApplicationCore.Services.Comparison
 
                 benchmarkCriteria = _benchmarkCriteriaBuilderService.BuildFromSpecialComparisonCriteria(defaultSchoolFinancialDataModel, specialCriteria, tryCount);
 
-                benchmarkSchools = await _financialDataService.SearchSchoolsByCriteriaAsync(benchmarkCriteria, EstablishmentType.All);
+                benchmarkSchools = await _financialDataService.SearchSchoolsByCriteriaAsync(benchmarkCriteria, EstablishmentType.All, true);
 #if DEBUG
                 System.Diagnostics.Debug.WriteLine(benchmarkSchools.Count, "Result count");
 #endif
