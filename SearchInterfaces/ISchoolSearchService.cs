@@ -17,5 +17,7 @@ namespace SFB.Web.ApplicationCore.Services.Search
         Task<SearchResultsModel<SchoolSearchResult>> SearchSchoolByLatLonAsync(string lat, string lon, decimal distance, int skip, int take, string orderby, NameValueCollection queryParams);
  
         Task<SearchResultsModel<SchoolSearchResult>> SearchAcademiesByCompanyNoAsync(int companyNo, int skip, int take, string @orderby, NameValueCollection queryParams);
+        
+        Task<SearchResultsModel<SchoolSearchResult>> SearchAcademiesByUIDAsync(int uid, int skip, int take, string @orderby, NameValueCollection queryParams);
     }
 }

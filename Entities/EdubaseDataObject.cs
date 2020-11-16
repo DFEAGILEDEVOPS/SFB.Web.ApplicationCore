@@ -41,6 +41,9 @@ namespace SFB.Web.ApplicationCore.Entities
         [JsonProperty(PropertyName = EdubaseDataFieldNames.COMPANY_NUMBER)]
         public int? CompanyNumber { get; set; }
 
+        [JsonProperty(PropertyName = EdubaseDataFieldNames.UID)]
+        public int? UID { get; set; }
+
         [JsonProperty(PropertyName = EdubaseDataFieldNames.LA_CODE)]
         public int LACode { get; set; }
 
