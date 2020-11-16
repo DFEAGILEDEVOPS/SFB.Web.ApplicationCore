@@ -11,6 +11,7 @@ namespace SFB.Web.ApplicationCore.Services.DataAccess
         Task<List<EdubaseDataObject>> GetSchoolDataObjectByLaEstabAsync(string laEstab, bool openOnly);        
         Task<List<EdubaseDataObject>> GetMultipleSchoolDataObjectsByUrnsAsync(List<int> urns);
         Task<IEnumerable<EdubaseDataObject>> GetAcademiesByCompanyNumberAsync(int companyNo);
+        Task<IEnumerable<EdubaseDataObject>> GetAcademiesByUidAsync(int uid);
         Task<int> GetAcademiesCountByCompanyNumberAsync(int companyNo);
     }
 }

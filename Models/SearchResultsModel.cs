@@ -70,6 +70,7 @@ namespace SFB.Web.ApplicationCore.Models
         public string Gender { get; set; }
         public string MATNumber { get; set; }
         public string CompanyNumber { get; set; }
+        public string UID { get; set; }
         public string NurseryProvisionName { get; set; }
         public GeographyPoint Location { get; set; }
 

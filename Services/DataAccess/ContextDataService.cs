@@ -43,5 +43,10 @@ namespace SFB.Web.ApplicationCore.Services.DataAccess
         {
             return await _edubaseRepository.GetAcademiesCountByCompanyNoAsync(companyNo);
         }
+
+        public async Task<IEnumerable<EdubaseDataObject>> GetAcademiesByUidAsync(int uid)
+        {
+            return await _edubaseRepository.GetAcademiesByUidAsync(uid);
+        }
     }
 }
