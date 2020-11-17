@@ -32,6 +32,8 @@ namespace SFB.Web.ApplicationCore.Models
         public string TrustOrCompanyName { get; set; }
 
         public string CompanyNumber { get; set; }
+        
+        public string Uid { get; set; }
 
         public string Trusts { get; set; }
     }
