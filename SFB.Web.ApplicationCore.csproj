@@ -61,7 +61,7 @@
     <Compile Include="DataAccessInterfaces\IDataCollectionManager.cs" />
     <Compile Include="DataAccessInterfaces\IEdubaseRepository.cs" />
     <Compile Include="DataAccessInterfaces\IFinancialDataRepository.cs" />
-    <Compile Include="Entities\AcademiesContextualDataObject.cs" />
+    <Compile Include="Entities\AcademySummaryDataObject.cs" />
     <Compile Include="Entities\EdubaseDataObject.cs" />
     <Compile Include="Entities\LocationDataObject.cs" />
     <Compile Include="Entities\SchoolTrustFinancialDataObject.cs" />

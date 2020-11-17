@@ -109,7 +109,7 @@ namespace SFB.Web.ApplicationCore.Services.DataAccess
             return await _financialDataRepository.GetEstablishmentRecordCountAsync(term, estType);
         }
 
-        public async Task<List<AcademiesContextualDataObject>> GetAcademiesByCompanyNumberAsync(string term, int companyNo)
+        public async Task<List<AcademySummaryDataObject>> GetAcademiesByCompanyNumberAsync(string term, int companyNo)
         {
             return await _financialDataRepository.GetAcademiesContextualDataObjectAsync(term, companyNo);
         }

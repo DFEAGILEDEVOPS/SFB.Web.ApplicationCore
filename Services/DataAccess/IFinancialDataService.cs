@@ -8,7 +8,7 @@ namespace SFB.Web.ApplicationCore.Services.DataAccess
 {
     public interface IFinancialDataService : ITermYearDataService
     {
-        Task<List<AcademiesContextualDataObject>> GetAcademiesByCompanyNumberAsync(string term, int companyNo);
+        Task<List<AcademySummaryDataObject>> GetAcademiesByCompanyNumberAsync(string term, int companyNo);
         Task<List<SchoolTrustFinancialDataObject>> GetMultipleTrustDataObjectsByCompanyNumbersAsync(List<int> companyNos);
         Task<SchoolTrustFinancialDataObject> GetTrustFinancialDataObjectByMatNameAsync(string matName, string term, MatFinancingType matFinance);
         Task<FinancialDataModel> GetSchoolsLatestFinancialDataModelAsync(int urn, EstablishmentType schoolFinancialType);

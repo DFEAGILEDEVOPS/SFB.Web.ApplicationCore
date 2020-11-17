@@ -3,7 +3,7 @@ using SFB.Web.ApplicationCore.Helpers.Constants;
 
 namespace SFB.Web.ApplicationCore.Entities
 {
-    public class AcademiesContextualDataObject
+    public class AcademySummaryDataObject
     {
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.URN)]
         public int URN;
