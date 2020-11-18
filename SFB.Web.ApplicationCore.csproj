@@ -52,11 +52,13 @@
     <Compile Include="CachingInterfaces\IBicComparisonResultCachingService.cs" />
     <Compile Include="DataAccessInterfaces\IEfficiencyMetricRepository.cs" />
     <Compile Include="DataAccessInterfaces\ISelfAssesmentDashboardRepository.cs" />
+    <Compile Include="DataAccessInterfaces\ITrustHistoryRepository.cs" />
     <Compile Include="Entities\EfficiencyMetricNeighbourDataObject.cs" />
     <Compile Include="Entities\EfficiencyMetricParentDataObject.cs" />
     <Compile Include="Entities\SADFSMLookupDataObject.cs" />
     <Compile Include="Entities\SADSizeLookupDataObject.cs" />
     <Compile Include="Entities\SADSchoolRatingsDataObject.cs" />
+    <Compile Include="Entities\TrustHistoryDataObject.cs" />
     <Compile Include="Models\ApiResponse.cs" />
     <Compile Include="DataAccessInterfaces\IDataCollectionManager.cs" />
     <Compile Include="DataAccessInterfaces\IEdubaseRepository.cs" />
@@ -94,6 +96,7 @@
     <Compile Include="Models\SenCriterion.cs" />
     <Compile Include="Models\SimpleCriteria.cs" />
     <Compile Include="Models\SpecialCriteria.cs" />
+    <Compile Include="Models\TrustHistoryModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CachingInterfaces\IActiveUrnsService.cs" />
     <Compile Include="Services\Comparison\BenchmarkCriteriaBuilderService.cs" />
@@ -113,7 +116,9 @@
     <Compile Include="SearchInterfaces\ITrustSearchService.cs" />
     <Compile Include="ApiInterfaces\ISptReportService.cs" />
     <Compile Include="Services\DataAccess\ISelfAssesmentDashboardDataService.cs" />
+    <Compile Include="Services\DataAccess\ITrustHistoryService.cs" />
     <Compile Include="Services\DataAccess\SelfAssesmentDashboardDataService.cs" />
+    <Compile Include="Services\DataAccess\TrustHistoryService.cs" />
     <Compile Include="Services\LocalAuthorities\ILaSearchService.cs" />
     <Compile Include="Services\LocalAuthorities\LaSearchService.cs" />
     <Compile Include="Services\Validation\ValidationService.cs" />
