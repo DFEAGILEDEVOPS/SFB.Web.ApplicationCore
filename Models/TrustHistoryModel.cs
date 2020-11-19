@@ -29,8 +29,7 @@ namespace SFB.Web.ApplicationCore.Models
                 foreach (var @event in academy.Events)
                 {
                     DateTime.TryParse(@event.Date, out DateTime date);
-                    var formattedTerm = $"{int.Parse(@event.Term) - 1}/{@event.Term}";
-                    this.Events.Add(new EventModel(formattedTerm, date, @event.EventType, academy.EstablishmentName, academy.URN ));
+                    this.Events.Add(new EventModel(@event.Term, date, @event.EventType, academy.EstablishmentName, academy.URN ));
                 }
             }
 

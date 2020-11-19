@@ -5,10 +5,10 @@ namespace SFB.Web.ApplicationCore.Entities
     public class TrustHistoryDataObject
     {
         public int UID { get; set; }
-        public string GroupName { get; set; }
-        public string GroupStatus { get; set; }
-        public string GroupOpenDate { get; set; }
-        public string GroupClosedDate { get; set; }
+        //public string GroupName { get; set; }
+        //public string GroupStatus { get; set; }
+        //public string GroupOpenDate { get; set; }
+        //public string GroupClosedDate { get; set; }
 
         public AcademyOfTrust[] Academies { get; set; }
     }
