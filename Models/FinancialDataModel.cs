@@ -230,61 +230,61 @@ namespace SFB.Web.ApplicationCore.Models
 
         #region Criteria Data
 
-        public string AdmissionPolicy => FinancialDataObjectModel.AdmissionPolicy;
+        public string AdmissionPolicy => FinancialDataObjectModel?.AdmissionPolicy;
 
-        public string Gender => FinancialDataObjectModel.Gender;
+        public string Gender => FinancialDataObjectModel?.Gender;
 
         public string SchoolOverallPhase => FinancialDataObjectModel?.OverallPhase;
 
         public string SchoolPhase => FinancialDataObjectModel?.Phase;
 
-        public string SchoolType => FinancialDataObjectModel.Type;
+        public string SchoolType => FinancialDataObjectModel?.Type;
 
-        public string UrbanRural => FinancialDataObjectModel.UrbanRural;
+        public string UrbanRural => FinancialDataObjectModel?.UrbanRural;
 
-        public string GovernmentOfficeRegion => FinancialDataObjectModel.Region;
+        public string GovernmentOfficeRegion => FinancialDataObjectModel?.Region;
 
-        public string LondonBorough => FinancialDataObjectModel.LondonBorough;
+        public string LondonBorough => FinancialDataObjectModel?.LondonBorough;
 
-        public string LondonWeighting => FinancialDataObjectModel.LondonWeight;
+        public string LondonWeighting => FinancialDataObjectModel?.LondonWeight;
 
-        public decimal? PercentageOfEligibleFreeSchoolMeals => FinancialDataObjectModel.PercentageFSM;
+        public decimal? PercentageOfEligibleFreeSchoolMeals => FinancialDataObjectModel?.PercentageFSM;
 
-        public decimal? PercentageOfPupilsWithSen => FinancialDataObjectModel.PercentagePupilsWSEN;
+        public decimal? PercentageOfPupilsWithSen => FinancialDataObjectModel?.PercentagePupilsWSEN;
 
-        public decimal? PercentageOfPupilsWithoutSen => FinancialDataObjectModel.PercentagePupilsWOSEN;
+        public decimal? PercentageOfPupilsWithoutSen => FinancialDataObjectModel?.PercentagePupilsWOSEN;
 
-        public decimal? PercentageOfPupilsWithEal => FinancialDataObjectModel.PercentagePupilsWEAL;
+        public decimal? PercentageOfPupilsWithEal => FinancialDataObjectModel?.PercentagePupilsWEAL;
 
-        public decimal? PercentageBoarders => FinancialDataObjectModel.PercentageBoarders;
+        public decimal? PercentageBoarders => FinancialDataObjectModel?.PercentageBoarders;
 
-        public string Pfi => FinancialDataObjectModel.PFI;
+        public string Pfi => FinancialDataObjectModel?.PFI;
 
-        public string DoesTheSchoolHave6Form => FinancialDataObjectModel.Has6Form;
+        public string DoesTheSchoolHave6Form => FinancialDataObjectModel?.Has6Form;
 
-        public decimal? NumberIn6Form => FinancialDataObjectModel.NumberIn6Form;
+        public decimal? NumberIn6Form => FinancialDataObjectModel?.NumberIn6Form;
 
-        public decimal? HighestAgePupils => FinancialDataObjectModel.HighestAgePupils;
+        public decimal? HighestAgePupils => FinancialDataObjectModel?.HighestAgePupils;
 
-        public decimal? FullTimeAdmin => FinancialDataObjectModel.AdminStaff;
+        public decimal? FullTimeAdmin => FinancialDataObjectModel?.AdminStaff;
 
-        public decimal? FullTimeAux => FinancialDataObjectModel.AuxStaff;
+        public decimal? FullTimeAux => FinancialDataObjectModel?.AuxStaff;
 
-        public decimal? FullTimeOther => FinancialDataObjectModel.FullTimeOther;
+        public decimal? FullTimeOther => FinancialDataObjectModel?.FullTimeOther;
 
-        public decimal? PercentageQualifiedTeachers => FinancialDataObjectModel.PercentageQualifiedTeachers;
+        public decimal? PercentageQualifiedTeachers => FinancialDataObjectModel?.PercentageQualifiedTeachers;
 
-        public decimal? LowestAgePupils => FinancialDataObjectModel.LowestAgePupils;
+        public decimal? LowestAgePupils => FinancialDataObjectModel?.LowestAgePupils;
 
-        public decimal? FullTimeTA => FinancialDataObjectModel.FullTimeTA;
+        public decimal? FullTimeTA => FinancialDataObjectModel?.FullTimeTA;
 
-        public decimal? TotalSchoolWorkforceFTE => FinancialDataObjectModel.WorkforceTotal;
+        public decimal? TotalSchoolWorkforceFTE => FinancialDataObjectModel?.WorkforceTotal;
 
-        public decimal? TotalNumberOfTeachersFTE => FinancialDataObjectModel.TeachersTotal;
+        public decimal? TotalNumberOfTeachersFTE => FinancialDataObjectModel?.TeachersTotal;
 
-        public decimal? TotalSeniorTeachersFTE => FinancialDataObjectModel.TeachersLeader;
+        public decimal? TotalSeniorTeachersFTE => FinancialDataObjectModel?.TeachersLeader;
 
-        public decimal? Ks2Actual => FinancialDataObjectModel.Ks2Actual;
+        public decimal? Ks2Actual => FinancialDataObjectModel?.Ks2Actual;
 
         public decimal? Ks2Progress
         {
@@ -330,37 +330,37 @@ namespace SFB.Web.ApplicationCore.Models
             }
         }
 
-        public string OfstedRating => FinancialDataObjectModel.OfstedRatingName;
+        public string OfstedRating => FinancialDataObjectModel?.OfstedRatingName;
 
-        public decimal? SpecificLearningDifficulty => FinancialDataObjectModel.SpecificLearningDiff;
+        public decimal? SpecificLearningDifficulty => FinancialDataObjectModel?.SpecificLearningDiff;
 
-        public decimal? ModerateLearningDifficulty => FinancialDataObjectModel.ModerateLearningDiff;
+        public decimal? ModerateLearningDifficulty => FinancialDataObjectModel?.ModerateLearningDiff;
 
-        public decimal? SevereLearningDifficulty => FinancialDataObjectModel.SevereLearningDiff;
+        public decimal? SevereLearningDifficulty => FinancialDataObjectModel?.SevereLearningDiff;
 
-        public decimal? ProfLearningDifficulty => FinancialDataObjectModel.ProfLearningDiff;
+        public decimal? ProfLearningDifficulty => FinancialDataObjectModel?.ProfLearningDiff;
 
-        public decimal? SocialHealth => FinancialDataObjectModel.SocialHealth;
+        public decimal? SocialHealth => FinancialDataObjectModel?.SocialHealth;
 
-        public decimal? SpeechNeeds => FinancialDataObjectModel.SpeechNeeds;
+        public decimal? SpeechNeeds => FinancialDataObjectModel?.SpeechNeeds;
 
-        public decimal? HearingImpairment => FinancialDataObjectModel.HearingImpairment;
+        public decimal? HearingImpairment => FinancialDataObjectModel?.HearingImpairment;
 
-        public decimal? VisualImpairment => FinancialDataObjectModel.VisualImpairment;
+        public decimal? VisualImpairment => FinancialDataObjectModel?.VisualImpairment;
 
-        public decimal? MultiSensoryImpairment => FinancialDataObjectModel.MultiSensoryImpairment;
+        public decimal? MultiSensoryImpairment => FinancialDataObjectModel?.MultiSensoryImpairment;
 
-        public decimal? PhysicalDisability => FinancialDataObjectModel.PhysicalDisability;
+        public decimal? PhysicalDisability => FinancialDataObjectModel?.PhysicalDisability;
 
-        public decimal? AutisticDisorder => FinancialDataObjectModel.AutisticDisorder;
+        public decimal? AutisticDisorder => FinancialDataObjectModel?.AutisticDisorder;
 
-        public decimal? OtherLearningDifficulty => FinancialDataObjectModel.OtherLearningDiff;
+        public decimal? OtherLearningDifficulty => FinancialDataObjectModel?.OtherLearningDiff;
 
-        public decimal? RRPerIncomePercentage => FinancialDataObjectModel.RRPerIncomePercentage;
+        public decimal? RRPerIncomePercentage => FinancialDataObjectModel?.RRPerIncomePercentage;
 
-        public decimal? PerPupilTotalExpenditure => FinancialDataObjectModel.PerPupilTotalExpenditure;
+        public decimal? PerPupilTotalExpenditure => FinancialDataObjectModel?.PerPupilTotalExpenditure;
 
-        public decimal? PerPupilGrantFunding => FinancialDataObjectModel.PerPupilGrantFunding;
+        public decimal? PerPupilGrantFunding => FinancialDataObjectModel?.PerPupilGrantFunding;
 
         public int? CrossPhaseBreakdownPrimary
         {
