@@ -317,26 +317,26 @@
     {
         // where min values are specified in the message, ensure they're consistent with the corresponding SearchParameterValidLength
         public const string NAME_ERR_MESSAGE =
-            "Please enter the name of the school or college you're looking for (minimum 3 characters)";
+            "Enter a school name, URN or LAESTAB to start a search (minimum 3 characters)";
 
         public const string TRUST_NAME_ERR_MESSAGE =
-            "Please enter the name of the trust you're looking for (minimum 3 characters)";
+            "Enter a trust name or Companies House number to start a search (minimum 3 characters)";
 
-        public const string LOCATION_ERR_MESSAGE = "Please enter the name of a town or city (minimum 2 characters)";
+        public const string LOCATION_ERR_MESSAGE = "Enter a postcode, town or street to start a search (minimum 2 characters)";
 
-        public const string LA_CODE_ERR_MESSAGE = "Please enter the LA code for the local authorithy (3 characters)";
+        public const string LA_CODE_ERR_MESSAGE = "Enter a local authority name or LA code to start a search (minimum 2 characters)";
 
         public const string LA_NAME_ERR_MESSAGE =
-            "Please enter the name of the local authority you're looking for (minimum 2 characters)";
+            "Enter a local authority name or LA code to start a search (minimum 2 characters)";
 
         public const string LA_CODE_NAME_ERR_MESSAGE =
-            "Please enter a three-digit Local authority code or select a local authority from the auto-completed list";
+            "Enter a local authority name or LA code to continue the comparison (minimum 2 characters)";
 
         public const string SCHOOL_ID_ERR_MESSAGE =
-            "Please enter the URN code (6 characters) or LAESTAB code (7 characters) of the school or college you're looking for";
+            "Enter a school name, URN or LAESTAB to start a search (minimum 3 characters)";
 
         public const string COMPANY_NO_ERR_MESSAGE =
-            "Please enter the company number (7-8 characters) of the trust you're looking for";
+            "Enter a trust name or Companies House number to start a search (minimum 3 characters)";
 
         public const string NO_SCHOOL_NAME_RESULTS = "We couldn't find any schools matching your search criteria";
         
