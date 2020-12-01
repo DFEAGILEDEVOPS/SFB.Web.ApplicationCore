@@ -75,6 +75,16 @@ namespace SFB.Web.ApplicationCore.Services
             return null;
         }
 
+        public string ValidateLaNameParameterForComparison(string laName)
+        {
+            if (laName == null || laName.Length < SearchParameterValidLengths.LA_NAME_MIN_LENGTH)
+            {
+                return SearchErrorMessages.LA_NAME_ERR_MESSAGE_FOR_COMPARISON;
+            }
+
+            return null;
+        }
+
         public string ValidateLaCodeNameParameter(string laCodeName)
         {
             if ((IsNumeric(laCodeName) && laCodeName.Length != SearchParameterValidLengths.LA_CODE_LENGTH)
@@ -85,6 +95,18 @@ namespace SFB.Web.ApplicationCore.Services
 
             return null;
         }
+
+        public string ValidateLaCodeNameParameterForComparison(string laCodeName)
+        {
+            if ((IsNumeric(laCodeName) && laCodeName.Length != SearchParameterValidLengths.LA_CODE_LENGTH)
+                || (!IsNumeric(laCodeName) && laCodeName.Length < SearchParameterValidLengths.LA_NAME_MIN_LENGTH))
+            {
+                return SearchErrorMessages.LA_CODE_NAME_ERR_MESSAGE_FOR_COMPARISON;
+            }
+
+            return null;
+        }
+
 
         public string ValidateSchoolIdParameter(string schoolId)
         {

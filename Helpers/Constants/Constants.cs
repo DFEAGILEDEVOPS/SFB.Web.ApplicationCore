@@ -333,7 +333,13 @@
         public const string LA_NAME_ERR_MESSAGE =
             "Enter a local authority name or LA code to start a search (minimum 2 characters)";
 
+        public const string LA_NAME_ERR_MESSAGE_FOR_COMPARISON =
+            "Enter a local authority name or LA code to continue the comparison (minimum 2 characters)";
+
         public const string LA_CODE_NAME_ERR_MESSAGE =
+            "Enter a local authority name or LA code to start a search (minimum 2 characters)";
+
+        public const string LA_CODE_NAME_ERR_MESSAGE_FOR_COMPARISON =
             "Enter a local authority name or LA code to continue the comparison (minimum 2 characters)";
 
         public const string SCHOOL_ID_ERR_MESSAGE =
