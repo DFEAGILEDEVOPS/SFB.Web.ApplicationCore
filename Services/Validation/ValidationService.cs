@@ -35,11 +35,31 @@ namespace SFB.Web.ApplicationCore.Services
             return null;
         }
 
+        public string ValidateLocationParameterForComparison(string location)
+        {
+            if (location == null || location.Length < SearchParameterValidLengths.LOCATION_MIN_LENGTH)
+            {
+                return SearchErrorMessages.LOCATION_ERR_MESSAGE_FOR_COMPARISON;
+            }
+
+            return null;
+        }
+
         public string ValidateLaCodeParameter(string laCode)
         {
             if (laCode == null || laCode.Length != SearchParameterValidLengths.LA_CODE_LENGTH)
             {
                 return SearchErrorMessages.LA_CODE_ERR_MESSAGE;
+            }
+
+            return null;
+        }
+
+        public string ValidateLaCodeParameterForComparison(string laCode)
+        {
+            if (laCode == null || laCode.Length != SearchParameterValidLengths.LA_CODE_LENGTH)
+            {
+                return SearchErrorMessages.LA_CODE_ERR_MESSAGE_FOR_COMPARISON;
             }
 
             return null;
