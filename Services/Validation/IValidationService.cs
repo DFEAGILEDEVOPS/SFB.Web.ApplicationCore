@@ -9,7 +9,9 @@
         string ValidateLaCodeParameter(string laCode);
         string ValidateLaCodeParameterForComparison(string laCode);
         string ValidateLaNameParameter(string laName);
+        string ValidateLaNameParameterForComparison(string laName);
         string ValidateLaCodeNameParameter(string laCodeName);
+        string ValidateLaCodeNameParameterForComparison(string laCodeName);
         string ValidateSchoolIdParameter(string schoolId);
         string ValidateCompanyNoParameter(string companyNo);
     }
