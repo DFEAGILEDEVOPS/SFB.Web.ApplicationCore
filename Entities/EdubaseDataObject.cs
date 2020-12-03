@@ -35,9 +35,6 @@ namespace SFB.Web.ApplicationCore.Entities
         [JsonProperty(PropertyName = EdubaseDataFieldNames.TRUSTS)]
         public string Trusts { get; set; }
 
-        [JsonProperty(PropertyName = EdubaseDataFieldNames.MAT_NUMBER)]
-        public string MATNumber { get; set; }
-
         [JsonProperty(PropertyName = EdubaseDataFieldNames.COMPANY_NUMBER)]
         public int? CompanyNumber { get; set; }
 

@@ -36,7 +36,6 @@
         public const string LOCATION_COORDINATES = "coordinates";
         public const string RELIGIOUS_CHARACTER = "ReligiousCharacter";
         public const string GENDER = "Gender";
-        public const string MAT_NUMBER = "MATNumber";
         public const string COMPANY_NUMBER = "CompanyNumber";
         public const string UID = "UID";
         public const string HAS_NURSERY = "NurseryProvisionName";

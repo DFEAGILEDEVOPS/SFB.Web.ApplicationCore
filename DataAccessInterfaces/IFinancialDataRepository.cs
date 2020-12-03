@@ -9,7 +9,8 @@ namespace SFB.Web.ApplicationCore.DataAccess
     public interface IFinancialDataRepository
     {
         Task<List<AcademySummaryDataObject>> GetAcademiesContextualDataObjectAsync(string term, int companyNo);
-        Task<SchoolTrustFinancialDataObject> GetTrustFinancialDataObjectAsync(int companyNo, string term, MatFinancingType matFinance);
+        Task<SchoolTrustFinancialDataObject> GetTrustFinancialDataObjectbyCompanyNoAsync(int companyNo, string term, MatFinancingType matFinance);
+        Task<SchoolTrustFinancialDataObject> GetTrustFinancialDataObjectByUidAsync(int uid, string term, MatFinancingType matFinance);
         Task<List<SchoolTrustFinancialDataObject>> GetMultipleTrustFinancialDataObjectsAsync(List<int> companyNoList, string term, MatFinancingType matFinance);
         Task<SchoolTrustFinancialDataObject> GetTrustFinancialDataObjectByMatNameAsync(string matName, string term, MatFinancingType matFinance);   
         Task<SchoolTrustFinancialDataObject> GetSchoolFinanceDataObjectAsync(int urn, string term, EstablishmentType schoolFinancialType, CentralFinancingType cFinance = CentralFinancingType.Exclude);

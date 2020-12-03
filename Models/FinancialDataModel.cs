@@ -103,6 +103,25 @@ namespace SFB.Web.ApplicationCore.Models
             }
         }
 
+        public string TrustName
+        {
+            get
+            {
+                try
+                {
+                    if (FinancialDataObjectModel != null)
+                    {
+                        return FinancialDataObjectModel.TrustOrCompanyName;
+                    }
+                    return null;
+                }
+                catch (Exception)
+                {
+                    return null;
+                }
+            }
+        }
+
         public bool IsMAT
         {
             get

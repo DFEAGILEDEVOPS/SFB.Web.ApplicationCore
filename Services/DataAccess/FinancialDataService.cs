@@ -49,11 +49,6 @@ namespace SFB.Web.ApplicationCore.Services.DataAccess
             return trustList;
         }
 
-        public async Task<SchoolTrustFinancialDataObject> GetTrustFinancialDataObjectByMatNameAsync(string matName, string term, MatFinancingType matFinance)
-        {
-            return await _financialDataRepository.GetTrustFinancialDataObjectByMatNameAsync(matName, term, matFinance);
-        }
-
         public async Task<int> GetLatestFinancialDataYearAsync()
         {
             return await _dataCollectionManager.GetOverallLatestFinancialDataYearAsync();
@@ -152,9 +147,14 @@ namespace SFB.Web.ApplicationCore.Services.DataAccess
             return models;
         }
 
-        public async Task<SchoolTrustFinancialDataObject> GetTrustFinancialDataObjectAsync(int companyNo, string term, MatFinancingType matFinance)
+        public async Task<SchoolTrustFinancialDataObject> GetTrustFinancialDataObjectByCompanyNoAsync(int companyNo, string term, MatFinancingType matFinance)
         {
-            return await _financialDataRepository.GetTrustFinancialDataObjectAsync(companyNo, term, matFinance);
+            return await _financialDataRepository.GetTrustFinancialDataObjectbyCompanyNoAsync(companyNo, term, matFinance);
+        }
+
+        public async Task<SchoolTrustFinancialDataObject> GetTrustFinancialDataObjectByUidAsync(int uid, string term)
+        {
+            return await _financialDataRepository.GetTrustFinancialDataObjectByUidAsync(uid, term, MatFinancingType.TrustOnly);
         }
     }
 }
