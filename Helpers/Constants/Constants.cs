@@ -13,6 +13,7 @@
         public const string LOCATION = "Location";
         public const string POSTCODE = "Postcode";
         public const string TRUSTS = "Trusts";
+        public const string SPONSORS = "SchoolSponsors";
         public const string LA_CODE = "LACode";
         public const string ESTAB_NO = "EstablishmentNumber";
         public const string LA_ESTAB = "LAEstab";
@@ -39,6 +40,7 @@
         public const string COMPANY_NUMBER = "CompanyNumber";
         public const string UID = "UID";
         public const string HAS_NURSERY = "NurseryProvisionName";
+        public const string MAT_SAT = "MAT SAT or Central Services";
     }
 
     public class SchoolTrustFinanceDataFieldNames

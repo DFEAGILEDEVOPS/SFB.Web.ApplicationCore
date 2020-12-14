@@ -35,6 +35,9 @@ namespace SFB.Web.ApplicationCore.Entities
         [JsonProperty(PropertyName = EdubaseDataFieldNames.TRUSTS)]
         public string Trusts { get; set; }
 
+        [JsonProperty(PropertyName = EdubaseDataFieldNames.SPONSORS)]
+        public string SponsorName { get; set; }
+
         [JsonProperty(PropertyName = EdubaseDataFieldNames.COMPANY_NUMBER)]
         public int? CompanyNumber { get; set; }
 
@@ -94,5 +97,8 @@ namespace SFB.Web.ApplicationCore.Entities
 
         [JsonProperty(PropertyName = EdubaseDataFieldNames.RELIGIOUS_CHARACTER)]
         public string ReligiousCharacter { get; set; }
+
+        [JsonProperty(PropertyName = EdubaseDataFieldNames.MAT_SAT)]
+        public string MatSat { get; set; }
     }
 }
