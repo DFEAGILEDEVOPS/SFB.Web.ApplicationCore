@@ -50,7 +50,7 @@ namespace SFB.Web.ApplicationCore.Models
         [JsonProperty(PropertyName = "progressscoretype")]
         public string ProgressScoreType { get; set; }
         
-        [JsonProperty(PropertyName = "topSEN")]
+        [JsonProperty(PropertyName = "topsen")]
         public KeyValuePair<string, int> TopSEN { get; set; }
     }
 }
