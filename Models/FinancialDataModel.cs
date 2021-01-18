@@ -2,6 +2,8 @@
 using SFB.Web.ApplicationCore.Helpers.Constants;
 using SFB.Web.ApplicationCore.Helpers.Enums;
 using SFB.Web.ApplicationCore.Entities;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace SFB.Web.ApplicationCore.Models
 {
@@ -461,10 +463,46 @@ namespace SFB.Web.ApplicationCore.Models
 
         #endregion
 
+        #region SEN Data
+        public List<SENCriteriaModel> TopSenCharacteristics
+        {
+            get
+            {
+                var aboveThresholdOnes = SenCharacteristics
+                    .Where(c => c.Value > CriteriaSearchConfig.SPECIALS_TOP_SEN_RATIO_THRESHOLD)
+                    .OrderByDescending(c => c.Value)
+                    .Take(CriteriaSearchConfig.SPECIALS_TOP_SEN_NUMBER).ToList();
+                if (aboveThresholdOnes.Count > 0)
+                {
+                    return aboveThresholdOnes;
+                }
+                else
+                {
+                    var highestOnes = SenCharacteristics
+                    .OrderByDescending(c => c.Value)
+                    .Take(CriteriaSearchConfig.SPECIALS_TOP_SEN_NUMBER).ToList();
+                    return highestOnes;
+                }
+            }
+        }
+        public List<SENCriteriaModel> SenCharacteristics => new List<SENCriteriaModel>() {
+            new SENCriteriaModel(SchoolTrustFinanceDataFieldNames.AUTISTIC_DISORDER, SchoolCharacteristicsQuestions.AUTISTIC_DISORDER, AutisticDisorder),
+            new SENCriteriaModel(SchoolTrustFinanceDataFieldNames.MODERATE_LEARNING_DIFFICULTY, SchoolCharacteristicsQuestions.MODERATE_LEARNING_DIFFICULTY, ModerateLearningDifficulty),
+            new SENCriteriaModel(SchoolTrustFinanceDataFieldNames.SPEECH_NEEDS, SchoolCharacteristicsQuestions.SPEECH_NEEDS, SpeechNeeds),
+            new SENCriteriaModel(SchoolTrustFinanceDataFieldNames.SEVERE_LEARNING_DIFFICULTY, SchoolCharacteristicsQuestions.SEVERE_LEARNING_DIFFICULTY, SevereLearningDifficulty),
+            new SENCriteriaModel(SchoolTrustFinanceDataFieldNames.PHYSICAL_DISABILITY, SchoolCharacteristicsQuestions.PHYSICAL_DISABILITY, PhysicalDisability),
+            new SENCriteriaModel(SchoolTrustFinanceDataFieldNames.SOCIAL_HEALTH , SchoolCharacteristicsQuestions.SOCIAL_HEALTH, SocialHealth),
+            new SENCriteriaModel(SchoolTrustFinanceDataFieldNames.SPECIFIC_LEARNING_DIFFICULTY, SchoolCharacteristicsQuestions.SPECIFIC_LEARNING_DIFFICULTY, SpecificLearningDifficulty),
+            new SENCriteriaModel(SchoolTrustFinanceDataFieldNames.PROF_LEARNING_DIFFICULTY, SchoolCharacteristicsQuestions.PROF_LEARNING_DIFFICULTY, ProfLearningDifficulty),
+            new SENCriteriaModel(SchoolTrustFinanceDataFieldNames.VISUAL_IMPAIRMENT, SchoolCharacteristicsQuestions.VISUAL_IMPAIRMENT, VisualImpairment),
+            new SENCriteriaModel(SchoolTrustFinanceDataFieldNames.MULTI_SENSORY_IMPAIRMENT, SchoolCharacteristicsQuestions.MULTI_SENSORY_IMPAIRMENT, MultiSensoryImpairment),
+            new SENCriteriaModel(SchoolTrustFinanceDataFieldNames.OTHER_LEARNING_DIFF, SchoolCharacteristicsQuestions.OTHER_LEARNING_DIFF, OtherLearningDifficulty),
+            new SENCriteriaModel(SchoolTrustFinanceDataFieldNames.HEARING_IMPAIRMENT, SchoolCharacteristicsQuestions.HEARING_IMPAIRMENT, HearingImpairment)
+        };
+        #endregion
         public bool Equals(FinancialDataModel other)
         {
             return (this.Id == other.Id);
-        }       
-
+        }
     }
 }
