@@ -51,6 +51,6 @@ namespace SFB.Web.ApplicationCore.Models
         public string ProgressScoreType { get; set; }
         
         [JsonProperty(PropertyName = "topsen")]
-        public KeyValuePair<string, int> TopSEN { get; set; }
+        public List<KeyValuePair<string, int>> TopSEN { get; set; }
     }
 }
