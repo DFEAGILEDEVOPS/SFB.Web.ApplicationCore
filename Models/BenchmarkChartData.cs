@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace SFB.Web.ApplicationCore.Models
 {
@@ -48,5 +49,8 @@ namespace SFB.Web.ApplicationCore.Models
 
         [JsonProperty(PropertyName = "progressscoretype")]
         public string ProgressScoreType { get; set; }
+        
+        [JsonProperty(PropertyName = "topSEN")]
+        public KeyValuePair<string, int> TopSEN { get; set; }
     }
 }
