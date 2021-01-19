@@ -52,5 +52,8 @@ namespace SFB.Web.ApplicationCore.Models
         
         [JsonProperty(PropertyName = "topsen")]
         public List<KeyValuePair<string, decimal>> TopSEN { get; set; }
+
+        [JsonProperty(PropertyName = "phase")]
+        public string Phase { get; set; }
     }
 }
