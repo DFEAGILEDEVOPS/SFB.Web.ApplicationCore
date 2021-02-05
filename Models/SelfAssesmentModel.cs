@@ -48,6 +48,7 @@ namespace SFB.Web.ApplicationCore.Models
 
         public decimal WorkforceTotalLastTerm { get; set; }
 
+        public List<string> AvailableScenarioTerms { get; set; }
         public SADSizeLookupDataObject SadSizeLookup { get; set; }
         public SADFSMLookupDataObject SadFSMLookup { get; set; }
         public List<SadAssesmentAreaModel> SadAssesmentAreas { get; set; }
