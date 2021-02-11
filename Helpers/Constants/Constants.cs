@@ -8,9 +8,9 @@
         public const string OVERALL_PHASE = "OverallPhase";
         public const string PHASE_OF_EDUCATION = "PhaseOfEducation";
         public const string TYPE_OF_ESTAB = "TypeOfEstablishment";
-        //public const string STREET = "Street";
-        //public const string TOWN = "Town";
-        //public const string POSTCODE = "Postcode";
+        public const string STREET = "Street";
+        public const string TOWN = "Town";
+        public const string POSTCODE = "Postcode";
         public const string ADDRESS = "FullAddress";
         public const string LOCATION = "Location";
         public const string TRUSTS = "Trusts";
