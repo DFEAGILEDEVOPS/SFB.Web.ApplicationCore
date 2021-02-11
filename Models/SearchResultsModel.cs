@@ -46,10 +46,10 @@ namespace SFB.Web.ApplicationCore.Models
         public string OverallPhase { get; set; }
         public string PhaseOfEducation { get; set; }
         public string TypeOfEstablishment { get; set; }
-        public string Street { get; set; }
-        public string Address { get; set; }
-        public string Town { get; set; }
-        public string Postcode { get; set; }
+        public string FullAddress { get; set; }
+        //public string Street { get; set; }
+        //public string Town { get; set; }
+        //public string Postcode { get; set; }
         public string Trusts { get; set; }
         public string LACode { get; set; }
         public string EstablishmentNumber { get; set; }
