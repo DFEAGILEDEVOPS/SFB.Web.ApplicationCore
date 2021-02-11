@@ -20,17 +20,11 @@ namespace SFB.Web.ApplicationCore.Entities
         [JsonProperty(PropertyName = EdubaseDataFieldNames.TYPE_OF_ESTAB)]
         public string TypeOfEstablishment { get; set; }
 
-        [JsonProperty(PropertyName = EdubaseDataFieldNames.STREET)]
-        public string Street { get; set; }
-
-        [JsonProperty(PropertyName = EdubaseDataFieldNames.TOWN)]
-        public string Town { get; set; }
-
         [JsonProperty(PropertyName = EdubaseDataFieldNames.LOCATION)]
         public LocationDataObject Location { get; set; }
 
-        [JsonProperty(PropertyName = EdubaseDataFieldNames.POSTCODE)]
-        public string Postcode { get; set; }
+        [JsonProperty(PropertyName = EdubaseDataFieldNames.ADDRESS)]
+        public string Address { get; set; }
 
         [JsonProperty(PropertyName = EdubaseDataFieldNames.TRUSTS)]
         public string Trusts { get; set; }
