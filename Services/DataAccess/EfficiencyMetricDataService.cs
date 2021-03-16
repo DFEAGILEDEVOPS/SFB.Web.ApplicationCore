@@ -24,7 +24,7 @@ namespace SFB.Web.ApplicationCore.Services.DataAccess
             else {
                 emData = emDatas.First();
             }
-            emData.Neighbours = emData.Neighbours.OrderBy(n => n.EfficiencyScore).ToList();
+            emData.Neighbours = emData.Neighbours.OrderBy(n => n.Rank).ToList();
             return emData;
         }
 
