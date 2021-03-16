@@ -23,10 +23,6 @@ namespace SFB.Web.ApplicationCore.Models
 
         public decimal Pupils => _data.Fte;
 
-        public decimal Ever6 => _data.Ever6Pub;
-
-        public decimal SEN => _data.SenPub;
-
         public decimal ExpenditurePP => _data.Expenditurepp;
 
         public decimal? Progress8 => _data.P8Score;
