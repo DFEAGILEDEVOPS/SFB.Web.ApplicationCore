@@ -13,7 +13,7 @@ namespace SFB.Web.ApplicationCore.Models
 
         public int Urn => _data.Urn;
 
-        public int Rank => (int)Math.Ceiling(_data.Rank % 5) ;
+        public int Rank => _data.Rank;
 
         public string Name => _data.Name;
 

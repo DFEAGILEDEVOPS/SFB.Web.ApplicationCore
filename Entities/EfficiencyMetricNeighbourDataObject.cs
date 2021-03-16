@@ -6,7 +6,7 @@ namespace SFB.Web.ApplicationCore.Entities
     {
         public int Urn { get; set; }
         public string Name { get; set; }
-        public decimal Rank { get; set; }
+        public int Rank { get; set; }
         public int La { get; set; }
         public string Laname { get; set; }
         public decimal Fte { get; set; }
