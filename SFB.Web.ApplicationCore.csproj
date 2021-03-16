@@ -90,7 +90,7 @@
     <Compile Include="Models\FinancialDataModel.cs" />
     <Compile Include="Models\SadAssesmentAreaModel.cs" />
     <Compile Include="Models\SelfAssesmentModel.cs" />
-    <Compile Include="Models\SchoolModel.cs" />
+    <Compile Include="Models\SchoolSearchModel.cs" />
     <Compile Include="Models\SearchResultsModel.cs" />
     <Compile Include="Models\SENCriteriaModel.cs" />
     <Compile Include="Models\SenCriterion.cs" />

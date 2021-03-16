@@ -1,4 +1,5 @@
 ﻿using SFB.Web.ApplicationCore.Entities;
+using System;
 
 namespace SFB.Web.ApplicationCore.Models
 {
@@ -12,7 +13,7 @@ namespace SFB.Web.ApplicationCore.Models
 
         public int Urn => _data.Urn;
 
-        public int Rank => _data.EfficiencyDecileNeighbour;
+        public int Rank => (int)Math.Ceiling(_data.Rank % 5) ;
 
         public string Name => _data.Name;
 
