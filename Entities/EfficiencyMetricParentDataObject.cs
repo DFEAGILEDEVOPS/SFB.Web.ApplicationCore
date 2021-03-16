@@ -17,8 +17,7 @@ namespace SFB.Web.ApplicationCore.Entities
         public decimal? KS2Progress { get; set; }
         public decimal? P8Score { get; set; }
         public decimal? Ks2 { get; set; }
-        public decimal Expenditurepp { get; set; }
-        public int EfficiencyDecileinGroup { get; set; }       
+        public decimal Expenditurepp { get; set; }    
         public List<EfficiencyMetricNeighbourDataObject> Neighbours { get; set;}
     }
 }

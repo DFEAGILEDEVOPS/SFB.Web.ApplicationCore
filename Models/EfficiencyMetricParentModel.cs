@@ -8,7 +8,13 @@ namespace SFB.Web.ApplicationCore.Models
     {
         private EfficiencyMetricParentDataObject _data;
         public int URN => _data.Urn;
-        public int Rank => _data.EfficiencyDecileinGroup;
+        public int Rank
+        {
+            get
+            {
+                return NeighbourDataModels.Find(n => n.Urn == this.URN).Rank;
+            }
+        }
         public string Name => _data.Name;
         public string Phase => _data.Phase;
         public string PrimarySecondary => _data.PrimarySecondary;
