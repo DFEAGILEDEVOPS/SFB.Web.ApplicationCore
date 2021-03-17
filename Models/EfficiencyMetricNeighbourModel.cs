@@ -21,6 +21,8 @@ namespace SFB.Web.ApplicationCore.Models
 
         public string LocalAuthority => _data.Laname;
 
+        public decimal Pupils => _data.Fte;
+
         public decimal ExpenditurePP => _data.Expenditurepp;
 
         public decimal? Progress8 => _data.P8Score;
