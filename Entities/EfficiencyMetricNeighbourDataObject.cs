@@ -10,6 +10,8 @@ namespace SFB.Web.ApplicationCore.Entities
         public int La { get; set; }
         public string Laname { get; set; }
         public decimal Fte { get; set; }
+        public decimal Ever6Pub { get; set;}
+        public decimal SenPub { get; set; }
         public decimal Expenditurepp { get; set; }
         public string HeadTeacher { get; set; }
         public string OfstedRating { get; set; }
