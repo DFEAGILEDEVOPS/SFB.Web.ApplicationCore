@@ -12,7 +12,9 @@ namespace SFB.Web.ApplicationCore.Helpers.Enums
         [Description("MAT")]
         MAT,
         [Description("All school types")]
-        All
+        All,
+        [Description("Federation")]
+        Federation
     }
 
     public enum CentralFinancingType

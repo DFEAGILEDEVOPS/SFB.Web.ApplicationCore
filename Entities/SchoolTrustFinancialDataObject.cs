@@ -495,6 +495,12 @@ namespace SFB.Web.ApplicationCore.Entities
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.FEDERATION_UID)]
         public int? FederationUid { get; set; }
 
+        [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.OPEN_DATE)]
+        public string OpenDate { get; set; }
+
+        [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.HAS_NURSERY)]
+        public string HasNursery { get; set; }
+
         internal decimal? getValueByCriteriaName(string criteriaName)
         {
             foreach (var property in typeof(SchoolTrustFinancialDataObject).GetProperties())

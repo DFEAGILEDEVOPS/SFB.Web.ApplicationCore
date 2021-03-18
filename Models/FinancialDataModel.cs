@@ -162,6 +162,9 @@ namespace SFB.Web.ApplicationCore.Models
             }
         }
 
+        public bool Has6Form => FinancialDataObjectModel?.Has6Form == "true";
+        public bool HasNursery => FinancialDataObjectModel?.HasNursery == "true";
+        public string OpenDate => FinancialDataObjectModel?.OpenDate;
 
         public bool IsDNS
         {
