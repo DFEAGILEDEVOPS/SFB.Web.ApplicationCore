@@ -21,11 +21,11 @@ namespace SFB.Web.ApplicationCore.Models
 
         public string LocalAuthority => _data.Laname;
 
-        public decimal Pupils => _data.Fte;
+        public decimal Pupils => _data.TotalFte;
 
-        public decimal Ever6 => _data.Ever6Pub;
+        public decimal Ever6 => _data.FsmEverSix;
 
-        public decimal SEN => _data.SenPub;
+        public decimal SEN => _data.SenPercentage;
 
         public decimal ExpenditurePP => _data.Expenditurepp;
 
