@@ -484,10 +484,10 @@ namespace SFB.Web.ApplicationCore.Entities
         public decimal? PerTeachersOnLeadershipPay { get; set; }
 
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.IS_FEDERATION)]
-        public bool IsFederation { get; set; }
+        public bool? IsFederation { get; set; }
 
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.IS_PART_OF_FEDERATION)]
-        public bool IsPartOfFederation { get; set; }
+        public bool? IsPartOfFederation { get; set; }
 
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.FEDERATION_MEMBERS)]
         public int[] FederationMembers { get; set; }

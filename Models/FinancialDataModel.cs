@@ -210,8 +210,8 @@ namespace SFB.Web.ApplicationCore.Models
 
         public decimal? InYearBalance => FinancialDataObjectModel?.InYearBalance;
         
-        public bool IsFederation => (bool)(FinancialDataObjectModel?.IsFederation);
-        public bool IsPartOfFederation => (bool)(FinancialDataObjectModel?.IsPartOfFederation);
+        public bool IsFederation => (bool)FinancialDataObjectModel?.IsFederation.GetValueOrDefault();
+        public bool IsPartOfFederation => (bool)FinancialDataObjectModel?.IsPartOfFederation.GetValueOrDefault();
         public int? FederationUID => FinancialDataObjectModel?.FederationUid;
         public string FederationName => FinancialDataObjectModel?.FederationName;
         public int[] FederationMembers => FinancialDataObjectModel?.FederationMembers;
