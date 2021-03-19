@@ -162,8 +162,8 @@ namespace SFB.Web.ApplicationCore.Models
             }
         }
 
-        public bool Has6Form => FinancialDataObjectModel?.Has6Form == "true";
-        public bool HasNursery => FinancialDataObjectModel?.HasNursery == "true";
+        public bool Has6Form => FinancialDataObjectModel != null ? FinancialDataObjectModel.Has6Form : false;
+        public bool HasNursery => FinancialDataObjectModel != null ? FinancialDataObjectModel.HasNursery : false;
         public string OpenDate => FinancialDataObjectModel?.OpenDate;
 
         public bool IsDNS
@@ -209,9 +209,9 @@ namespace SFB.Web.ApplicationCore.Models
         public decimal? TotalExpenditure => FinancialDataObjectModel?.TotalExpenditure;
 
         public decimal? InYearBalance => FinancialDataObjectModel?.InYearBalance;
-        
-        public bool IsFederation => (bool)FinancialDataObjectModel?.IsFederation.GetValueOrDefault();
-        public bool IsPartOfFederation => (bool)FinancialDataObjectModel?.IsPartOfFederation.GetValueOrDefault();
+
+        public bool IsFederation => FinancialDataObjectModel != null ? FinancialDataObjectModel.IsFederation : false;
+        public bool IsPartOfFederation => FinancialDataObjectModel != null ? FinancialDataObjectModel.IsPartOfFederation : false;
         public int? FederationUID => FinancialDataObjectModel?.FederationUid;
         public string FederationName => FinancialDataObjectModel?.FederationName;
         public int[] FederationMembers => FinancialDataObjectModel?.FederationMembers;
@@ -289,8 +289,6 @@ namespace SFB.Web.ApplicationCore.Models
         public decimal? PercentageBoarders => FinancialDataObjectModel?.PercentageBoarders;
 
         public string Pfi => FinancialDataObjectModel?.PFI;
-
-        public string DoesTheSchoolHave6Form => FinancialDataObjectModel?.Has6Form;
 
         public decimal? NumberIn6Form => FinancialDataObjectModel?.NumberIn6Form;
 

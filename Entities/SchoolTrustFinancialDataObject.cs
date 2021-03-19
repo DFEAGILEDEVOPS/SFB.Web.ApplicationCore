@@ -349,7 +349,7 @@ namespace SFB.Web.ApplicationCore.Entities
         public string PFI { get; set; }
 
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.HAS_6_FORM)]
-        public string Has6Form { get; set; }
+        public bool Has6Form { get; set; }
 
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.NUMBER_IN_6_FORM)]
         public decimal? NumberIn6Form { get; set; }
@@ -484,10 +484,10 @@ namespace SFB.Web.ApplicationCore.Entities
         public decimal? PerTeachersOnLeadershipPay { get; set; }
 
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.IS_FEDERATION)]
-        public bool? IsFederation { get; set; }
+        public bool IsFederation { get; set; }
 
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.IS_PART_OF_FEDERATION)]
-        public bool? IsPartOfFederation { get; set; }
+        public bool IsPartOfFederation { get; set; }
 
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.FEDERATION_MEMBERS)]
         public int[] FederationMembers { get; set; }
@@ -502,7 +502,7 @@ namespace SFB.Web.ApplicationCore.Entities
         public string OpenDate { get; set; }
 
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.HAS_NURSERY)]
-        public string HasNursery { get; set; }
+        public bool HasNursery { get; set; }
 
         internal decimal? getValueByCriteriaName(string criteriaName)
         {
