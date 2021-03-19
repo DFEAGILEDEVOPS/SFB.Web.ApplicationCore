@@ -349,7 +349,7 @@ namespace SFB.Web.ApplicationCore.Entities
         public string PFI { get; set; }
 
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.HAS_6_FORM)]
-        public bool Has6Form { get; set; }
+        public string Has6Form { get; set; }
 
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.NUMBER_IN_6_FORM)]
         public decimal? NumberIn6Form { get; set; }
@@ -495,7 +495,7 @@ namespace SFB.Web.ApplicationCore.Entities
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.FEDERATION_UID)]
         public int? FederationUid { get; set; }
 
-        [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.FEDERATION_UID)]
+        [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.FEDERATION_NAME)]
         public string FederationName { get; set; }
 
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.OPEN_DATE)]
