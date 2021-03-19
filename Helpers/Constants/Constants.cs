@@ -215,6 +215,7 @@
         public const string FEDERATION_MEMBERS = "FederationMembers";
         public const string IS_PART_OF_FEDERATION = "IsPartOfFederation";
         public const string FEDERATION_UID = "FederationUID";
+        public const string FEDERATION_NAME = "FederationName";
         public const string OPEN_DATE = "OpenDate";
         public const string HAS_NURSERY = "NurseryProvisionName";
 
