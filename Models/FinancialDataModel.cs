@@ -213,6 +213,7 @@ namespace SFB.Web.ApplicationCore.Models
         public bool IsFederation => (bool)(FinancialDataObjectModel?.IsFederation);
         public bool IsPartOfFederation => (bool)(FinancialDataObjectModel?.IsPartOfFederation);
         public int? FederationUID => FinancialDataObjectModel?.FederationUid;
+        public string FederationName => FinancialDataObjectModel?.FederationName;
         public int[] FederationMembers => FinancialDataObjectModel?.FederationMembers;
 
         public bool IsReturnsComplete
