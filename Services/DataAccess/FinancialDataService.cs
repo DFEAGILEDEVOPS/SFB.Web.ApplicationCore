@@ -156,5 +156,10 @@ namespace SFB.Web.ApplicationCore.Services.DataAccess
         {
             return await _financialDataRepository.GetTrustFinancialDataObjectByUidAsync(uid, term, MatFinancingType.TrustOnly);
         }
+
+        public async Task<SchoolTrustFinancialDataObject> GetFederationFinancialDataObjectByFuidAsync(int fuid, string term)
+        {
+            return await _financialDataRepository.GetFederationFinancialDataObjectByFuidAsync(fuid, term);
+        }
     }
 }
