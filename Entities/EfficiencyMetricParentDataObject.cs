@@ -10,7 +10,7 @@ namespace SFB.Web.ApplicationCore.Entities
         public string Name { get; set; }
         public string Phase { get; set; }
         public string PrimarySecondary { get; set; }
-        public string SchoolType { get; set; }
+        public string EstablishmentTypeGroup { get; set; }
         public decimal TotalFte { get; set; }
         public decimal SenPercentage { get; set; }
         public decimal FsmEverSix { get; set; }

@@ -19,7 +19,7 @@ namespace SFB.Web.ApplicationCore.Models
         public string Phase => _data.Phase;
         public string PrimarySecondary => _data.PrimarySecondary;
         public string LocalAuthority => _data.Laname;
-        public string SchoolType => _data.SchoolType;
+        public string SchoolType => _data.EstablishmentTypeGroup;
         public decimal? Progress8 => _data.P8Score;
         public decimal? Ks2 => _data.KS2Progress;
 
