@@ -483,20 +483,20 @@ namespace SFB.Web.ApplicationCore.Entities
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.TEACHERS_LEADERSHIP_PAY)]
         public decimal? PerTeachersOnLeadershipPay { get; set; }
 
-        [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.IS_FEDERATION)]
-        public bool IsFederation { get; set; }
+        //[JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.IS_FEDERATION)]
+        //public bool IsFederation { get; set; }
 
-        [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.IS_PART_OF_FEDERATION)]
-        public bool IsPartOfFederation { get; set; }
+        //[JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.IS_PART_OF_FEDERATION)]
+        //public bool IsPartOfFederation { get; set; }
 
-        [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.FEDERATION_MEMBERS)]
-        public int[] FederationMembers { get; set; }
+        //[JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.FEDERATION_MEMBERS)]
+        //public int[] FederationMembers { get; set; }
 
-        [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.FEDERATION_UID)]
-        public int? FederationUid { get; set; }
+        //[JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.FEDERATION_UID)]
+        //public int? FederationUid { get; set; }
 
-        [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.FEDERATION_NAME)]
-        public string FederationName { get; set; }
+        //[JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.FEDERATION_NAME)]
+        //public string FederationName { get; set; }
 
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.OPEN_DATE)]
         public string OpenDate { get; set; }

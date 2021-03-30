@@ -62,8 +62,8 @@ namespace SFB.Web.ApplicationCore.Entities
         [JsonProperty(PropertyName = EdubaseDataFieldNames.HEAD_FIRST_NAME)]
         public string HeadFirstName { get; set; }
 
-        [JsonProperty(PropertyName = EdubaseDataFieldNames.HAS_NURSERY)]
-        public string HasNursery { get; set; }
+        [JsonProperty(PropertyName = EdubaseDataFieldNames.NURSERY_PROVISION)]
+        public string NurseryProvision { get; set; }
 
         [JsonProperty(PropertyName = EdubaseDataFieldNames.HEAD_LAST_NAME)]
         public string HeadLastName { get; set; }
@@ -94,5 +94,26 @@ namespace SFB.Web.ApplicationCore.Entities
 
         [JsonProperty(PropertyName = EdubaseDataFieldNames.MAT_SAT)]
         public string MatSat { get; set; }
+
+        [JsonProperty(PropertyName = EdubaseDataFieldNames.IS_FEDERATION)]
+        public bool IsFederation { get; set; }
+
+        [JsonProperty(PropertyName = EdubaseDataFieldNames.IS_PART_OF_FEDERATION)]
+        public bool IsPartOfFederation { get; set; }
+
+        [JsonProperty(PropertyName = EdubaseDataFieldNames.FEDERATION_MEMBERS)]
+        public int[] FederationMembers { get; set; }
+
+        [JsonProperty(PropertyName = EdubaseDataFieldNames.FEDERATION_UID)]
+        public int? FederationUid { get; set; }
+
+        [JsonProperty(PropertyName = EdubaseDataFieldNames.FEDERATION_NAME)]
+        public string FederationName { get; set; }
+
+        [JsonProperty(PropertyName = EdubaseDataFieldNames.FEDERATIONS_CODE)]
+        public int? FederationsCode { get; set; }        
+        
+        [JsonProperty(PropertyName = EdubaseDataFieldNames.FEDERATION)]
+        public string Federation { get; set; }
     }
 }

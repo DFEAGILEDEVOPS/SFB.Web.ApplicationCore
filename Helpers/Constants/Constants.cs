@@ -40,8 +40,15 @@
         public const string GENDER = "Gender";
         public const string COMPANY_NUMBER = "CompanyNumber";
         public const string UID = "UID";
-        public const string HAS_NURSERY = "NurseryProvisionName";
+        public const string NURSERY_PROVISION = "NurseryProvisionName";
         public const string MAT_SAT = "MAT SAT or Central Services";
+        public const string IS_FEDERATION = "IsFederation";
+        public const string FEDERATION_MEMBERS = "FederationMembers";
+        public const string IS_PART_OF_FEDERATION = "IsPartOfFederation";
+        public const string FEDERATION_UID = "FederationUId";
+        public const string FEDERATION_NAME = "FederationName";
+        public const string FEDERATIONS_CODE = "FederationsCode";
+        public const string FEDERATION = "Federations";
     }
 
     public class SchoolTrustFinanceDataFieldNames
@@ -218,7 +225,6 @@
         public const string FEDERATION_NAME = "FederationName";
         public const string OPEN_DATE = "OpenDate";
         public const string HAS_NURSERY = "NurseryProvisionName";
-
     }      
 
     public class TrustCharacteristicsQuestions
