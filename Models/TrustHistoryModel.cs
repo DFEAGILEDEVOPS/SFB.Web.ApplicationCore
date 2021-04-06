@@ -24,12 +24,15 @@ namespace SFB.Web.ApplicationCore.Models
         private void BuildEventHistory()
         {
             Events = new List<EventModel>();
-            foreach (var academy in _data.Academies)
+            if (_data != null)
             {
-                foreach (var @event in academy.Events)
+                foreach (var academy in _data.Academies)
                 {
-                    DateTime.TryParse(@event.Date, out DateTime date);
-                    this.Events.Add(new EventModel(@event.Term, date, @event.EventType, academy.EstablishmentName, academy.URN ));
+                    foreach (var @event in academy.Events)
+                    {
+                        DateTime.TryParse(@event.Date, out DateTime date);
+                        this.Events.Add(new EventModel(@event.Term, date, @event.EventType, academy.EstablishmentName, academy.URN));
+                    }
                 }
             }
 
