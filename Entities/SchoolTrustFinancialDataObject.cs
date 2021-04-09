@@ -495,8 +495,8 @@ namespace SFB.Web.ApplicationCore.Entities
         //[JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.FEDERATION_UID)]
         //public int? FederationUid { get; set; }
 
-        //[JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.FEDERATION_NAME)]
-        //public string FederationName { get; set; }
+        [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.FEDERATION_NAME)]
+        public string FederationName { get; set; }
 
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.OPEN_DATE)]
         public string OpenDate { get; set; }

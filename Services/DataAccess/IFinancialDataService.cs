@@ -16,8 +16,7 @@ namespace SFB.Web.ApplicationCore.Services.DataAccess
         Task<SchoolTrustFinancialDataObject> GetTrustFinancialDataObjectByCompanyNoAsync(int companyNo, string term, MatFinancingType matFinance);
         Task<SchoolTrustFinancialDataObject> GetTrustFinancialDataObjectByUidAsync(int uid, string term);
         Task<List<SchoolTrustFinancialDataObject>> SearchTrustsByCriteriaAsync(BenchmarkCriteria criteria);
-        Task<List<SchoolTrustFinancialDataObject>> SearchSchoolsByCriteriaAsync(BenchmarkCriteria criteria, EstablishmentType estType);
-        Task<List<SchoolTrustFinancialDataObject>> SearchSchoolsByCriteriaAsync(BenchmarkCriteria criteria, EstablishmentType estType, bool excludePartial);
+        Task<List<SchoolTrustFinancialDataObject>> SearchSchoolsByCriteriaAsync(BenchmarkCriteria criteria, EstablishmentType estType, bool excludePartial = false, bool excludeFeds = true);                
         Task<int> SearchSchoolsCountByCriteriaAsync(BenchmarkCriteria criteria, EstablishmentType estType, bool excludePartial = false);
         Task<int> SearchTrustCountByCriteriaAsync(BenchmarkCriteria criteria);
         Task<int> GetEstablishmentRecordCountAsync(string term, EstablishmentType estType);

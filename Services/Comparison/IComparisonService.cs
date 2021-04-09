@@ -14,8 +14,11 @@ namespace SFB.Web.ApplicationCore.Services.Comparison
             EstablishmentType estType, bool excludePartial, int basketSize = 30);
 
         Task<ComparisonResult> GenerateBenchmarkListWithSimpleComparisonAsync(BenchmarkCriteria benchmarkCriteria,
-            EstablishmentType estType, int basketSize,
-            SimpleCriteria simpleCriteria, FinancialDataModel defaultSchoolFinancialDataModel);
+            EstablishmentType estType, 
+            int basketSize,
+            SimpleCriteria simpleCriteria, 
+            FinancialDataModel defaultSchoolFinancialDataModel,
+            bool excludeFeds = true);
 
         Task<ComparisonResult> GenerateBenchmarkListWithSpecialComparisonAsync(BenchmarkCriteria benchmarkCriteria,
             SpecialCriteria specialCriteria, FinancialDataModel defaultSchoolFinancialDataModel);

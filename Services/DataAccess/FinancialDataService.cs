@@ -76,12 +76,12 @@ namespace SFB.Web.ApplicationCore.Services.DataAccess
 
         public async Task<List<SchoolTrustFinancialDataObject>> SearchSchoolsByCriteriaAsync(BenchmarkCriteria criteria, EstablishmentType estType)
         {
-            return await _financialDataRepository.SearchSchoolsByCriteriaAsync(criteria, estType, false);
+            return await _financialDataRepository.SearchSchoolsByCriteriaAsync(criteria, estType, false, true);
         }
 
-        public async Task<List<SchoolTrustFinancialDataObject>> SearchSchoolsByCriteriaAsync(BenchmarkCriteria criteria, EstablishmentType estType, bool excludePartial)
+        public async Task<List<SchoolTrustFinancialDataObject>> SearchSchoolsByCriteriaAsync(BenchmarkCriteria criteria, EstablishmentType estType, bool excludePartial = false, bool excludeFeds = true)
         {
-            return await _financialDataRepository.SearchSchoolsByCriteriaAsync(criteria, estType, excludePartial);
+            return await _financialDataRepository.SearchSchoolsByCriteriaAsync(criteria, estType, excludePartial, excludeFeds);
         }
 
         public async Task<List<SchoolTrustFinancialDataObject>> SearchTrustsByCriteriaAsync(BenchmarkCriteria criteria)
