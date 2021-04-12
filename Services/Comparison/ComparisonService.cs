@@ -5,6 +5,7 @@ using SFB.Web.ApplicationCore.Helpers.Constants;
 using SFB.Web.ApplicationCore.Models;
 using SFB.Web.ApplicationCore.Services.DataAccess;
 using SFB.Web.ApplicationCore.Helpers.Enums;
+using SFB.Web.ApplicationCore.Entities;
 
 namespace SFB.Web.ApplicationCore.Services.Comparison
 {
@@ -177,7 +178,7 @@ namespace SFB.Web.ApplicationCore.Services.Comparison
             }
 
             //STEP 3: Query return is still less than required. Flex the Urban/Rural criteria gradually. Not applied to federations.
-            if (estType != EstablishmentType.Federation)
+            if (defaultSchoolFinancialDataModel.EstabType != EstablishmentType.Federation)
             {
                 tryCount = 1;
                 while (benchmarkSchools.Count < basketSize)
@@ -207,6 +208,13 @@ namespace SFB.Web.ApplicationCore.Services.Comparison
 
                     tryCount++;
                 }
+            }
+
+            //STEP 4: For federations, eliminate the schools if both federation and its schools are found
+            if (defaultSchoolFinancialDataModel.EstabType == EstablishmentType.Federation)
+            {
+                var fedSchools = benchmarkSchools.Where(school => !school.IsFederation && school.IsPartOfFederation && benchmarkSchools.Exists(fed => fed.IsFederation && fed.FederationUid == school.FederationUid));
+                benchmarkSchools = benchmarkSchools.Except(fedSchools).ToList();
             }
 
             return new ComparisonResult()
