@@ -219,12 +219,9 @@
         public const string TEACHERS_LEADERSHIP_PAY = "AllTeachersOnTheLeadershipPayRangePercent";
         public const string UID = "UID";
         public const string IS_FEDERATION = "IsFederation";
-        public const string FEDERATION_MEMBERS = "FederationMembers";
         public const string IS_PART_OF_FEDERATION = "IsPartOfFederation";
         public const string FEDERATION_UID = "FederationUID";
         public const string FEDERATION_NAME = "FederationName";
-        public const string OPEN_DATE = "OpenDate";
-        public const string HAS_NURSERY = "NurseryProvisionName";
     }      
 
     public class TrustCharacteristicsQuestions
