@@ -97,7 +97,11 @@ namespace SFB.Web.ApplicationCore.Services.Comparison
             var criteria = new BenchmarkCriteria();
 
             criteria.SchoolOverallPhase = new []{ benchmarkSchoolData.SchoolOverallPhase};
-            criteria.UrbanRural = new []{ benchmarkSchoolData.UrbanRural};
+            
+            if (benchmarkSchoolData.UrbanRural != null)
+            {
+                criteria.UrbanRural = new[] { benchmarkSchoolData.UrbanRural };
+            }
 
             var minMarginFactor = 1 - ((percentageMargin + CriteriaSearchConfig.PC_DEFAULT_MARGIN) / 100m);
             var maxMarginFactor = 1 + ((percentageMargin + CriteriaSearchConfig.PC_DEFAULT_MARGIN) / 100m);
