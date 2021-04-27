@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using SFB.Web.ApplicationCore.DataAccess;
 using SFB.Web.ApplicationCore.Entities;
@@ -18,7 +19,11 @@ namespace SFB.Web.ApplicationCore.Services.DataAccess
         {
             EfficiencyMetricParentDataObject emData = null;
             var emDatas =  await _efficiencyMetricRepository.GetEfficiencyMetricDataObjectByUrnAsync(urn);
-            if (emDatas.Count == 2) {
+            if(emDatas.Count == 0)
+            {
+                throw new ApplicationException("Efficiency metric data object could not be loaded from collection! URN:" + urn);
+            }
+            else if (emDatas.Count == 2) {
                 emData = emDatas.Where(em => em.PrimarySecondary == "Secondary").FirstOrDefault();
             }
             else {
