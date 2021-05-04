@@ -4,7 +4,7 @@ namespace SFB.Web.ApplicationCore.Services
 {
     public interface IBicComparisonResultCachingService
     {
-        ComparisonResult GetBicComparisonResultByUrn(int urn);
-        void StoreBicComparisonResultByUrn(int urn, ComparisonResult comparisonResult);
+        ComparisonResult GetBicComparisonResultByUrn(long urn);
+        void StoreBicComparisonResultByUrn(long urn, ComparisonResult comparisonResult);
     }
 }

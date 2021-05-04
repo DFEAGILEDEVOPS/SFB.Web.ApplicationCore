@@ -13,13 +13,13 @@ namespace SFB.Web.ApplicationCore.DataAccess
         Task<SchoolTrustFinancialDataObject> GetTrustFinancialDataObjectByUidAsync(int uid, string term, MatFinancingType matFinance);
         Task<List<SchoolTrustFinancialDataObject>> GetMultipleTrustFinancialDataObjectsAsync(List<int> companyNoList, string term, MatFinancingType matFinance);
         Task<SchoolTrustFinancialDataObject> GetTrustFinancialDataObjectByMatNameAsync(string matName, string term, MatFinancingType matFinance);   
-        Task<SchoolTrustFinancialDataObject> GetSchoolFinanceDataObjectAsync(int urn, string term, EstablishmentType schoolFinancialType, CentralFinancingType cFinance = CentralFinancingType.Exclude);
-        Task<SchoolTrustFinancialDataObject> GetSchoolFinancialDataObjectAsync(int urn, string term, EstablishmentType schoolFinancialType, CentralFinancingType cFinance = CentralFinancingType.Exclude);
+        Task<SchoolTrustFinancialDataObject> GetSchoolFinanceDataObjectAsync(long urn, string term, EstablishmentType schoolFinancialType, CentralFinancingType cFinance = CentralFinancingType.Exclude);
+        Task<SchoolTrustFinancialDataObject> GetSchoolFinancialDataObjectAsync(long urn, string term, EstablishmentType schoolFinancialType, CentralFinancingType cFinance = CentralFinancingType.Exclude);
         Task<int> SearchTrustCountByCriteriaAsync(BenchmarkCriteria criteria);
         Task<List<SchoolTrustFinancialDataObject>> SearchTrustsByCriteriaAsync(BenchmarkCriteria criteria);
         Task<int> SearchSchoolsCountByCriteriaAsync(BenchmarkCriteria criteria, EstablishmentType estType, bool excludePartial = false);
         Task<List<SchoolTrustFinancialDataObject>> SearchSchoolsByCriteriaAsync(BenchmarkCriteria criteria, EstablishmentType estType, bool excludePartial = false, bool excludeFeds = true);
         Task<int> GetEstablishmentRecordCountAsync(string term, EstablishmentType estType);
-        Task<SchoolTrustFinancialDataObject> GetFederationFinancialDataObjectByFuidAsync(int fuid, string term);
+        Task<SchoolTrustFinancialDataObject> GetFederationFinancialDataObjectByFuidAsync(long fuid, string term);
     }
 }

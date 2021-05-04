@@ -11,7 +11,7 @@ namespace SFB.Web.ApplicationCore.Models
             this._data = data;
         }
 
-        public int Urn => _data.Urn;
+        public long Urn => _data.Urn;
 
         public int Rank => _data.Rank;
 

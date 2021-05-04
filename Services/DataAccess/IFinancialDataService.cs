@@ -10,9 +10,9 @@ namespace SFB.Web.ApplicationCore.Services.DataAccess
     {
         Task<List<AcademySummaryDataObject>> GetAcademiesByCompanyNumberAsync(string term, int companyNo);
         Task<List<SchoolTrustFinancialDataObject>> GetMultipleTrustDataObjectsByCompanyNumbersAsync(List<int> companyNos);
-        Task<FinancialDataModel> GetSchoolsLatestFinancialDataModelAsync(int urn, EstablishmentType schoolFinancialType);
-        Task<SchoolTrustFinancialDataObject> GetSchoolFinancialDataObjectAsync(int urn, EstablishmentType schoolFinancialType, CentralFinancingType cFinance = CentralFinancingType.Exclude);
-        Task<SchoolTrustFinancialDataObject> GetSchoolFinancialDataObjectAsync(int urn, string term, EstablishmentType schoolFinancialType, CentralFinancingType cFinance = CentralFinancingType.Exclude);
+        Task<FinancialDataModel> GetSchoolsLatestFinancialDataModelAsync(long urn, EstablishmentType schoolFinancialType);
+        Task<SchoolTrustFinancialDataObject> GetSchoolFinancialDataObjectAsync(long urn, EstablishmentType schoolFinancialType, CentralFinancingType cFinance = CentralFinancingType.Exclude);
+        Task<SchoolTrustFinancialDataObject> GetSchoolFinancialDataObjectAsync(long urn, string term, EstablishmentType schoolFinancialType, CentralFinancingType cFinance = CentralFinancingType.Exclude);
         Task<SchoolTrustFinancialDataObject> GetTrustFinancialDataObjectByCompanyNoAsync(int companyNo, string term, MatFinancingType matFinance);
         Task<SchoolTrustFinancialDataObject> GetTrustFinancialDataObjectByUidAsync(int uid, string term);
         Task<List<SchoolTrustFinancialDataObject>> SearchTrustsByCriteriaAsync(BenchmarkCriteria criteria);
@@ -21,7 +21,7 @@ namespace SFB.Web.ApplicationCore.Services.DataAccess
         Task<int> SearchTrustCountByCriteriaAsync(BenchmarkCriteria criteria);
         Task<int> GetEstablishmentRecordCountAsync(string term, EstablishmentType estType);
         Task<List<FinancialDataModel>> GetFinancialDataForSchoolsAsync(List<SchoolSearchModel> schools, CentralFinancingType centralFinancing = CentralFinancingType.Include);
-        Task<SchoolTrustFinancialDataObject> GetFederationFinancialDataObjectByFuidAsync(int fuid, string term);
+        Task<SchoolTrustFinancialDataObject> GetFederationFinancialDataObjectByFuidAsync(long fuid, string term);
     }
 
     public interface ITermYearDataService

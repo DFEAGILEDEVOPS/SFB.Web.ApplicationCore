@@ -6,7 +6,7 @@ namespace SFB.Web.ApplicationCore.Entities
     public class EdubaseDataObject
     {
         [JsonProperty(PropertyName = EdubaseDataFieldNames.URN)]
-        public int URN { get; set; }
+        public long URN { get; set; }
 
         [JsonProperty(PropertyName = EdubaseDataFieldNames.ESTAB_NAME)]
         public string EstablishmentName { get; set; }
@@ -102,16 +102,16 @@ namespace SFB.Web.ApplicationCore.Entities
         public bool IsPartOfFederation { get; set; }
 
         [JsonProperty(PropertyName = EdubaseDataFieldNames.FEDERATION_MEMBERS)]
-        public int[] FederationMembers { get; set; }
+        public long[] FederationMembers { get; set; }
 
         [JsonProperty(PropertyName = EdubaseDataFieldNames.FEDERATION_UID)]
-        public int? FederationUid { get; set; }
+        public long? FederationUid { get; set; }
 
         [JsonProperty(PropertyName = EdubaseDataFieldNames.FEDERATION_NAME)]
         public string FederationName { get; set; }
 
         [JsonProperty(PropertyName = EdubaseDataFieldNames.FEDERATIONS_CODE)]
-        public int? FederationsCode { get; set; }        
+        public long? FederationsCode { get; set; }        
         
         [JsonProperty(PropertyName = EdubaseDataFieldNames.FEDERATION)]
         public string Federation { get; set; }

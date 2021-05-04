@@ -22,19 +22,19 @@ namespace SFB.Web.ApplicationCore.Services.DataAccess
             _financialDataRepository = financialDataRepository;
         }
 
-        public async Task<SchoolTrustFinancialDataObject> GetSchoolFinancialDataObjectAsync(int urn, string term, EstablishmentType schoolFinancialType, CentralFinancingType cFinance)
+        public async Task<SchoolTrustFinancialDataObject> GetSchoolFinancialDataObjectAsync(long urn, string term, EstablishmentType schoolFinancialType, CentralFinancingType cFinance)
         {
             return await _financialDataRepository.GetSchoolFinanceDataObjectAsync(urn, term, schoolFinancialType, cFinance);
         }
 
-        public async Task<SchoolTrustFinancialDataObject> GetSchoolFinancialDataObjectAsync(int urn, EstablishmentType schoolFinancialType, CentralFinancingType cFinance = CentralFinancingType.Exclude)
+        public async Task<SchoolTrustFinancialDataObject> GetSchoolFinancialDataObjectAsync(long urn, EstablishmentType schoolFinancialType, CentralFinancingType cFinance = CentralFinancingType.Exclude)
         {
             var latestYear = await GetLatestDataYearPerEstabTypeAsync(schoolFinancialType);
             var term = SchoolFormatHelpers.FinancialTermFormatAcademies(latestYear);
             return await _financialDataRepository.GetSchoolFinancialDataObjectAsync(urn, term, schoolFinancialType, cFinance);
         }
 
-        public async Task<FinancialDataModel> GetSchoolsLatestFinancialDataModelAsync(int urn, EstablishmentType schoolFinancialType)
+        public async Task<FinancialDataModel> GetSchoolsLatestFinancialDataModelAsync(long urn, EstablishmentType schoolFinancialType)
         {
             var latestYear = await GetLatestDataYearPerEstabTypeAsync(schoolFinancialType);
             var term = SchoolFormatHelpers.FinancialTermFormatAcademies(latestYear);
@@ -120,7 +120,7 @@ namespace SFB.Web.ApplicationCore.Services.DataAccess
                 var latestYear = await this.GetLatestDataYearPerEstabTypeAsync(estabType);
                 var term = SchoolFormatHelpers.FinancialTermFormatAcademies(latestYear);
 
-                var task = this.GetSchoolFinancialDataObjectAsync(Int32.Parse(school.Urn), term, estabType, centralFinancing);
+                var task = this.GetSchoolFinancialDataObjectAsync(long.Parse(school.Urn), term, estabType, centralFinancing);
                 taskList.Add(task);
             }
 
@@ -133,7 +133,7 @@ namespace SFB.Web.ApplicationCore.Services.DataAccess
 
                 if (estabType == EstablishmentType.Academies && centralFinancing == CentralFinancingType.Include && resultDocument == null)//if nothing found in -Allocs collection try to source it from (non-allocated) Academies data
                 {
-                    resultDocument = (await this.GetSchoolFinancialDataObjectAsync(Int32.Parse(schools[i].Urn), term, estabType, CentralFinancingType.Exclude));
+                    resultDocument = (await this.GetSchoolFinancialDataObjectAsync(long.Parse(schools[i].Urn), term, estabType, CentralFinancingType.Exclude));
                 }
 
                 if (resultDocument != null && resultDocument.DidNotSubmit)//School did not submit finance, return & display "no data" in the charts
@@ -157,7 +157,7 @@ namespace SFB.Web.ApplicationCore.Services.DataAccess
             return await _financialDataRepository.GetTrustFinancialDataObjectByUidAsync(uid, term, MatFinancingType.TrustOnly);
         }
 
-        public async Task<SchoolTrustFinancialDataObject> GetFederationFinancialDataObjectByFuidAsync(int fuid, string term)
+        public async Task<SchoolTrustFinancialDataObject> GetFederationFinancialDataObjectByFuidAsync(long fuid, string term)
         {
             return await _financialDataRepository.GetFederationFinancialDataObjectByFuidAsync(fuid, term);
         }

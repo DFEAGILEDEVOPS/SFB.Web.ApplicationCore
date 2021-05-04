@@ -5,6 +5,6 @@ namespace SFB.Web.ApplicationCore.Services
 {
     public interface IActiveUrnsService
     {
-        Task<List<int>> GetAllActiveUrnsAsync();
+        Task<List<long>> GetAllActiveUrnsAsync();
     }
 }

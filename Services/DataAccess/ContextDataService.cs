@@ -14,12 +14,12 @@ namespace SFB.Web.ApplicationCore.Services.DataAccess
             _edubaseRepository = edubaseRepository;
         }
 
-        public async Task<EdubaseDataObject> GetSchoolDataObjectByUrnAsync(int urn)
+        public async Task<EdubaseDataObject> GetSchoolDataObjectByUrnAsync(long urn)
         {
             return await _edubaseRepository.GetSchoolDataObjectByUrnAsync(urn);
         }
 
-        public async Task<List<int>> GetAllSchoolUrnsAsync()
+        public async Task<List<long>> GetAllSchoolUrnsAsync()
         {
             return await _edubaseRepository.GetAllSchoolUrnsAsync();
         }
@@ -29,7 +29,7 @@ namespace SFB.Web.ApplicationCore.Services.DataAccess
             return await _edubaseRepository.GetSchoolsByLaEstabAsync(laEstab, openOnly);
         }
 
-        public async Task<List<EdubaseDataObject>> GetMultipleSchoolDataObjectsByUrnsAsync(List<int> urns)
+        public async Task<List<EdubaseDataObject>> GetMultipleSchoolDataObjectsByUrnsAsync(List<long> urns)
         {
             return await _edubaseRepository.GetMultipleSchoolDataObjectsByUrnsAsync(urns);
         }

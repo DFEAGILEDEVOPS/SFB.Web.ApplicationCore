@@ -7,7 +7,7 @@ namespace SFB.Web.ApplicationCore.Models
     public class EfficiencyMetricParentModel
     {
         private EfficiencyMetricParentDataObject _data;
-        public int URN => _data.Urn;
+        public long URN => _data.Urn;
         public int Rank
         {
             get

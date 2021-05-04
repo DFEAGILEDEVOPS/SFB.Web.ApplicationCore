@@ -15,7 +15,7 @@ namespace SFB.Web.ApplicationCore.Entities
 
     public class AcademyOfTrust
     {
-        public int URN { get; set; }
+        public long URN { get; set; }
         public string EstablishmentName { get; set; }
 
         public HistoricalEvent[] Events { get; set; }

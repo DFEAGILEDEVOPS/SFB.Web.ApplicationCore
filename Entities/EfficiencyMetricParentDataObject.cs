@@ -4,7 +4,7 @@ namespace SFB.Web.ApplicationCore.Entities
 {
     public class EfficiencyMetricParentDataObject
     {
-        public int Urn { get; set; }
+        public long Urn { get; set; }
         public int La { get; set; }
         public string Laname { get; set; }
         public string Name { get; set; }

@@ -42,7 +42,7 @@ namespace SFB.Web.ApplicationCore.Models
 
     public class EventModel
     {
-        public EventModel(string schoolYear, DateTime date, string @event, string schoolName, int schoolUrn)
+        public EventModel(string schoolYear, DateTime date, string @event, string schoolName, long schoolUrn)
         {
             SchoolYear = schoolYear;
             Date = date;
@@ -55,7 +55,7 @@ namespace SFB.Web.ApplicationCore.Models
         public DateTime Date { get; set; }
         public string Event { get; set; }
         public string OrganisationName { get; set; }
-        public int OrganisationUrn { get; set; }
+        public long OrganisationUrn { get; set; }
 
     }
 }

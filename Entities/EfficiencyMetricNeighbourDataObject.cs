@@ -4,7 +4,7 @@ namespace SFB.Web.ApplicationCore.Entities
 {
     public class EfficiencyMetricNeighbourDataObject
     {
-        public int Urn { get; set; }
+        public long Urn { get; set; }
         public string Name { get; set; }
         public int Rank { get; set; }
         public int La { get; set; }

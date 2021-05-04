@@ -15,7 +15,7 @@ namespace SFB.Web.ApplicationCore.Services.DataAccess
             _efficiencyMetricRepository = efficiencyMetricRepository;
         }
 
-        public async Task<EfficiencyMetricParentDataObject> GetSchoolDataObjectByUrnAsync(int urn)
+        public async Task<EfficiencyMetricParentDataObject> GetSchoolDataObjectByUrnAsync(long urn)
         {
             EfficiencyMetricParentDataObject emData = null;
             var emDatas =  await _efficiencyMetricRepository.GetEfficiencyMetricDataObjectByUrnAsync(urn);
@@ -33,7 +33,7 @@ namespace SFB.Web.ApplicationCore.Services.DataAccess
             return emData;
         }
 
-        public Task<bool> GetStatusByUrn(int urn)
+        public Task<bool> GetStatusByUrn(long urn)
         {
             return _efficiencyMetricRepository.GetStatusByUrnAsync(urn);            
         }

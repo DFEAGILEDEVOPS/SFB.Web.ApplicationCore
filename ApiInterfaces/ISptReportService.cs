@@ -2,6 +2,6 @@
 {
     public interface ISptReportService
     {
-        bool SptReportExists(int urn);
+        bool SptReportExists(long urn);
     }
 }

@@ -6,7 +6,7 @@ namespace SFB.Web.ApplicationCore.Models
 {
     public class SelfAssesmentModel
     {
-        public int Urn { get; private set; }
+        public long Urn { get; private set; }
 
         public string Name { get; private set; }
         
@@ -53,7 +53,7 @@ namespace SFB.Web.ApplicationCore.Models
         public SADFSMLookupDataObject SadFSMLookup { get; set; }
         public List<SadAssesmentAreaModel> SadAssesmentAreas { get; set; }
 
-        public SelfAssesmentModel(int urn, 
+        public SelfAssesmentModel(long urn, 
             string name, 
             string overallPhase, 
             string financeType,

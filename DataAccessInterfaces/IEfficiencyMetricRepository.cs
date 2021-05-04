@@ -6,8 +6,8 @@ namespace SFB.Web.ApplicationCore.DataAccess
 {
     public interface IEfficiencyMetricRepository
     {
-        Task<List<EfficiencyMetricParentDataObject>> GetEfficiencyMetricDataObjectByUrnAsync(int urn);
+        Task<List<EfficiencyMetricParentDataObject>> GetEfficiencyMetricDataObjectByUrnAsync(long urn);
 
-        Task<bool> GetStatusByUrnAsync(int urn);
+        Task<bool> GetStatusByUrnAsync(long urn);
     }
 }

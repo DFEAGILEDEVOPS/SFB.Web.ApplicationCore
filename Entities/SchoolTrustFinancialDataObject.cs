@@ -13,7 +13,7 @@ namespace SFB.Web.ApplicationCore.Entities
     public class SchoolTrustFinancialDataObject
     {
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.URN)]
-        public int? URN{ get; set; }
+        public long? URN{ get; set; }
 
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.SCHOOL_NAME)]
         public string SchoolName { get; set; }
@@ -493,7 +493,7 @@ namespace SFB.Web.ApplicationCore.Entities
         //public int[] FederationMembers { get; set; }
 
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.FEDERATION_UID)]
-        public int? FederationUid { get; set; }
+        public long? FederationUid { get; set; }
 
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.FEDERATION_NAME)]
         public string FederationName { get; set; }
