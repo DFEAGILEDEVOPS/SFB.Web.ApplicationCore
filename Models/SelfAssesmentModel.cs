@@ -35,6 +35,8 @@ namespace SFB.Web.ApplicationCore.Models
         public bool HasSixthForm { get; set; }
 
         public bool IsReturnsComplete { get; set; }
+        
+        public bool DoReturnsExist { get; set; }
 
         public string OverallPhase { get; set; }
 
@@ -73,7 +75,8 @@ namespace SFB.Web.ApplicationCore.Models
             decimal teachersTotal,
             decimal teachersLeader,
             decimal workforceTotal,
-            bool isReturnsComplete)
+            bool isReturnsComplete,
+            bool doReturnsExist)
         {
             Urn = urn;
             Name = name;
@@ -96,6 +99,7 @@ namespace SFB.Web.ApplicationCore.Models
             TeachersLeaderLastTerm = teachersLeader;
             WorkforceTotalLastTerm = workforceTotal;
             IsReturnsComplete = isReturnsComplete;
+            DoReturnsExist = doReturnsExist;
         }
     }
 }
