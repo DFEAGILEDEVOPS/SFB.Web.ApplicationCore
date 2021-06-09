@@ -43,9 +43,15 @@ namespace SFB.Web.ApplicationCore.Services.DataAccess
         public async Task<List<SADSchoolRatingsDataObject>> GetSADSchoolRatingsDataObjectAsync(string assesmentArea, string overallPhase, bool hasSixthForm, string londonWeighting, string size, string FSM, string term)
         {
             var results = await _repository.GetSADSchoolRatingsDataObjectsAsync(assesmentArea, overallPhase, hasSixthForm, londonWeighting, size, FSM, term);
-            var groups = results.GroupBy(r => r.Term);
-            var latestRatings = results.GroupBy(r => r.Term).Last();
-            return latestRatings.ToList();
+            if (results.Count > 0)
+            {
+                var groups = results.GroupBy(r => r.Term);
+                var latestRatings = results.GroupBy(r => r.Term).Last();
+                return latestRatings.ToList();
+            }
+            else {
+                return new List<SADSchoolRatingsDataObject>();
+            }
         }
     }
 }
