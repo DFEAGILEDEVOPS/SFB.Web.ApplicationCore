@@ -108,10 +108,14 @@ namespace SFB.Web.ApplicationCore.Models
             string financeType,
             string ofstedRating,
             DateTime? ofstedInspectionDate,
-            string londonWeighting,
-            bool hasSixthForm) :
-                this(urn, name, overallPhase, financeType, londonWeighting, null, null, ofstedRating, ofstedInspectionDate,
-                null, null, null, null, hasSixthForm, null, null, null, null, null, null, false, false)
+            string governmentOfficeRegion,
+            string officialSixthForm) :
+                this(urn, name, overallPhase, financeType, 
+                    governmentOfficeRegion == "London" ? "Inner, Outer" : "Neither", 
+                    null, null, ofstedRating, ofstedInspectionDate,
+                    null, null, null, null, 
+                    officialSixthForm == "Has a sixth form", 
+                    null, null, null, null, null, null, false, false)
          { }
     }
 }
