@@ -49,6 +49,7 @@
         public const string FEDERATION_NAME = "FederationName";
         public const string FEDERATIONS_CODE = "FederationsCode";
         public const string FEDERATION = "Federations";
+        public const string GOV_OFFICE_REGION = "GOR";
     }
 
     public class SchoolTrustFinanceDataFieldNames
