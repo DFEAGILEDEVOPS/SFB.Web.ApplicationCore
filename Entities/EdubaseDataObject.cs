@@ -117,6 +117,9 @@ namespace SFB.Web.ApplicationCore.Entities
         public string Federation { get; set; }        
         
         [JsonProperty(PropertyName = EdubaseDataFieldNames.GOV_OFFICE_REGION)]
-        public string GovernmentOfficeRegion { get; set; }
+        public string GovernmentOfficeRegion { get; set; }        
+        
+        [JsonProperty(PropertyName = EdubaseDataFieldNames.ESTAB_STATUS)]
+        public string EstablishmentStatus { get; set; }
     }
 }
