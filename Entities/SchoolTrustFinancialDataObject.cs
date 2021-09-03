@@ -234,11 +234,8 @@ namespace SFB.Web.ApplicationCore.Entities
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.COMM_FOCUSED_SCHOOL)]
         public decimal? CommunityFocusedSchoolCosts { get; set; }
 
-        [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.PRE_16_FUNDING)]
-        public decimal? Pre16Funding { get; set; }
-
-        [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.POST_16_FUNDING)]
-        public decimal? Post16Funding { get; set; }
+        [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.PRE_POST_16_FUNDING)]
+        public decimal? PrePost16Funding { get; set; }
 
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.COMMUNITY_FOCUSED)]
         public decimal? CommunityFocusedFunding { get; set; }

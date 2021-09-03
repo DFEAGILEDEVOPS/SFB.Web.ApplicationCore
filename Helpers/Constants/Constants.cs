@@ -202,8 +202,7 @@
         public const string DNS = "DNS";
         public const string MAT_SAT = "MAT SAT or Central Services";
         public const string WORKFORCE_PRESENT = "WorkforcePresent";
-        public const string PRE_16_FUNDING = "Pre-16 Funding";
-        public const string POST_16_FUNDING = "Post-16 Funding";
+        public const string PRE_POST_16_FUNDING = "Pre-16 and 6th form funding";        
         public const string ADDITIONAL_GRANT = "Additional grant for schools";
         public const string PUPIL_FOCUSED_FUNDING = "Pupil focussed extended school funding and/or grants";
         public const string PUPIL_PREMIUM = "Pupil Premium";
