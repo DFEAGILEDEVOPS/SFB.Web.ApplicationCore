@@ -45,7 +45,7 @@ namespace SFB.Web.ApplicationCore.Services.DataAccess
             var results = await _repository.GetSADSchoolRatingsDataObjectsAsync(assesmentArea, overallPhase, hasSixthForm, londonWeighting, size, FSM, term);
             if (results.Count > 0)
             {
-                var groups = results.GroupBy(r => r.Term);
+                results.OrderBy(r => r.Term);
                 var latestRatings = results.GroupBy(r => r.Term).Last();
                 return latestRatings.ToList();
             }
