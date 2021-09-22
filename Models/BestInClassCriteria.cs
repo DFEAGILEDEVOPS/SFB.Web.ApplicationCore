@@ -12,15 +12,15 @@ namespace SFB.Web.ApplicationCore.Models
         public decimal? Ks2ProgressScoreMax { get; set; }
         public decimal? Ks4ProgressScoreMin { get; set; }
         public decimal? Ks4ProgressScoreMax { get; set; }
-        public decimal NoPupilsMin { get; set; }
-        public decimal NoPupilsMax { get; set; }
-        public decimal PercentageFSMMin { get; set; }
-        public decimal PercentageFSMMax { get; set; }
+        public decimal? NoPupilsMin { get; set; }
+        public decimal? NoPupilsMax { get; set; }
+        public decimal? PercentageFSMMin { get; set; }
+        public decimal? PercentageFSMMax { get; set; }
         public decimal PercentageSENMin { get; set; }
         public decimal PercentageSENMax { get; set; }
         public decimal RRPerIncomeMin { get; set; }
-        public decimal PerPupilExpMin { get; set; }
-        public decimal PerPupilExpMax { get; set; }
+        public decimal? PerPupilExpMin { get; set; }
+        public decimal? PerPupilExpMax { get; set; }
         public bool UREnabled { get; set; }
         public bool SENEnabled { get; set; }
         public string[] LondonWeighting { get; set; }
