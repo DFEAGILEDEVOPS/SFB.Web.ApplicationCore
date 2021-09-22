@@ -14,13 +14,13 @@ namespace SFB.Web.ApplicationCore.Models
         public decimal? Ks4ProgressScoreMin { get; set; }
         public decimal? Ks4ProgressScoreMax { get; set; }        
         [Required]
-        public decimal NoPupilsMin { get; set; }
+        public decimal? NoPupilsMin { get; set; }
         [Required]
-        public decimal NoPupilsMax { get; set; }
+        public decimal? NoPupilsMax { get; set; }
         [Required]
-        public decimal PercentageFSMMin { get; set; }
+        public decimal? PercentageFSMMin { get; set; }
         [Required]
-        public decimal PercentageFSMMax { get; set; }
+        public decimal? PercentageFSMMax { get; set; }
         [Required]
         public decimal PercentageSENMin { get; set; }
         [Required]
@@ -28,9 +28,9 @@ namespace SFB.Web.ApplicationCore.Models
         [Required]
         public decimal RRPerIncomeMin { get; set; }
         [Required]
-        public decimal PerPupilExpMin { get; set; }
+        public decimal? PerPupilExpMin { get; set; }
         [Required]
-        public decimal PerPupilExpMax { get; set; }
+        public decimal? PerPupilExpMax { get; set; }
         public bool UREnabled { get; set; }
         public bool SENEnabled { get; set; }
         public string[] LondonWeighting { get; set; }
