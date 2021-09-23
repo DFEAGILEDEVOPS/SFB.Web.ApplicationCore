@@ -15,11 +15,11 @@ namespace SFB.Web.ApplicationCore.Models
         public decimal? Ks4ProgressScoreMax { get; set; }
 
         [Required(ErrorMessage = "Enter minimum number of pupils")]
-        [Range(0.0, double.MaxValue, ErrorMessage = "Enter a value greater than zero for minimum number of pupils")]
+        [Range(0, int.MaxValue, ErrorMessage = "Enter a value greater than zero for minimum number of pupils")]
         public decimal? NoPupilsMin { get; set; }
         
         [Required(ErrorMessage = "Enter maximum number of pupils")]
-        [Range(0.0, double.MaxValue, ErrorMessage = "Enter a value greater than zero for maximum number of pupils")]
+        [Range(0, int.MaxValue, ErrorMessage = "Enter a value greater than zero for maximum number of pupils")]
         public decimal? NoPupilsMax { get; set; }
 
         [Required(ErrorMessage = "Enter minimum FSM percentage")]
@@ -30,11 +30,13 @@ namespace SFB.Web.ApplicationCore.Models
         [Range(0.0, double.MaxValue, ErrorMessage = "Enter a value greater than zero for maximum FSM percentage")]
         public decimal? PercentageFSMMax { get; set; }
 
-        [Required]
-        public decimal PercentageSENMin { get; set; }
+        [Required(ErrorMessage = "Enter minimum SEN percentage")]
+        [Range(0.0, double.MaxValue, ErrorMessage = "Enter a value greater than zero for minimum SEN percentage")]
+        public decimal? PercentageSENMin { get; set; }
 
-        [Required]
-        public decimal PercentageSENMax { get; set; }
+        [Required(ErrorMessage = "Enter maximum SEN percentage")]
+        [Range(0.0, double.MaxValue, ErrorMessage = "Enter a value greater than zero for maximum SEN percentage")]
+        public decimal? PercentageSENMax { get; set; }
         
         [Required]
         public decimal RRPerIncomeMin { get; set; }
