@@ -15,7 +15,7 @@ namespace SFB.Web.ApplicationCore.Models
         public decimal? Ks4ProgressScoreMax { get; set; }
 
         [Required(ErrorMessage = "Enter minimum number of pupils")]
-        [Range(0, int.MaxValue, ErrorMessage = "Enter a value greater than zero for minimum number of pupils")]
+        [Range(0, int.MaxValue, ErrorMessage = "Enter a value greater than or equal to zero for minimum number of pupils")]
         public decimal? NoPupilsMin { get; set; }
         
         [Required(ErrorMessage = "Enter maximum number of pupils")]
@@ -23,30 +23,30 @@ namespace SFB.Web.ApplicationCore.Models
         public decimal? NoPupilsMax { get; set; }
 
         [Required(ErrorMessage = "Enter minimum FSM percentage")]
-        [Range(0.0, double.MaxValue, ErrorMessage = "Enter a value greater than zero for minimum FSM percentage")]
+        [Range(0.0, 100, ErrorMessage = "Enter a value between 0-100 for minimum FSM percentage")]
         public decimal? PercentageFSMMin { get; set; }
                 
         [Required(ErrorMessage = "Enter maximum FSM percentage")]
-        [Range(0.0, double.MaxValue, ErrorMessage = "Enter a value greater than zero for maximum FSM percentage")]
+        [Range(0.0, 100, ErrorMessage = "Enter a value between 0-100 for maximum FSM percentage")]
         public decimal? PercentageFSMMax { get; set; }
 
         [Required(ErrorMessage = "Enter minimum SEN percentage")]
-        [Range(0.0, double.MaxValue, ErrorMessage = "Enter a value greater than zero for minimum SEN percentage")]
+        [Range(0.0, 100, ErrorMessage = "Enter a value between 0-100 for minimum SEN percentage")]
         public decimal? PercentageSENMin { get; set; }
 
         [Required(ErrorMessage = "Enter maximum SEN percentage")]
-        [Range(0.0, double.MaxValue, ErrorMessage = "Enter a value greater than zero for maximum SEN percentage")]
+        [Range(0.0, 100.0, ErrorMessage = "Enter a value between 0-100 for maximum SEN percentage")]
         public decimal? PercentageSENMax { get; set; }
         
         [Required]
         public decimal RRPerIncomeMin { get; set; }
 
         [Required(ErrorMessage = "Enter minimum total expenditure per pupil")]
-        [Range(0.0, double.MaxValue, ErrorMessage = "Enter a value greater than zero for minimum total expenditure per pupil")]
+        [Range(0.01, double.MaxValue, ErrorMessage = "Enter a value greater than zero for minimum total expenditure per pupil")]
         public decimal? PerPupilExpMin { get; set; }
 
         [Required(ErrorMessage = "Enter maximum total expenditure per pupil")]
-        [Range(0.0, double.MaxValue, ErrorMessage = "Enter a value greater than zero for maximum total expenditure per pupil")]
+        [Range(0.01, double.MaxValue, ErrorMessage = "Enter a value greater than zero for maximum total expenditure per pupil")]
         public decimal? PerPupilExpMax { get; set; }
 
         public bool UREnabled { get; set; }
