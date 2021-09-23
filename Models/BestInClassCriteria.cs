@@ -42,11 +42,11 @@ namespace SFB.Web.ApplicationCore.Models
         public decimal RRPerIncomeMin { get; set; }
 
         [Required(ErrorMessage = "Enter minimum total expenditure per pupil")]
-        [Range(0.01, double.MaxValue, ErrorMessage = "Enter a value greater than zero for minimum total expenditure per pupil")]
+        [Range(0.00, double.MaxValue, ErrorMessage = "Enter a value greater than or equal to zero for minimum total expenditure per pupil")]
         public decimal? PerPupilExpMin { get; set; }
 
         [Required(ErrorMessage = "Enter maximum total expenditure per pupil")]
-        [Range(0.01, double.MaxValue, ErrorMessage = "Enter a value greater than zero for maximum total expenditure per pupil")]
+        [Range(0.00, double.MaxValue, ErrorMessage = "Enter a value greater than or equal to zero for maximum total expenditure per pupil")]
         public decimal? PerPupilExpMax { get; set; }
 
         public bool UREnabled { get; set; }
