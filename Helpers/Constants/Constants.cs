@@ -190,6 +190,7 @@
         public const string EDUCATIONAL_SUPPLIES = "Educational Supplies";
         public const string BROUGHT_IN_SERVICES = "Brought in Professional Sevices";
         public const string BOUGHT_IN_OTHER = "Bought in professional services / other";
+        public const string BOUGHT_IN_NOT_PFI = "BoughtInProfessionalServicesOtherNotPFI";
         public const string COMM_FOCUSED_STAFF = "Community focused school staff";
         public const string COMM_FOCUSED_SCHOOL = "Community focused school costs";
         public const string COST_OF_FINANCE = "Cost of Finance";

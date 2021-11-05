@@ -226,7 +226,10 @@ namespace SFB.Web.ApplicationCore.Entities
         public decimal? BroughtProfessionalServices { get; set; }
 
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.BOUGHT_IN_OTHER)]
-        public decimal? BoughtInOther { get; set; }
+        public decimal? BoughtInOther { get; set; }        
+        
+        [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.BOUGHT_IN_NOT_PFI)]
+        public decimal? BoughtInNotPFI { get; set; }
 
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.COMM_FOCUSED_STAFF)]
         public decimal? CommunityFocusedStaff { get; set; }
