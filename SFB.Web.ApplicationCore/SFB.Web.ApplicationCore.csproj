@@ -59,6 +59,7 @@
     <Compile Include="Entities\SADSizeLookupDataObject.cs" />
     <Compile Include="Entities\SADSchoolRatingsDataObject.cs" />
     <Compile Include="Entities\TrustHistoryDataObject.cs" />
+    <Compile Include="Helpers\Utilities.cs" />
     <Compile Include="Models\ApiResponse.cs" />
     <Compile Include="DataAccessInterfaces\IDataCollectionManager.cs" />
     <Compile Include="DataAccessInterfaces\IEdubaseRepository.cs" />
