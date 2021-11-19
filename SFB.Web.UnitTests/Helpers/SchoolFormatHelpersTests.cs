@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using SFB.Web.ApplicationCore.Helpers;
 
-namespace SFB.Web.UnitTests
+namespace SFB.Web.UnitTests.Helpers
 {
     public class SchoolFormatHelpersTests
     {

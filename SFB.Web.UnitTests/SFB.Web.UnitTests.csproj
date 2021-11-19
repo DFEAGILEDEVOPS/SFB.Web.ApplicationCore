@@ -61,9 +61,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GeoCodeCalcTests.cs" />
+    <Compile Include="Helpers\GeoCodeCalcTests.cs" />
+    <Compile Include="Helpers\UtilitiesTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SchoolFormatHelpersTests.cs" />
+    <Compile Include="Helpers\SchoolFormatHelpersTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
