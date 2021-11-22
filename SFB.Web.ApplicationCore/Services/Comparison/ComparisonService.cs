@@ -50,7 +50,7 @@ namespace SFB.Web.ApplicationCore.Services.Comparison
                     .Take(CriteriaSearchConfig.BIC_TARGET_POOL_COUNT).ToList();
             }
 
-            //STEP 2: Original query returns less than required. Expand criteria values gradually and try this max 10 times
+            //STEP 2: Original query returns less than required. Expand criteria values gradually and try this max 15 times
             var tryCount = 0;
             while (benchmarkSchools.Count < CriteriaSearchConfig.BIC_TARGET_POOL_COUNT)
             {

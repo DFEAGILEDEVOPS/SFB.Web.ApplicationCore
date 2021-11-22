@@ -65,6 +65,10 @@
     <Compile Include="Helpers\UtilitiesTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Helpers\SchoolFormatHelpersTests.cs" />
+    <Compile Include="Services\Comparison\BenchmarkCriteriaBuilderServiceTests.cs" />
+    <Compile Include="Services\Comparison\ComparisonServiceTests.cs" />
+    <Compile Include="Services\DataAccess\EffifiencyMetricDataServiceTests.cs" />
+    <Compile Include="Services\DataAccess\SelfAssessmentDashboardDataServiceTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -75,6 +79,7 @@
       <Name>SFB.Web.ApplicationCore</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
