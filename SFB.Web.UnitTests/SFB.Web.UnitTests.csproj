@@ -69,6 +69,7 @@
     <Compile Include="Services\Comparison\ComparisonServiceTests.cs" />
     <Compile Include="Services\DataAccess\EffifiencyMetricDataServiceTests.cs" />
     <Compile Include="Services\DataAccess\SelfAssessmentDashboardDataServiceTests.cs" />
+    <Compile Include="Services\Validation\ValidationServiceTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
