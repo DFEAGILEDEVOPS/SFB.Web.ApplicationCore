@@ -24,6 +24,11 @@ namespace SFB.Web.ApplicationCore.Services.DataAccess
             return await _edubaseRepository.GetAllSchoolUrnsAsync();
         }
 
+        public async Task<List<long>> GetAllFederationUidsAsync()
+        {
+            return await _edubaseRepository.GetAllFederationUids();
+        }
+
         public async Task<List<EdubaseDataObject>> GetSchoolDataObjectByLaEstabAsync(string laEstab, bool openOnly)
         {
             return await _edubaseRepository.GetSchoolsByLaEstabAsync(laEstab, openOnly);
@@ -48,5 +53,6 @@ namespace SFB.Web.ApplicationCore.Services.DataAccess
         {
             return await _edubaseRepository.GetAcademiesByUidAsync(uid);
         }
+
     }
 }

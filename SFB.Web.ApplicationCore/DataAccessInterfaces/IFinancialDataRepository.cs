@@ -21,5 +21,6 @@ namespace SFB.Web.ApplicationCore.DataAccess
         Task<List<SchoolTrustFinancialDataObject>> SearchSchoolsByCriteriaAsync(BenchmarkCriteria criteria, EstablishmentType estType, bool excludePartial = false, bool excludeFeds = true);
         Task<int> GetEstablishmentRecordCountAsync(string term, EstablishmentType estType);
         Task<SchoolTrustFinancialDataObject> GetFederationFinancialDataObjectByFuidAsync(long fuid, string term);
+        Task<List<int>> GetAllTrustCompanyNos();
     }
 }
