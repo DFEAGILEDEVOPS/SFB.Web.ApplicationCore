@@ -1,4 +1,4 @@
-﻿using System; 
+﻿using System;
 using System.ComponentModel.DataAnnotations;
 using SFB.Web.ApplicationCore.Helpers.Constants;
 using SFB.Web.ApplicationCore.Attributes;
