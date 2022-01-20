@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SFB.Web.ApplicationCore\SFB.Web.ApplicationCore.csproj" />
+    <ProjectReference Include="..\SFB.Artifacts.ApplicationCore\SFB.Artifacts.ApplicationCore.csproj" />
   </ItemGroup>
 
 </Project>
