@@ -3,7 +3,7 @@ using SFB.Web.ApplicationCore.Helpers;
 
 namespace SFB.Web.UnitTests.Helpers
 {
-    public class SchoolFormatHelpersTests
+    public class SchoolFormatHelpersTests 
     {
         [SetUp]
         public void Setup()
