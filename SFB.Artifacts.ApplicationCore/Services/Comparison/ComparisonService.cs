@@ -176,8 +176,31 @@ namespace SFB.Web.ApplicationCore.Services.Comparison
                     break;
                 }
             }
+                        
+            //STEP 3: Expansion query returns less than required. Expand criteria values further gradually and try this max 10 times
+            tryCount = 0;
+            while (benchmarkSchools.Count < basketSize)
+            {
+                if (++tryCount > CriteriaSearchConfig.MAX_TRY_LIMIT) //Max query try reached. Return whatever is found.
+                {
+                    break;
+                }
 
-            //STEP 3: Query return is still less than required. Flex the Urban/Rural criteria gradually. Not applied to federations.
+                benchmarkCriteria = _benchmarkCriteriaBuilderService.BuildFromSimpleComparisonCriteriaExtended(defaultSchoolFinancialDataModel, simpleCriteria, tryCount);
+
+                benchmarkSchools = await _financialDataService.SearchSchoolsByCriteriaAsync(benchmarkCriteria, estType, false, excludeFeds);
+
+                if (benchmarkSchools.Count > basketSize) //Number jumping to more than ideal. Cut from top by proximity.
+                {
+                    benchmarkSchools = benchmarkSchools.OrderBy(b => Math.Abs(b.NoPupils.GetValueOrDefault() - defaultSchoolFinancialDataModel.PupilCount.GetValueOrDefault())).Take(basketSize).ToList();
+                    benchmarkCriteria.MinNoPupil = benchmarkSchools.Min(s => s.NoPupils);
+                    benchmarkCriteria.MaxNoPupil = benchmarkSchools.Max(s => s.NoPupils); //Update the criteria to reflect the max and min pupil count of the found schools
+                    break;
+                }
+            }
+
+
+            //STEP 4: Query return is still less than required. Flex the Urban/Rural criteria gradually. Not applied to federations.
             if (defaultSchoolFinancialDataModel.EstabType != EstablishmentType.Federation)
             {
                 tryCount = 1;
@@ -210,7 +233,7 @@ namespace SFB.Web.ApplicationCore.Services.Comparison
                 }
             }
 
-            //STEP 4: For federations, eliminate the schools if both federation and its schools are found
+            //STEP 5: For federations, eliminate the schools if both federation and its schools are found
             if (defaultSchoolFinancialDataModel.EstabType == EstablishmentType.Federation)
             {
                 var fedSchools = benchmarkSchools.Where(school => !school.IsFederation && school.IsPartOfFederation && benchmarkSchools.Exists(fed => fed.IsFederation && fed.FederationUid == school.FederationUid));
