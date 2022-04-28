@@ -223,6 +223,8 @@
         public const string IS_PART_OF_FEDERATION = "IsPartOfFederation";
         public const string FEDERATION_UID = "FederationUID";
         public const string FEDERATION_NAME = "FederationName";
+        public const string DIRECT_REVENUE_FINANCING = "DirectRevenueFinancingCapitalReserveTransfers";
+        public const string INTEREST_LOANS_BANKING = "InterestChargesForLoansAndBank";
     }      
 
     public class TrustCharacteristicsQuestions

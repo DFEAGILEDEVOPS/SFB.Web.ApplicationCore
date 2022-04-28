@@ -498,6 +498,12 @@ namespace SFB.Web.ApplicationCore.Entities
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.FEDERATION_NAME)]
         public string FederationName { get; set; }
 
+        [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.INTEREST_LOANS_BANKING)]
+        public decimal? InterestLoansAndBanking { get; set; }
+
+        [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.DIRECT_REVENUE_FINANCING)]
+        public decimal? DirectRevenueFinancing { get; set; }
+
         internal decimal? getValueByCriteriaName(string criteriaName)
         {
             foreach (var property in typeof(SchoolTrustFinancialDataObject).GetProperties())
