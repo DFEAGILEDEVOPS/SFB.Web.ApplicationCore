@@ -6,6 +6,10 @@ namespace SFB.Web.ApplicationCore.Models
 {
     public class SelfAssesmentModel
     {
+        public SelfAssesmentModel()
+        {
+        }
+
         public long Urn { get; private set; }
 
         public string Name { get; private set; }
