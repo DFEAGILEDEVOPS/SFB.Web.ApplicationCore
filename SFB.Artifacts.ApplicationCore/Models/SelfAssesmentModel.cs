@@ -10,29 +10,29 @@ namespace SFB.Web.ApplicationCore.Models
         {
         }
 
-        public long Urn { get; private set; }
+        public long Urn { get; set; }
 
-        public string Name { get; private set; }
+        public string Name { get; set; }
         
-        public string FinanceType { get; private set; }
+        public string FinanceType { get; set; }
 
-        public string LondonWeighting { get; private set; }
+        public string LondonWeighting { get; set; }
 
-        public decimal? NumberOfPupilsLatestTerm { get; private set; }
+        public decimal? NumberOfPupilsLatestTerm { get; set; }
 
-        public string OfstedRating { get; private set; }
+        public string OfstedRating { get; set; }
 
-        public DateTime? OfstedInspectionDate { get; private set; }
+        public DateTime? OfstedInspectionDate { get;  set; }
 
-        public decimal? P8Score { get; private set; }
+        public decimal? P8Score { get; set; }
 
-        public decimal? Ks2Score { get; private set; }
+        public decimal? Ks2Score { get; set; }
 
-        public string ProgressScoreType { get; private set; }
+        public string ProgressScoreType { get; set; }
 
-        public decimal? Progress8Banding { get; private set; }
+        public decimal? Progress8Banding { get; set; }
         
-        public decimal? FSMLatestTerm { get; private set; }
+        public decimal? FSMLatestTerm { get; set; }
 
         public string LatestTerm { get; set; }
 
