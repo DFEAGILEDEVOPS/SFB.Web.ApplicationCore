@@ -22,6 +22,10 @@ namespace SFB.Web.ApplicationCore.Services.DataAccess
             _financialDataRepository = financialDataRepository;
         }
 
+        public async Task<List<SchoolTrustFinancialDataObject>> GetTrustSchoolsFinancialDataAsync(int uid, string term)
+        {
+            return await _financialDataRepository.GetTrustSchoolsFinancialDataAsync(uid, term);
+        }
         public async Task<SchoolTrustFinancialDataObject> GetSchoolFinancialDataObjectAsync(long urn, string term, EstablishmentType schoolFinancialType, CentralFinancingType cFinance)
         {
             return await _financialDataRepository.GetSchoolFinanceDataObjectAsync(urn, term, schoolFinancialType, cFinance);
