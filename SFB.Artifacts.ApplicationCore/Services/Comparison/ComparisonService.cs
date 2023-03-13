@@ -189,6 +189,14 @@ namespace SFB.Web.ApplicationCore.Services.Comparison
                 benchmarkCriteria = _benchmarkCriteriaBuilderService.BuildFromSimpleComparisonCriteriaExtended(defaultSchoolFinancialDataModel, simpleCriteria, tryCount);
 
                 benchmarkSchools = await _financialDataService.SearchSchoolsByCriteriaAsync(benchmarkCriteria, estType, false, excludeFeds);
+                
+                if (benchmarkSchools.Count() < basketSize)
+                {
+                    benchmarkCriteria.MinNoPupil = (defaultSchoolFinancialDataModel.PupilCount / 100 * 50);
+                    benchmarkCriteria.MaxNoPupil = (defaultSchoolFinancialDataModel.PupilCount / 100 * 150);
+                    benchmarkSchools = await _financialDataService.SearchSchoolsByCriteriaAsync(benchmarkCriteria, estType, false, excludeFeds);
+                }
+
 
                 if (benchmarkSchools.Count > basketSize) //Number jumping to more than ideal. Cut from top by proximity.
                 {
