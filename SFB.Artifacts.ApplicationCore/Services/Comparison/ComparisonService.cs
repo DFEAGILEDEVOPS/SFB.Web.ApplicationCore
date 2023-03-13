@@ -190,7 +190,7 @@ namespace SFB.Web.ApplicationCore.Services.Comparison
 
                 benchmarkSchools = await _financialDataService.SearchSchoolsByCriteriaAsync(benchmarkCriteria, estType, false, excludeFeds);
                 
-                if (benchmarkSchools.Count() < basketSize)
+                if (benchmarkSchools.Count() < basketSize) 
                 {
                     benchmarkCriteria.MinNoPupil = (defaultSchoolFinancialDataModel.PupilCount / 100 * 50);
                     benchmarkCriteria.MaxNoPupil = (defaultSchoolFinancialDataModel.PupilCount / 100 * 150);
