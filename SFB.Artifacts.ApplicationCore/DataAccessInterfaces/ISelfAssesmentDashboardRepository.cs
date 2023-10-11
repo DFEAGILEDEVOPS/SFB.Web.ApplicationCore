@@ -7,6 +7,7 @@ namespace SFB.Web.ApplicationCore.DataAccess
     public interface ISelfAssesmentDashboardRepository
     {
         Task<SADSizeLookupDataObject> GetSADSizeLookupDataObjectAsync(string overallPhase, bool hasSixthForm, decimal noPupils, string term);
+        
         Task<SADFSMLookupDataObject> GetSADFSMLookupDataObjectAsync(string overallPhase, bool hasSixthForm, decimal fsm, string term);
         Task<List<SADSizeLookupDataObject>> GetSADSizeLookupListDataObject();
         Task<List<SADFSMLookupDataObject>> GetSADFSMLookupListDataObject();
