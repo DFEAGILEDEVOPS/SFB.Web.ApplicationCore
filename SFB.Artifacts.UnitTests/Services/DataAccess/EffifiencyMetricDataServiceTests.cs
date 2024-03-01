@@ -6,6 +6,7 @@ using SFB.Web.ApplicationCore.Entities;
 using System.Collections.Generic;
 using SFB.Web.ApplicationCore.Services.DataAccess;
 using System;
+using Assert = NUnit.Framework.Legacy.ClassicAssert;
 
 namespace SFB.Web.UnitTests.Services.DataAccess
 {

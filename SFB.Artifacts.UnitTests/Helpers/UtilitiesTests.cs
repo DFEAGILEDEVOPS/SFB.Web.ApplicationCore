@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 using SFB.Web.ApplicationCore.Helpers;
-
+using Assert = NUnit.Framework.Legacy.ClassicAssert;
 
 namespace SFB.Web.UnitTests.Helpers
 {
