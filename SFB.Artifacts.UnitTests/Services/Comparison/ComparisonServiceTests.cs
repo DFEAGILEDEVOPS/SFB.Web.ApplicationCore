@@ -6,7 +6,6 @@ using SFB.Web.ApplicationCore.Models;
 using SFB.Web.ApplicationCore.Services.Comparison;
 using SFB.Web.ApplicationCore.Services.DataAccess;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace SFB.Web.UnitTests.Services.Comparison

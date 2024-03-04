@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
-using Moq;
 using SFB.Web.ApplicationCore.Services;
+using Assert = NUnit.Framework.Legacy.ClassicAssert;
 
 namespace SFB.Web.UnitTests.Services.Validation
 {

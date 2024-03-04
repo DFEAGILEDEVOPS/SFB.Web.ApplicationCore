@@ -1,10 +1,8 @@
-﻿using Newtonsoft.Json;
-using SFB.Web.ApplicationCore.Attributes;
-using SFB.Web.ApplicationCore.Helpers.Constants;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using Newtonsoft.Json;
+using SFB.Web.ApplicationCore.Helpers.Constants;
 
 namespace SFB.Web.ApplicationCore.Entities
 {
@@ -13,7 +11,7 @@ namespace SFB.Web.ApplicationCore.Entities
     public class SchoolTrustFinancialDataObject
     {
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.URN)]
-        public long? URN{ get; set; }
+        public long? URN { get; set; }
 
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.SCHOOL_NAME)]
         public string SchoolName { get; set; }
@@ -226,8 +224,8 @@ namespace SFB.Web.ApplicationCore.Entities
         public decimal? BroughtProfessionalServices { get; set; }
 
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.BOUGHT_IN_OTHER)]
-        public decimal? BoughtInOther { get; set; }        
-        
+        public decimal? BoughtInOther { get; set; }
+
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.BOUGHT_IN_NOT_PFI)]
         public decimal? BoughtInNotPFI { get; set; }
 
@@ -263,7 +261,7 @@ namespace SFB.Web.ApplicationCore.Entities
 
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.COMMUNITY_EXP)]
         public decimal? CommunityExpenditure { get; set; }
-        
+
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.COMM_FOCUSED_SCHOOL_FACILITIES)]
         public decimal? CommFocusedSchoolFacilities { get; set; }
 
@@ -457,7 +455,7 @@ namespace SFB.Web.ApplicationCore.Entities
         public decimal? OtherLearningDiff { get; set; }
 
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.LA)]
-        public int? LA  { get; set; }
+        public int? LA { get; set; }
 
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.OFSTED_RATING)]
         public decimal? OfstedRating { get; set; }

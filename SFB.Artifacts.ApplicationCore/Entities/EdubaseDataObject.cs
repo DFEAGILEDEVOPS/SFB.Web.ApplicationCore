@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using SFB.Web.ApplicationCore.Entities.Converters;
 using SFB.Web.ApplicationCore.Helpers.Constants;
 
 namespace SFB.Web.ApplicationCore.Entities
@@ -20,6 +21,7 @@ namespace SFB.Web.ApplicationCore.Entities
         [JsonProperty(PropertyName = EdubaseDataFieldNames.TYPE_OF_ESTAB)]
         public string TypeOfEstablishment { get; set; }
 
+        [JsonConverter(typeof(LocationConverter))]
         [JsonProperty(PropertyName = EdubaseDataFieldNames.LOCATION)]
         public LocationDataObject Location { get; set; }
 
@@ -111,14 +113,14 @@ namespace SFB.Web.ApplicationCore.Entities
         public string FederationName { get; set; }
 
         [JsonProperty(PropertyName = EdubaseDataFieldNames.FEDERATIONS_CODE)]
-        public long? FederationsCode { get; set; }        
-        
+        public long? FederationsCode { get; set; }
+
         [JsonProperty(PropertyName = EdubaseDataFieldNames.FEDERATION)]
-        public string Federation { get; set; }        
-        
+        public string Federation { get; set; }
+
         [JsonProperty(PropertyName = EdubaseDataFieldNames.GOV_OFFICE_REGION)]
-        public string GovernmentOfficeRegion { get; set; }        
-        
+        public string GovernmentOfficeRegion { get; set; }
+
         [JsonProperty(PropertyName = EdubaseDataFieldNames.ESTAB_STATUS)]
         public string EstablishmentStatus { get; set; }
     }

@@ -3,6 +3,7 @@ using SFB.Web.ApplicationCore.Entities;
 using SFB.Web.ApplicationCore.Helpers.Enums;
 using SFB.Web.ApplicationCore.Models;
 using SFB.Web.ApplicationCore.Services.Comparison;
+using Assert = NUnit.Framework.Legacy.ClassicAssert;
 
 namespace SFB.Web.UnitTests.Services.Comparison
 {
