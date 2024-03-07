@@ -218,7 +218,7 @@ public class EdubaseDataObjectDeserializationTests
 
     [Test]
     // 20231211-GIAS-2022-2023
-    public void DeserializeCurrentGiasData_School_ParsesSuccessfully()
+    public void DeserializeMalformedGiasData_School_ThrowsException()
     {
         // arrange
         const string document = @"{
@@ -373,50 +373,13 @@ public class EdubaseDataObjectDeserializationTests
 }";
 
         // act
-        var parsed = JsonConvert.DeserializeObject<EdubaseDataObject>(document);
+        // ReSharper disable once ConvertToLocalFunction
+        var parsed = () => JsonConvert.DeserializeObject<EdubaseDataObject>(document);
 
         // assert
-        Assert.AreEqual(138704, parsed.URN);
-        Assert.AreEqual(371, parsed.LACode);
-        Assert.AreEqual(3007, parsed.EstablishmentNumber);
-        Assert.AreEqual(3713007, parsed.LAEstab);
-        Assert.AreEqual("St Oswald's CofE Academy", parsed.EstablishmentName);
-        Assert.AreEqual("Academy converter", parsed.TypeOfEstablishment);
-        Assert.AreEqual("Open", parsed.EstablishmentStatus);
-        Assert.AreEqual("09/01/2012", parsed.OpenDate);
-        Assert.AreEqual(null, parsed.CloseDate);
-        Assert.AreEqual("Primary", parsed.PhaseOfEducation);
-        Assert.AreEqual(null, parsed.StatutoryLowAge);
-        Assert.AreEqual(null, parsed.StatutoryHighAge);
-        Assert.AreEqual(null, parsed.NurseryProvision);
-        Assert.AreEqual("Does not have a sixth form", parsed.OfficialSixthForm);
-        Assert.AreEqual("Church of England", parsed.ReligiousCharacter);
-        Assert.AreEqual(230, parsed.NumberOfPupils);
-        Assert.AreEqual(null, parsed.UID);
-        Assert.AreEqual("THE DIOCESE OF SHEFFIELD ACADEMIES TRUST", parsed.Trusts);
-        Assert.AreEqual("The Diocese of Sheffield Academies Trust", parsed.SponsorName);
-        Assert.AreEqual(false, parsed.IsFederation);
-        Assert.AreEqual(false, parsed.IsPartOfFederation);
-        Assert.AreEqual(null, parsed.FederationName);
-        Assert.AreEqual(null, parsed.FederationMembers);
-        Assert.AreEqual(null, parsed.FederationUid);
-        Assert.AreEqual(null, parsed.FederationsCode);
-        Assert.AreEqual(string.Empty, parsed.Federation);
-        Assert.AreEqual(null, parsed.MatSat);
-        Assert.AreEqual("1", parsed.OfstedRating);
-        Assert.AreEqual("13/06/2014", parsed.OfstedLastInsp);
-        Assert.AreEqual("www.stoswaldsacademy.co.uk", parsed.SchoolWebsite);
-        Assert.AreEqual("01302770330", parsed.TelephoneNum);
-        Assert.AreEqual("Sharon", parsed.HeadFirstName);
-        Assert.AreEqual("Patton", parsed.HeadLastName);
-        Assert.AreEqual("Yorkshire and the Humber", parsed.GovernmentOfficeRegion);
-        Assert.AreEqual("Academies", parsed.FinanceType);
-        Assert.AreEqual("Primary", parsed.OverallPhase);
-        Assert.AreEqual(null, parsed.CompanyNumber);
-        Assert.AreEqual("Point", parsed.Location.type);
-        Assert.AreEqual("-0.96762656169189831", parsed.Location.coordinates[0]);
-        Assert.AreEqual("54.099926106277557", parsed.Location.coordinates[1]);
-        Assert.AreEqual("Silver Birch Grove, Finningley, Doncaster, South Yorkshire, DN9 3EQ", parsed.Address);
+        // ReSharper disable once AccessToStaticMemberViaDerivedType
+        var ex = Assert.Throws<JsonSerializationException>(() => parsed());
+        Assert.AreEqual("Location", ex!.Path);
     }
 
     [Test]

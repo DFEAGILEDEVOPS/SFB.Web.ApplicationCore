@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Reflection;
 using Newtonsoft.Json;
+using SFB.Web.ApplicationCore.Entities.Converters;
 using SFB.Web.ApplicationCore.Helpers.Constants;
 
 namespace SFB.Web.ApplicationCore.Entities
@@ -284,6 +285,7 @@ namespace SFB.Web.ApplicationCore.Entities
         public int? SchoolCount { get; set; }
 
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.PERIOD_COVERED_BY_RETURN)]
+        [JsonConverter(typeof(Int32JsonConverter))]
         public int? PeriodCoveredByReturn { get; set; }
 
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.PARTIAL_YEARS_PRESENT)]
@@ -353,6 +355,7 @@ namespace SFB.Web.ApplicationCore.Entities
         public decimal? NumberIn6Form { get; set; }
 
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.HIGHEST_AGE_PUPILS)]
+        [JsonConverter(typeof(Int32JsonConverter))]
         public int? HighestAgePupils { get; set; }
 
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.ADMIN_STAFF)]
@@ -368,6 +371,7 @@ namespace SFB.Web.ApplicationCore.Entities
         public decimal? PercentageQualifiedTeachers { get; set; }
 
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.LOWEST_AGE_PUPILS)]
+        [JsonConverter(typeof(Int32JsonConverter))]
         public int? LowestAgePupils { get; set; }
 
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.FULL_TIME_TA)]
