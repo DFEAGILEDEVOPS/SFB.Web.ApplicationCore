@@ -2,14 +2,19 @@
 
     <PropertyGroup>
         <TargetFrameworks>netstandard2.0;net48</TargetFrameworks>
-        <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+        <Timestamp>$([System.DateTime]::Now.ToString("yyyyMMddHHmmss"))</Timestamp>
     </PropertyGroup>
 
     <ItemGroup>
         <PackageReference Include="Microsoft.CSharp" Version="4.7.0"/>
         <PackageReference Include="Microsoft.Spatial" Version="7.5.3"/>
-        <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3"/>
         <PackageReference Include="System.ComponentModel.Annotations" Version="4.7.0"/>
     </ItemGroup>
+
+    <Target Name="BuildNuget" AfterTargets="AfterBuild" Condition=" '$(Configuration)' == 'Debug' ">
+        <Exec Command="dotnet pack --no-build --include-symbols --output bin --configuration Debug --version-suffix $(Timestamp)"
+              ContinueOnError="WarnAndContinue"/>
+    </Target>
 
 </Project>

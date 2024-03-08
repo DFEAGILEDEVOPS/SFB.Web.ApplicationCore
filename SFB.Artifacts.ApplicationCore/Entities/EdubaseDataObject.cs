@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using SFB.Web.ApplicationCore.Entities.Converters;
 using SFB.Web.ApplicationCore.Helpers.Constants;
 
 namespace SFB.Web.ApplicationCore.Entities
@@ -54,9 +55,11 @@ namespace SFB.Web.ApplicationCore.Entities
         public float? NumberOfPupils { get; set; }
 
         [JsonProperty(PropertyName = EdubaseDataFieldNames.STAT_LOW)]
+        [JsonConverter(typeof(Int32JsonConverter))]
         public int? StatutoryLowAge { get; set; }
 
         [JsonProperty(PropertyName = EdubaseDataFieldNames.STAT_HIGH)]
+        [JsonConverter(typeof(Int32JsonConverter))]
         public int? StatutoryHighAge { get; set; }
 
         [JsonProperty(PropertyName = EdubaseDataFieldNames.HEAD_FIRST_NAME)]
@@ -111,14 +114,14 @@ namespace SFB.Web.ApplicationCore.Entities
         public string FederationName { get; set; }
 
         [JsonProperty(PropertyName = EdubaseDataFieldNames.FEDERATIONS_CODE)]
-        public long? FederationsCode { get; set; }        
-        
+        public long? FederationsCode { get; set; }
+
         [JsonProperty(PropertyName = EdubaseDataFieldNames.FEDERATION)]
-        public string Federation { get; set; }        
-        
+        public string Federation { get; set; }
+
         [JsonProperty(PropertyName = EdubaseDataFieldNames.GOV_OFFICE_REGION)]
-        public string GovernmentOfficeRegion { get; set; }        
-        
+        public string GovernmentOfficeRegion { get; set; }
+
         [JsonProperty(PropertyName = EdubaseDataFieldNames.ESTAB_STATUS)]
         public string EstablishmentStatus { get; set; }
     }

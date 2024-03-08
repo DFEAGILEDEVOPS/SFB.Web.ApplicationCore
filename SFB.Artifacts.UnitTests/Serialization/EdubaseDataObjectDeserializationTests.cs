@@ -399,8 +399,8 @@ public class EdubaseDataObjectDeserializationTests
     ""FinanceType"": ""Federation"",
     ""PhaseOfEducation"": ""Primary"",
     ""OverallPhase"": ""Primary"",
-    ""StatutoryLowAge"": 4,
-    ""StatutoryHighAge"": 11,
+    ""StatutoryLowAge"": 4.0,
+    ""StatutoryHighAge"": 11.0,
     ""NumberOfPupils"": 146.5,
     ""OpenDate"": ""01/09/2007"",
     ""CloseDate"": null,
@@ -416,7 +416,7 @@ public class EdubaseDataObjectDeserializationTests
     ""FederationName"": ""North Bedfordshire Schools Trust (NBST)"",
     ""_ts"": 1667984192
 }";
-        
+
         // act
         var parsed = JsonConvert.DeserializeObject<EdubaseDataObject>(document);
 
