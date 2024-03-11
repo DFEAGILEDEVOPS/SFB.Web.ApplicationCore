@@ -226,7 +226,7 @@ public class SchoolTrustFinancialDataObjectDeserializationTests
         Assert.AreEqual(4, parsed.LowestAgePupils);
         Assert.AreEqual(11, parsed.HighestAgePupils);
     }
-    
+
     [Test]
     // 20221012000000-Maintained-2021-2022
     public void DeserializeSchoolTrustFinancialDataObject_IntAsDecimals_ParsesSuccessfully()
@@ -459,5 +459,176 @@ public class SchoolTrustFinancialDataObjectDeserializationTests
         Assert.AreEqual(12, parsed.PeriodCoveredByReturn);
         Assert.AreEqual(5, parsed.LowestAgePupils);
         Assert.AreEqual(11, parsed.HighestAgePupils);
+    }
+
+    [Test]
+    // 20200421000000-MAT-Overview-2018-2019
+    public void DeserializeSchoolTrustFinancialDataObject_Trust_ParsesSuccessfully()
+    {
+        // arrange
+        const string document = @"{
+  ""LA"": null,
+  ""Estab"": null,
+  ""URN"": null,
+  ""UID"": 4850,
+  ""School Name"": null,
+  ""Period covered by return"": 12,
+  ""MAT SAT or Central Services"": ""Central services"",
+  ""Lead UPIN"": 137255,
+  ""Date closed if in period"": null,
+  ""Date opened if in period"": null,
+  ""Gender"": null,
+  ""Phase"": null,
+  ""Overall PhaseBreakdown"": {
+    ""Primary"": 8,
+    ""Secondary"": 0,
+    ""Special"": 0,
+    ""Pupil referral unit"": 0,
+    ""All-through"": 0,
+    ""16 plus"": 0
+  },
+  ""Type"": null,
+  ""Urban /Rural"": null,
+  ""Region"": null,
+  ""London Borough"": null,
+  ""London Weighting"": null,
+  ""% of pupils eligible for FSM"": null,
+  ""% of pupils with SEN Statement"": 11.675,
+  ""DirectRevenueFinancingCapitalReserveTransfers"": -164000.0,
+  ""InterestChargesForLoansAndBank"": 0.0,
+  ""% of pupils without SEN Statement"": 2.5375,
+  ""% of pupils with EAL"": null,
+  ""% of pupils who are Boarders"": null,
+  ""Admissions policy"": null,
+  ""PFI"": null,
+  ""Has a 6th form"": false,
+  ""No of pupils in 6th form"": 0.0,
+  ""Lowest age of pupils"": null,
+  ""Highest age of pupils"": null,
+  ""SEN"": 614000.0,
+  ""Other DfE/EFA Revenue Grants"": 667000.0,
+  ""Other income (LA & other Government grants)"": 0.0,
+  ""Government source (non-grant)"": 0.0,
+  ""Academies"": 0.0,
+  ""Non- Government"": 30000.0,
+  ""Income from facilities and services"": 117000.0,
+  ""Income from catering"": 0.0,
+  ""Receipts from supply teacher insurance claims"": 32000.0,
+  ""Donations and/or voluntary funds"": 26000.0,
+  ""Other self-generated income"": 23000.0,
+  ""Investment income"": 0.0,
+  ""Teaching staff"": 5553000.0,
+  ""Supply teaching staff"": 0.0,
+  ""Education support staff"": 2067000.0,
+  ""Administrative and clerical staff"": 1307000.0,
+  ""Premises staff"": 148000.0,
+  ""Catering staff"": 0.0,
+  ""Other staff"": 440000.0,
+  ""Indirect employee expenses"": 5000.0,
+  ""Staff development and training"": 66000.0,
+  ""Staff-related insurance"": 45000.0,
+  ""Supply teacher insurance"": 0.0,
+  ""Building and Grounds maintenance and improvement"": 253000.0,
+  ""Cleaning and caretaking"": 206000.0,
+  ""Water and sewerage"": 26000.0,
+  ""Energy"": 92000.0,
+  ""Rent and Rates"": 56000.0,
+  ""Other occupation costs"": 95000.0,
+  ""Special facilities"": 26000.0,
+  ""Learning resources (not ICT equipment)"": 465000.0,
+  ""ICT learning resources"": 36000.0,
+  ""Examination fees"": 0.0,
+  ""Educational Consultancy"": 9000.0,
+  ""Administrative supplies - non educational"": 559000.0,
+  ""Agency supply teaching staff"": 170000.0,
+  ""Catering supplies"": 321000.0,
+  ""Other insurance premiums"": 37000.0,
+  ""Legal & Professional"": 56000.0,
+  ""Auditor costs"": 31000.0,
+  ""Interest charges for Loan and Bank"": null,
+  ""Direct revenue financing (Revenue contributions to capital)"": null,
+  ""PFI Charges"": 0.0,
+  ""In Year Balance"": -529000.0,
+  ""Grant Funding"": 11506000.0,
+  ""Direct Grant"": 10862000.0,
+  ""Community Grants"": 30000.0,
+  ""Targeted Grants"": 614000.0,
+  ""Self Generated Funding"": 198000.0,
+  ""Total Income"": 11540000.0,
+  ""Supply Staff"": 170000.0,
+  ""Other Staff Costs"": 556000.0,
+  ""Staff Total"": 9653000.0,
+  ""Maintenance & Improvement"": 253000.0,
+  ""Premises"": 607000.0,
+  ""Catering Exp"": 321000.0,
+  ""Occupation"": 627000.0,
+  ""Supplies and Services"": 1156000.0,
+  ""Educational Supplies"": 501000.0,
+  ""Brought in Professional Sevices"": 96000.0,
+  ""Cost of Finance"": null,
+  ""Community Exp"": null,
+  ""Total Expenditure"": 12069000.0,
+  ""TrustDidNotSubmit"": false,
+  ""IsPlaceholder"": false,
+  ""DNS"": false,
+  ""WorkforcePresent"": true,
+  ""SpecialNeedsPresent"": true,
+  ""KS2Present"": true,
+  ""KS4Present"": false,
+  ""OfstedPresent"": true,
+  ""CompanyNumberD8"": ""08179242"",
+  ""TrustOrCompanyName"": ""Stour Academy Trust"",
+  ""MATNumber"": null,
+  ""CompanyNumber"": 8179242,
+  ""Pre-16 Funding"": 10195000.0,
+  ""RevenueReserveAsSubmitted"": 1518000.0,
+  ""PartialYearsPresent"": false,
+  ""LAEstab"": null,
+  ""% of teachers with QTS"": null,
+  ""FTE of Teaching Assistants"": null,
+  ""FTE of Support Staff"": null,
+  ""FTE of Admin Staff"": null,
+  ""Average Key Stage 2 Point score"": null,
+  ""% achieving Level 4 including English and Maths at KS2"": null,
+  ""Average Attainment 8 score per pupil"": null,
+  ""% with 5 A*-C grade GCSEs (or equiv) inc English and Maths"": null,
+  ""Pupil Premium"": null,
+  ""ESG"": null,
+  ""Other Income"": null,
+  ""Other"": null,
+  ""Post-16 Funding"": null,
+  ""ValidFrom"": null,
+  ""ValidTo"": null,
+  ""MemberCount"": 8.0,
+  ""No Pupils"": 2015.0,
+  ""No Teachers"": 114.5,
+  ""Members"": [
+    138579,
+    141308,
+    141881,
+    140393,
+    141548,
+    145115,
+    145013,
+    138738
+  ],
+  ""Overall Phase"": ""Primary"",
+  ""Revenue Reserve"": 1518000.0,
+  ""last-modified-date-time"": ""05/03/2022 23:34:26"",
+  ""id"": ""a1548264-1445-4045-ab5c-80e00adbcd69"",
+  ""_rid"": ""qgt3AIbKQg9GAAAAAAAAAA=="",
+  ""_self"": ""dbs/qgt3AA==/colls/qgt3AIbKQg8=/docs/qgt3AIbKQg9GAAAAAAAAAA==/"",
+  ""_etag"": ""\""48025bde-0000-0d00-0000-63f4abe40000\"""",
+  ""_attachments"": ""attachments/"",
+  ""_ts"": 1676979172
+}
+";
+
+        // act
+        var parsed = JsonConvert.DeserializeObject<SchoolTrustFinancialDataObject>(document);
+
+        // assert
+        Assert.AreEqual(8179242, parsed.CompanyNumber);
+        Assert.AreEqual(8, parsed.SchoolCount);
     }
 }

@@ -282,6 +282,7 @@ namespace SFB.Web.ApplicationCore.Entities
         public decimal? NoTeachers { get; set; }
 
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.MEMBER_COUNT)]
+        [JsonConverter(typeof(Int32JsonConverter))]
         public int? SchoolCount { get; set; }
 
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.PERIOD_COVERED_BY_RETURN)]
