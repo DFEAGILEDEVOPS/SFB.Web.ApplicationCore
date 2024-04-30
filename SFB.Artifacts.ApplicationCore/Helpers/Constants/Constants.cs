@@ -197,6 +197,7 @@
         public const string COMMUNITY_EXP = "Community Exp";
         public const string TOTAL_EXP = "Total Expenditure";
         public const string REVENUE_RESERVE = "Revenue Reserve";
+        public const string SHARE_OF_REVENUE_RESERVE = "Share of Revenue Reserve";
         public const string NO_TEACHERS = "No Teachers";
         public const string MEMBER_COUNT = "MemberCount";
         public const string PARTIAL_YEARS_PRESENT = "PartialYearsPresent";
