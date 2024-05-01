@@ -74,8 +74,13 @@
         public const string AUX_STAFF = "TotalNumberOfAuxiliaryStaffFullTimeEquivalent";
         public const string AUX_STAFF_HC = "TotalNumberOfAuxiliaryStaffHeadcount";
         public const string ADMIN_STAFF = "FTE of Admin Staff";
-        public const string FULL_TIME_OTHER = "TotalNumberOfNonClassroomBasedSchoolSupportStaffExcludingAuxiliaryStaffFullTimeEquivalent";
-        public const string FULL_TIME_OTHER_HC = "TotalNumberOfNonClassroomBasedSchoolSupportStaffExcludingAuxiliaryStaffHeadcount";
+
+        public const string FULL_TIME_OTHER =
+            "TotalNumberOfNonClassroomBasedSchoolSupportStaffExcludingAuxiliaryStaffFullTimeEquivalent";
+
+        public const string FULL_TIME_OTHER_HC =
+            "TotalNumberOfNonClassroomBasedSchoolSupportStaffExcludingAuxiliaryStaffHeadcount";
+
         public const string FULL_TIME_TA = "TotalNumberOfTeachingAssistantsFullTimeEquivalent";
         public const string FULL_TIME_TA_HEADCOUNT = "TotalNumberOfTeachingAssistantsHeadcount";
         public const string PERCENTAGE_QUALIFIED_TEACHERS = "TeachersWithQualifiedTeacherStatus";
@@ -197,14 +202,13 @@
         public const string COMMUNITY_EXP = "Community Exp";
         public const string TOTAL_EXP = "Total Expenditure";
         public const string REVENUE_RESERVE = "Revenue Reserve";
-        public const string SHARE_OF_REVENUE_RESERVE = "Share of Revenue Reserve";
         public const string NO_TEACHERS = "No Teachers";
         public const string MEMBER_COUNT = "MemberCount";
         public const string PARTIAL_YEARS_PRESENT = "PartialYearsPresent";
         public const string DNS = "DNS";
         public const string MAT_SAT = "MAT SAT or Central Services";
         public const string WORKFORCE_PRESENT = "WorkforcePresent";
-        public const string PRE_POST_16_FUNDING = "Pre-16 Funding";        
+        public const string PRE_POST_16_FUNDING = "Pre-16 Funding";
         public const string ADDITIONAL_GRANT = "Additional grant for schools";
         public const string PUPIL_FOCUSED_FUNDING = "Pupil focussed extended school funding and/or grants";
         public const string PUPIL_PREMIUM = "Pupil Premium";
@@ -217,7 +221,10 @@
         public const string GRANT_FUNDING_PP = "PerPupilGrantFunding";
         public const string TOTAL_EXP_PP = "PerPupilTotalExpenditure";
         public const string TEACHERS_MAIN_PAY = "AllClassroomTeachersOnMainPayRangePercent";
-        public const string TEACHERS_UPPER_LEADING_PAY = "AllClassroomTeachersOnUpperPayRangeAndOrLeadingPractionersPayRangePercent";
+
+        public const string TEACHERS_UPPER_LEADING_PAY =
+            "AllClassroomTeachersOnUpperPayRangeAndOrLeadingPractionersPayRangePercent";
+
         public const string TEACHERS_LEADERSHIP_PAY = "AllTeachersOnTheLeadershipPayRangePercent";
         public const string UID = "UID";
         public const string IS_FEDERATION = "IsFederation";
@@ -226,7 +233,7 @@
         public const string FEDERATION_NAME = "FederationName";
         public const string DIRECT_REVENUE_FINANCING = "DirectRevenueFinancingCapitalReserveTransfers";
         public const string INTEREST_LOANS_BANKING = "InterestChargesForLoansAndBank";
-    }      
+    }
 
     public class TrustCharacteristicsQuestions
     {
@@ -240,7 +247,6 @@
         public const string CROSS_PRU = "Pupil referral unit";
         public const string CROSS_AP = "Alternative provision";
         public const string CROSS_AT = "All through";
-
     }
 
     public class SchoolCharacteristicsQuestions
@@ -257,8 +263,13 @@
         public const string LONDON_BOROUGH = "London borough";
         public const string LONDON_WEIGHTING = "London weighting";
         public const string PERCENTAGE_OF_ELIGIBLE_FREE_SCHOOL_MEALS = "Eligibility for free school meals";
-        public const string PERCENTAGE_OF_PUPILS_WITH_STATEMENT_OF_SEN = "Pupils with SEN who have statements or EHC plans";
-        public const string PERCENTAGE_OF_PUPILS_ON_SEN_REGISTER = "Pupils with special educational needs (SEN) who don't have statements or education and health care (EHC) plans";
+
+        public const string PERCENTAGE_OF_PUPILS_WITH_STATEMENT_OF_SEN =
+            "Pupils with SEN who have statements or EHC plans";
+
+        public const string PERCENTAGE_OF_PUPILS_ON_SEN_REGISTER =
+            "Pupils with special educational needs (SEN) who don't have statements or education and health care (EHC) plans";
+
         public const string PERCENTAGE_OF_PUPILS_WITH_EAL = "Pupils with English as an additional language";
         public const string PERCENTAGE_BOARDERS = "Boarders";
         public const string ADMISSIONS_POLICY = "Admissions policy";
@@ -267,9 +278,15 @@
         public const string NUMBER_IN6_FORM = "Number in sixth form";
         public const string LOWEST_AGE_PUPILS = "Lowest age of pupils";
         public const string HIGHEST_AGE_PUPILS = "Highest age of pupils";
-        public const string PERCENTAGE_QUALIFIED_TEACHERS = "Percentage of teachers with qualified teacher status (full time equivalent)";
+
+        public const string PERCENTAGE_QUALIFIED_TEACHERS =
+            "Percentage of teachers with qualified teacher status (full time equivalent)";
+
         public const string FULL_TIME_TA = "Number of teaching assistants (full time equivalent)";
-        public const string FULL_TIME_OTHER = "Number of non-classroom support staff – excluding auxiliary staff (full time equivalent)";
+
+        public const string FULL_TIME_OTHER =
+            "Number of non-classroom support staff – excluding auxiliary staff (full time equivalent)";
+
         public const string FULL_TIME_AUX = "Number of Auxiliary staff (Full Time Equivalent)";
         public const string SCHOOL_WORKFORCE_FTE = "Number in the school workforce (full time equivalent)";
         public const string NUMBER_OF_TEACHERS_FTE = "Number of teachers (full time equivalent)";
@@ -316,17 +333,16 @@
     {
         public const string Edubase = "Edubase";
 
-        public const string Maintained = "Maintained";//Maintained figures
+        public const string Maintained = "Maintained"; //Maintained figures
 
-        public const string Academies = "Academies";//Academy's own figures        
-        public const string MATAllocs = "MAT-Allocs";//Academy + its MAT's allocated figures        
+        public const string Academies = "Academies"; //Academy's own figures        
+        public const string MATAllocs = "MAT-Allocs"; //Academy + its MAT's allocated figures        
 
-        public const string MATCentral = "MAT-Central";//MAT only figures
-        public const string MATTotals = "MAT-Totals";//Total of Academy only figures of the MAT
-        public const string MATOverview = "MAT-Overview";//MAT + all of its Academies' figures
+        public const string MATCentral = "MAT-Central"; //MAT only figures
+        public const string MATTotals = "MAT-Totals"; //Total of Academy only figures of the MAT
+        public const string MATOverview = "MAT-Overview"; //MAT + all of its Academies' figures
 
         public const string Unidentified = "Unidentified";
-
     }
 
     public class SearchErrorMessages
@@ -338,13 +354,17 @@
         public const string TRUST_NAME_ERR_MESSAGE =
             "Enter a trust name or Companies House number to start a search (minimum 3 characters)";
 
-        public const string LOCATION_ERR_MESSAGE = "Enter a postcode, town or street to start a search (minimum 2 characters)";
+        public const string LOCATION_ERR_MESSAGE =
+            "Enter a postcode, town or street to start a search (minimum 2 characters)";
 
-        public const string LOCATION_ERR_MESSAGE_FOR_COMPARISON = "Enter a postcode, town or street to continue the comparison (minimum 2 characters)";
+        public const string LOCATION_ERR_MESSAGE_FOR_COMPARISON =
+            "Enter a postcode, town or street to continue the comparison (minimum 2 characters)";
 
-        public const string LA_CODE_ERR_MESSAGE = "Enter a local authority name or LA code to start a search (minimum 2 characters)";
+        public const string LA_CODE_ERR_MESSAGE =
+            "Enter a local authority name or LA code to start a search (minimum 2 characters)";
 
-        public const string LA_CODE_ERR_MESSAGE_FOR_COMPARISON = "Enter a local authority name or LA code to continue the comparison (minimum 2 characters)";
+        public const string LA_CODE_ERR_MESSAGE_FOR_COMPARISON =
+            "Enter a local authority name or LA code to continue the comparison (minimum 2 characters)";
 
         public const string LA_NAME_ERR_MESSAGE =
             "Enter a local authority name or LA code to start a search (minimum 2 characters)";
@@ -365,11 +385,11 @@
             "Enter a trust name or Companies House number to start a search (minimum 3 characters)";
 
         public const string NO_SCHOOL_NAME_RESULTS = "We couldn't find any schools matching your search criteria";
-        
+
         public const string NO_TRUST_NAME_RESULTS = "We couldn't find any trusts matching your search criteria";
-        
+
         public const string NO_LA_RESULTS = "We couldn't find any local authorities matching your search criteria";
-        
+
         public const string NO_LOCATION_RESULTS = "We couldn't find any locations matching your search criteria";
     }
 
@@ -406,7 +426,9 @@
         public const decimal BIC_DEFAULT_CONSTANT_PUPIL_COUNT_TOPUP = 30M;
         public const decimal BIC_DEFAULT_CONSTANT_EXP_PP_TOPUP = 100M;
         public const decimal BIC_DEFAULT_CONSTANT_FSM_TOPUP = 3M;
+
         public const decimal BIC_DEFAULT_FLEX_PUPIL_COUNT = 0.20M;
+
         //public const decimal BIC_DEFAULT_FLEX_EXP_PP_MAX = 0.1M;
         public const decimal BIC_DEFAULT_FLEX_SEN = 0.15M;
         public const decimal BIC_DEFAULT_FLEX_FSM = 0.1M;
@@ -417,7 +439,12 @@
         public const int SPECIALS_SEN_PERCENTAGE_MIN_LIMIT = 0;
         public const int SPECIALS_TOP_SEN_RATIO_THRESHOLD = 10;
         public const int SPECIALS_TOP_SEN_NUMBER = 3;
-        public static readonly int[] SPECIALS_CONSTANT_SEN_TOPUP = new[] { 15, 10, 5 };
-        public static readonly string[] BIC_ALLOWED_PHASES = new[] { "All-through", "Infant and junior", "Secondary", "Junior", "Middle deemed secondary", "Middle deemed primary" };
+        public static readonly int[] SPECIALS_CONSTANT_SEN_TOPUP = { 15, 10, 5 };
+
+        public static readonly string[] BIC_ALLOWED_PHASES =
+        {
+            "All-through", "Infant and junior", "Secondary", "Junior", "Middle deemed secondary",
+            "Middle deemed primary"
+        };
     }
 }

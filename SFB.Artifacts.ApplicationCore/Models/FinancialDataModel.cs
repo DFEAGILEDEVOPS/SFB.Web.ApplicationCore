@@ -208,7 +208,6 @@ namespace SFB.Web.ApplicationCore.Models
 
         public decimal? InYearBalance => FinancialDataObjectModel?.InYearBalance;
         public decimal? RevenueReserve => FinancialDataObjectModel?.RevenueReserve;
-        public decimal? ShareOfRevenueReserve => FinancialDataObjectModel?.ShareOfRevenueReserve;
 
         //public bool IsFederation => FinancialDataObjectModel != null ? FinancialDataObjectModel.IsFederation : false;
         //public bool IsPartOfFederation => FinancialDataObjectModel != null ? FinancialDataObjectModel.IsPartOfFederation : false;

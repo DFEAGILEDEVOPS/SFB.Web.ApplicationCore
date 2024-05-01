@@ -274,9 +274,6 @@ namespace SFB.Web.ApplicationCore.Entities
 
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.REVENUE_RESERVE)]
         public decimal? RevenueReserve { get; set; }
-        
-        [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.SHARE_OF_REVENUE_RESERVE)]
-        public decimal? ShareOfRevenueReserve { get; set; }
 
         [JsonProperty(PropertyName = SchoolTrustFinanceDataFieldNames.NO_PUPILS)]
         public decimal? NoPupils { get; set; }
